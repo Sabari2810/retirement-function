@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Playfair_Display, PT_Serif, UnifrakturCook } from "next/font/google";
+import { IBM_Plex_Mono, Playfair_Display, PT_Serif, UnifrakturCook } from "next/font/google";
+import { officer } from "@/lib/config";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -16,6 +17,12 @@ const ptSerif = PT_Serif({
   style: ["normal", "italic"],
 });
 
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
 const masthead = UnifrakturCook({
   variable: "--font-masthead",
   subsets: ["latin"],
@@ -23,16 +30,15 @@ const masthead = UnifrakturCook({
 });
 
 export const metadata: Metadata = {
-  title: "You're Invited: Prabhakaran's Retirement Celebration",
-  description:
-    "A special-edition invitation to celebrate 38 wonderful years and toast to Prabhakaran's next chapter.",
+  title: `The Retirement Times: ${officer.name}'s Final Report`,
+  description: `A special-edition newspaper honouring ${officer.name}'s ${officer.totalService} of service. Come celebrate the final shift.`,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${ptSerif.variable} ${masthead.variable} h-full antialiased`}
+      className={`${playfair.variable} ${ptSerif.variable} ${plexMono.variable} ${masthead.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
