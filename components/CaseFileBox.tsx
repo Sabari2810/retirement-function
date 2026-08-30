@@ -34,7 +34,7 @@ export default function CaseFileBox({
       {findings && (
         <div className="mt-4 border-t border-[var(--ink)]/20 pt-4 sm:mt-6 sm:pt-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-            Findings
+            கண்டறிதல்கள்
           </p>
           <ul className="mt-2 space-y-1 text-sm italic text-[var(--ink-soft)] sm:text-base">
             {findings.map((f) => (

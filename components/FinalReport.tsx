@@ -3,21 +3,21 @@ import Reveal from "@/components/Reveal";
 import { officer } from "@/lib/config";
 
 const fields = [
-  { k: "Case No.", v: "38" },
-  { k: "Name", v: officer.name },
-  { k: "Qualification", v: officer.qualification },
-  { k: "Designation", v: officer.designation },
-  { k: "Department", v: officer.department },
-  { k: "Service", v: officer.serviceBranch },
-  { k: "Service Period", v: `${officer.joinedDate} – ${officer.finalDay}` },
-  { k: "Total Service", v: officer.totalService },
+  { k: "வழக்கு எண்.", v: "38" },
+  { k: "பெயர்", v: officer.name },
+  { k: "தகுதி", v: officer.qualification },
+  { k: "பதவி", v: officer.designation },
+  { k: "துறை", v: officer.department },
+  { k: "சேவை", v: officer.serviceBranch },
+  { k: "சேவைக் காலம்", v: `${officer.joinedDate} – ${officer.finalDay}` },
+  { k: "மொத்த சேவை", v: officer.totalService },
 ];
 
 const findings = [
-  "A career completed with honour.",
-  "A city served with dedication.",
-  "A family that waited through countless shifts.",
-  "A lifetime of memories earned along the way.",
+  "மரியாதையுடன் நிறைவு பெற்ற ஒரு பணிவாழ்க்கை.",
+  "அர்ப்பணிப்புடன் சேவை செய்யப்பட்ட ஒரு நகரம்.",
+  "எண்ணற்ற பணிநேரங்களை எதிர்பார்த்துக் காத்திருந்த ஒரு குடும்பம்.",
+  "வழியில் ஈட்டிய வாழ்நாள் நினைவுகள்.",
 ];
 
 export default function FinalReport() {
@@ -25,15 +25,15 @@ export default function FinalReport() {
     <section className="px-4 py-14 sm:py-20">
       <Reveal>
         <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-          The Final Report
+          இறுதி அறிக்கை
         </p>
       </Reveal>
       <div className="mt-6 sm:mt-8">
         <CaseFileBox
-          eyebrow="Case File"
+          eyebrow="வழக்குக் கோப்பு"
           fields={fields}
           findings={findings}
-          verdictLines={["Case Closed.", "Career Complete.", "Rest Starts."]}
+          verdictLines={["வழக்கு முடிந்தது.", "பணி முடிந்தது.", "ஓய்வு தொடங்குகிறது."]}
         />
       </div>
     </section>

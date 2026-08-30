@@ -14,10 +14,10 @@ export default function Masthead() {
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       style={{ transformOrigin: "top center" }}
     >
-      <h1 className="font-masthead text-5xl leading-none sm:text-7xl lg:text-8xl">
+      <h1 className="font-masthead text-5xl leading-tight sm:text-7xl lg:text-8xl">
         {masthead.paperName}
       </h1>
-      <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--ink-soft)] sm:text-xs">
+      <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--ink-soft)] sm:mt-3 sm:text-xs">
         {masthead.strapline}
       </p>
       <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--ink-faint)] sm:text-[11px]">

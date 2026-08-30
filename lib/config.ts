@@ -1,132 +1,132 @@
 // ============================================================================
-// THE RETIREMENT TIMES: CONFIG
+// THE RETIREMENT TIMES: CONFIG (தமிழ் பதிப்பு)
 // Every editable fact lives here: name, dates, venue, RSVP/Maps links, and
 // the full career timeline. Nothing below should be hard-coded elsewhere.
 // ============================================================================
 
 export const officer = {
-  name: "Prabhakaran. V",
-  qualification: "M.A.",
-  designation: "Sub-Inspector",
-  department: "Greater Chennai Police",
-  serviceBranch: "Tamil Nadu Police Service",
+  name: "பிரபாகரன். வி",
+  qualification: "எம்.ஏ.",
+  designation: "சப் இன்ஸ்பெக்டர்",
+  department: "பெருநகர சென்னை காவல்துறை",
+  serviceBranch: "தமிழ்நாடு காவல் துறை சேவை",
   joinedDate: "09.05.1988",
   finalDay: "31.08.2026",
-  totalService: "38 Years, 3 Months, 22 Days",
+  totalService: "38 ஆண்டுகள், 3 மாதங்கள், 22 நாட்கள்",
   serviceYears: "38",
   serviceMonths: "03",
   serviceDays: "22",
 };
 
 export const masthead = {
-  paperName: "The Retirement Times",
-  strapline: "A Special Edition Honouring 38 Years of Service",
-  volumeLine: "Vol. 38 · Final Edition · 06 September 2026",
+  paperName: "ஓய்வு காலம்",
+  strapline: "38 ஆண்டுகால சேவையைப் போற்றும் சிறப்பு பதிப்பு",
+  volumeLine: "தொகுதி 38 · இறுதி பதிப்பு · செப்டம்பர் 6, 2026",
 };
 
 export const event = {
-  dateLabel: "06.09.2026 · Sunday",
-  time: "18:00 – 21:00 Hrs",
-  venueName: "Vijayalakshmi Party Hall A/C",
-  addressLines: ["#98B, Sabari Salai,", "Madipakkam,", "Chennai – 600 091"],
-  landmark: "Madipakkam Iyappan Temple",
+  dateLabel: "06.09.2026 · ஞாயிறு",
+  time: "மாலை 6:00 முதல் இரவு 9:00 மணி வரை",
+  venueName: "விஜயலட்சுமி பார்ட்டி ஹால் ஏசி",
+  addressLines: ["#98B, சபரி சாலை,", "மாதிப்பாக்கம்,", "சென்னை – 600 091"],
+  landmark: "மாதிப்பாக்கம் ஐயப்பன் கோயில்",
   // Configure these to real destinations before sending the invite.
   mapsUrl: "https://maps.google.com/?q=Vijayalakshmi+Party+Hall+Madipakkam+Chennai",
-  rsvpUrl: "https://wa.me/919876543210?text=I'll%20be%20there%20to%20celebrate%20Prabhakaran%20sir's%20retirement!",
+  rsvpUrl: "https://wa.me/919876543210?text=%E0%AE%A8%E0%AE%BE%E0%AE%A9%E0%AF%8D%20%E0%AE%B5%E0%AE%B0%E0%AF%81%E0%AE%B5%E0%AF%87%E0%AE%A9%E0%AF%8D!",
 };
 
 export const heroPhoto = {
   src: "/photos/photo-10.jpeg",
-  alt: `${officer.name} in dress uniform`,
+  alt: `${officer.name} சீருடையில்`,
 };
 
 export const careerTimeline = [
   {
     date: "09.05.1988",
-    label: "The Beginning",
-    posting: "Joined the Police Department",
-    note: "Service begins.",
+    label: "தொடக்கம்",
+    posting: "காவல்துறையில் இணைந்தார்",
+    note: "சேவை தொடங்குகிறது.",
   },
   {
     date: "1988 – 1997",
-    label: "The Constable Years Begin",
-    posting: "Armed Reserve, Pudhupettai",
-    note: "Served in Armed Reserve for nine years. The beginning of a career that would span nearly four decades.",
+    label: "கான்ஸ்டபிள் ஆண்டுகள் தொடங்குகின்றன",
+    posting: "ஆயுதப் படை காப்பகம், புதுப்பேட்டை",
+    note: "ஒன்பது ஆண்டுகள் ஆயுதப் படை காப்பகத்தில் பணியாற்றினார். கிட்டத்தட்ட நாற்பது ஆண்டுகள் நீடிக்கும் பணிவாழ்வின் தொடக்கம்.",
   },
   {
     date: "1997 – 2003",
-    label: "A New Posting",
-    posting: "Grade I, E3 Teynampet Traffic",
-    note: "Traffic Writer.",
+    label: "ஒரு புதிய பணியிடம்",
+    posting: "கிரேடு I, E3 தேனாம்பேட்டை போக்குவரத்து",
+    note: "போக்குவரத்து எழுத்தர்.",
   },
   {
     date: "2003 – 2008",
-    label: "A New Responsibility",
-    posting: "Head Constable, R4 Traffic Investigation",
-    note: "Five years of service in Traffic Investigation.",
+    label: "ஒரு புதிய பொறுப்பு",
+    posting: "ஹெட் கான்ஸ்டபிள், R4 போக்குவரத்து விசாரணை",
+    note: "போக்குவரத்து விசாரணையில் ஐந்தாண்டு சேவை.",
   },
   {
     date: "2008 – 2011",
     label: "",
-    posting: "E3 Traffic",
-    note: "Traffic Writer.",
+    posting: "E3 போக்குவரத்து",
+    note: "போக்குவரத்து எழுத்தர்.",
   },
   {
     date: "2012 – 2013",
     label: "",
-    posting: "R5 Virugambakkam Traffic",
-    note: "Traffic Writer.",
+    posting: "R5 விருகம்பாக்கம் போக்குவரத்து",
+    note: "போக்குவரத்து எழுத்தர்.",
   },
   {
     date: "2013 – 2018",
-    label: "Special Sub-Inspector",
-    posting: "Special Sub-Inspector, E3 Crime",
-    note: "Crime Writer.",
+    label: "சிறப்பு சப் இன்ஸ்பெக்டர்",
+    posting: "சிறப்பு சப் இன்ஸ்பெக்டர், E3 குற்றப் பிரிவு",
+    note: "குற்றப் பிரிவு எழுத்தர்.",
   },
   {
     date: "2018 – 2019",
     label: "",
-    posting: "Special Sub-Inspector, E3 Traffic",
-    note: "Traffic Writer.",
+    posting: "சிறப்பு சப் இன்ஸ்பெக்டர், E3 போக்குவரத்து",
+    note: "போக்குவரத்து எழுத்தர்.",
   },
   {
-    date: "Jun 2019 – Aug 2019",
-    label: "The Uniform Changes",
-    posting: "Sub-Inspector Training, RR Stadium, Pudupet",
-    note: "A new chapter.",
+    date: "ஜூன் 2019 – ஆகஸ்ட் 2019",
+    label: "சீருடை மாறுகிறது",
+    posting: "சப் இன்ஸ்பெக்டர் பயிற்சி, RR மைதானம், புதுப்பேட்டை",
+    note: "ஒரு புதிய அத்தியாயம்.",
   },
   {
-    date: "Aug 2019 – Nov 2019",
-    label: "Sub-Inspector",
-    posting: "Sub-Inspector Practical Training, F3 Nungambakkam",
+    date: "ஆகஸ்ட் 2019 – நவம்பர் 2019",
+    label: "சப் இன்ஸ்பெக்டர்",
+    posting: "சப் இன்ஸ்பெக்டர் நடைமுறைப் பயிற்சி, F3 நுங்கம்பாக்கம்",
     note: "",
   },
   {
     date: "2019 – 2021",
     label: "",
-    posting: "Sub-Inspector, Crime Record Bureau",
-    note: "A new responsibility. A new role.",
+    posting: "சப் இன்ஸ்பெக்டர், குற்றப் பதிவு பணியகம்",
+    note: "ஒரு புதிய பொறுப்பு. ஒரு புதிய பணி.",
   },
   {
     date: "2022 – 31.08.2026",
-    label: "The Final Posting",
-    posting: "Sub-Inspector, Crime Branch CID Head Quarters",
-    note: "The final posting. The final chapter. The final report.",
+    label: "இறுதிப் பணியிடம்",
+    posting: "சப் இன்ஸ்பெக்டர், கிரைம் பிரான்ச் சிஐடி தலைமையகம்",
+    note: "இறுதிப் பணியிடம். இறுதி அத்தியாயம். இறுதி அறிக்கை.",
   },
 ];
 
 export const betweenTheLines = [
-  { top: "Some nights were for sleep.", bottom: "Some were for duty." },
-  { top: "Some mornings started early.", bottom: "Some started before the city woke up." },
-  { top: "Some family functions needed everyone.", bottom: "Sometimes, duty needed him more." },
-  { top: "Some celebrations were missed.", bottom: "Because someone had to be there when others couldn't." },
-  { top: "Some days were long.", bottom: "He still showed up the next morning." },
+  { top: "சில இரவுகள் தூக்கத்திற்காக இருந்தன.", bottom: "சில பணிக்காக இருந்தன." },
+  { top: "சில காலைகள் விரைவில் தொடங்கின.", bottom: "சில நகரம் விழிப்பதற்கு முன்பே தொடங்கின." },
+  { top: "சில குடும்ப நிகழ்வுகளுக்கு அனைவரும் தேவைப்பட்டனர்.", bottom: "சில நேரங்களில், பணி அவரை அதிகம் தேவைப்பட்டது." },
+  { top: "சில கொண்டாட்டங்கள் தவறவிடப்பட்டன.", bottom: "ஏனெனில் மற்றவர்களால் முடியாதபோது, ஒருவர் அங்கு இருக்க வேண்டியிருந்தது." },
+  { top: "சில நாட்கள் நீண்டவை.", bottom: "அவர் மறுநாள் காலையும் பணிக்கு வந்தார்." },
 ];
 
 export const microContent = [
-  { k: "Special Correspondent", v: "Retirement Desk" },
-  { k: "Filed From", v: "Chennai" },
-  { k: "Edition", v: "Final" },
-  { k: "Archive No.", v: "1988–2026" },
-  { k: "Report Status", v: "Complete" },
+  { k: "சிறப்பு நிருபர்", v: "ஓய்வூதியப் பிரிவு" },
+  { k: "அனுப்பப்பட்ட இடம்", v: "சென்னை" },
+  { k: "பதிப்பு", v: "இறுதி" },
+  { k: "காப்பக எண்.", v: "1988–2026" },
+  { k: "அறிக்கை நிலை", v: "முடிந்தது" },
 ];

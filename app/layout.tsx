@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Playfair_Display, PT_Serif, UnifrakturCook } from "next/font/google";
+import { IBM_Plex_Mono, Noto_Sans_Tamil, Noto_Serif_Tamil, Playfair_Display, PT_Serif, UnifrakturCook } from "next/font/google";
 import { officer } from "@/lib/config";
 import "./globals.css";
 
@@ -29,16 +29,28 @@ const masthead = UnifrakturCook({
   weight: "700",
 });
 
+const notoSerifTamil = Noto_Serif_Tamil({
+  variable: "--font-display-ta",
+  subsets: ["tamil"],
+  weight: ["700", "900"],
+});
+
+const notoSansTamil = Noto_Sans_Tamil({
+  variable: "--font-sans-ta",
+  subsets: ["tamil"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
-  title: `The Retirement Times: ${officer.name}'s Final Report`,
-  description: `A special-edition newspaper honouring ${officer.name}'s ${officer.totalService} of service. Come celebrate the final shift.`,
+  title: `ஓய்வு காலம்: ${officer.name} அவர்களின் இறுதி அறிக்கை`,
+  description: `${officer.name} அவர்களின் ${officer.totalService} சேவையைப் போற்றும் சிறப்பு பதிப்பு நாளிதழ். இறுதிப் பணியைக் கொண்டாட வாருங்கள்.`,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
-      className={`${playfair.variable} ${ptSerif.variable} ${plexMono.variable} ${masthead.variable} h-full antialiased`}
+      lang="ta"
+      className={`${playfair.variable} ${ptSerif.variable} ${plexMono.variable} ${masthead.variable} ${notoSerifTamil.variable} ${notoSansTamil.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

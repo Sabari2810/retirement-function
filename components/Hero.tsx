@@ -17,18 +17,18 @@ export default function Hero() {
         animate={reduce ? undefined : { opacity: 1 }}
         transition={stagger(0)}
       >
-        The Final Report
+        இறுதி அறிக்கை
       </motion.p>
 
       <motion.h2
-        className="font-display mt-3 text-3xl font-black uppercase leading-tight sm:text-5xl"
+        className="font-display mt-3 text-2xl font-black leading-snug sm:text-4xl"
         initial={reduce ? undefined : { opacity: 0, y: 20 }}
         animate={reduce ? undefined : { opacity: 1, y: 0 }}
         transition={stagger(1)}
       >
-        After 38 Years, 3 Months &amp; 22 Days,
+        38 ஆண்டுகள், 3 மாதங்கள் &amp; 22 நாட்களுக்குப் பிறகு,
         <br />
-        the Final Shift Has Arrived.
+        இறுதிப் பணி வந்துவிட்டது.
       </motion.h2>
 
       <motion.div
@@ -48,7 +48,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.h3
-        className="font-display mt-8 text-2xl font-black uppercase sm:text-4xl"
+        className="font-display mt-8 text-xl font-black leading-snug sm:text-3xl"
         initial={reduce ? undefined : { opacity: 0, y: 12 }}
         animate={reduce ? undefined : { opacity: 1, y: 0 }}
         transition={stagger(3)}
@@ -72,7 +72,7 @@ export default function Hero() {
         animate={reduce ? undefined : { opacity: 1 }}
         transition={stagger(5)}
       >
-        Serving the city since 1988.
+        1988 முதல் நகருக்குச் சேவை.
       </motion.p>
     </section>
   );

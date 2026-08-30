@@ -7,10 +7,10 @@ export default function BetweenTheLines() {
       <div className="mx-auto max-w-2xl">
         <Reveal>
           <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-            Because a Service Record Never Tells the Whole Story
+            ஏனெனில் ஒரு பணிப் பதிவேடு முழுக்கதையையும் சொல்வதில்லை
           </p>
-          <h2 className="font-display mt-3 text-center text-3xl font-black uppercase sm:text-5xl">
-            Between the Lines
+          <h2 className="font-display mt-3 text-center text-3xl font-black sm:text-5xl">
+            வரிகளுக்கு இடையே
           </h2>
         </Reveal>
 
@@ -27,7 +27,8 @@ export default function BetweenTheLines() {
 
         <Reveal delay={0.3}>
           <p className="font-display mx-auto mt-12 max-w-lg text-center text-xl italic leading-relaxed sm:mt-16 sm:text-3xl">
-            &ldquo;The years are easy to count. The moments he gave up for them are not.&rdquo;
+            &ldquo;ஆண்டுகளை எண்ணுவது எளிது. அவற்றுக்காக அவர் விட்டுக்கொடுத்த தருணங்களை
+            அல்ல.&rdquo;
           </p>
         </Reveal>
       </div>

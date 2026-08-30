@@ -3,10 +3,10 @@ import Reveal from "@/components/Reveal";
 import { officer } from "@/lib/config";
 
 const facts = [
-  { k: "Joined", v: officer.joinedDate },
-  { k: "Retired", v: officer.finalDay },
-  { k: "Department", v: officer.department },
-  { k: "Final Designation", v: officer.designation },
+  { k: "இணைந்த நாள்", v: officer.joinedDate },
+  { k: "ஓய்வு பெற்ற நாள்", v: officer.finalDay },
+  { k: "துறை", v: officer.department },
+  { k: "இறுதிப் பதவி", v: officer.designation },
 ];
 
 export default function NumbersPanel() {
@@ -14,7 +14,7 @@ export default function NumbersPanel() {
     <section className="px-4 py-14 text-center sm:py-20">
       <Reveal>
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-          The Numbers Behind the Uniform
+          சீருடைக்குப் பின்னால் இருக்கும் எண்கள்
         </p>
       </Reveal>
 
@@ -22,19 +22,19 @@ export default function NumbersPanel() {
         <div>
           <Counter to={38} className="font-display text-6xl font-black leading-none sm:text-8xl" />
           <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-[var(--ink-soft)] sm:text-xs">
-            Years
+            ஆண்டுகள்
           </p>
         </div>
         <div>
           <Counter to={3} pad={2} className="font-display text-4xl font-black leading-none sm:text-6xl" />
           <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-[var(--ink-soft)] sm:text-xs">
-            Months
+            மாதங்கள்
           </p>
         </div>
         <div>
           <Counter to={22} className="font-display text-4xl font-black leading-none sm:text-6xl" />
           <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-[var(--ink-soft)] sm:text-xs">
-            Days
+            நாட்கள்
           </p>
         </div>
       </Reveal>

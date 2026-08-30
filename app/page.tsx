@@ -13,6 +13,7 @@ import NumbersPanel from "@/components/NumbersPanel";
 import QuietHumor from "@/components/QuietHumor";
 import Rsvp from "@/components/Rsvp";
 import TurnPage from "@/components/TurnPage";
+import { microContent } from "@/lib/config";
 
 export default function Home() {
   return (
@@ -21,14 +22,14 @@ export default function Home() {
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:border-2 focus:border-[var(--ink)] focus:bg-[var(--paper)] focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase"
       >
-        Skip to content
+        முதன்மை உள்ளடக்கத்திற்குச் செல்ல
       </a>
 
       <Masthead />
 
       <main id="main">
         <Hero />
-        <MicroNote k="Special Correspondent" v="Retirement Desk" />
+        <MicroNote k={microContent[0].k} v={microContent[0].v} />
         <Invitation />
         <CaseFilePreview />
         <EventDetails />
@@ -37,11 +38,11 @@ export default function Home() {
         <TurnPage targetId="the-record" />
 
         <CareerRecord />
-        <MicroNote k="Archive No." v="1988–2026" />
+        <MicroNote k={microContent[3].k} v={microContent[3].v} />
         <BetweenTheLines />
         <NumbersPanel />
         <QuietHumor />
-        <MicroNote k="Report Status" v="Complete" />
+        <MicroNote k={microContent[4].k} v={microContent[4].v} />
         <FinalReport />
         <FinalSmile />
       </main>

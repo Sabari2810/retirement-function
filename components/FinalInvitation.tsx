@@ -5,8 +5,8 @@ export default function FinalInvitation() {
   return (
     <footer className="border-t-4 border-double border-[var(--ink)] px-4 py-14 text-center sm:py-20">
       <Reveal className="mx-auto max-w-md">
-        <h2 className="font-display text-xl font-black uppercase leading-snug sm:text-2xl">
-          We Would Love to Have You With Us.
+        <h2 className="font-display text-xl font-black leading-snug sm:text-2xl">
+          உங்களுடன் இருக்க நாங்கள் விரும்புகிறோம்.
         </h2>
 
         <p className="font-display mt-5 text-lg font-bold sm:mt-6 sm:text-xl">
@@ -23,11 +23,11 @@ export default function FinalInvitation() {
           ))}
         </p>
         <p className="mt-1 text-sm italic text-[var(--ink-soft)] sm:text-base">
-          Landmark: {event.landmark}
+          அடையாளம்: {event.landmark}
         </p>
 
         <p className="font-display mt-8 text-xl italic sm:mt-10 sm:text-2xl">
-          See You at the Final Report.
+          இறுதி அறிக்கையில் சந்திப்போம்.
         </p>
       </Reveal>
     </footer>
