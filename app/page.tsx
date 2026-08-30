@@ -124,7 +124,7 @@ export default function Home() {
             {invite.date} · {invite.time}
           </p>
           <p className="mt-1 text-sm opacity-80 sm:text-base">
-            {invite.venue.name} — {invite.venue.address}
+            {invite.venue.name}, {invite.venue.address}
           </p>
           <a
             href={invite.venue.mapUrl}

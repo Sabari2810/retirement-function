@@ -23,7 +23,7 @@ const masthead = UnifrakturCook({
 });
 
 export const metadata: Metadata = {
-  title: "You're Invited — Prabhakaran's Retirement Celebration",
+  title: "You're Invited: Prabhakaran's Retirement Celebration",
   description:
     "A special-edition invitation to celebrate 38 wonderful years and toast to Prabhakaran's next chapter.",
 };
