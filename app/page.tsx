@@ -16,17 +16,17 @@ import Timeline from "@/components/Timeline";
 import { fillerHeadlines } from "@/lib/config";
 
 const titles = [
-  "The Front Page",
-  "The Case File",
-  "Exclusive Report",
-  "Wanted",
-  "Other News",
-  "Behind the Headlines",
-  "From the Archives",
-  "The Record",
-  "Retirement Notice",
-  "Report for Duty",
-  "The Final Word",
+  "முதல் பக்கம்",
+  "வழக்குக் கோப்பு",
+  "பிரத்யேக செய்தி",
+  "தேடப்படுகிறார்",
+  "மற்றொரு செய்தி",
+  "தலைப்புச் செய்திக்குப் பின்னால்",
+  "காப்பகத்திலிருந்து",
+  "பணிப் பதிவேடு",
+  "ஓய்வூதிய அறிவிப்பு",
+  "பணிக்கு ஆஜராகவும்",
+  "இறுதி வார்த்தை",
 ];
 
 export default function Home() {

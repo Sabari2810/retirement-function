@@ -8,10 +8,10 @@ export default function PhotoArchive() {
       <div className="mx-auto max-w-4xl">
         <Reveal>
           <p className="text-center font-mono text-[9px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-            Photo Feature
+            புகைப்பட சிறப்பம்சம்
           </p>
-          <h2 className="font-display mt-1 text-center text-lg font-black uppercase sm:text-4xl">
-            From the Archives
+          <h2 className="font-display mt-1 text-center text-lg font-black sm:text-4xl">
+            காப்பகத்திலிருந்து
           </h2>
         </Reveal>
 

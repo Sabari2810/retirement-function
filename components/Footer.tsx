@@ -5,28 +5,31 @@ export default function Footer() {
   return (
     <footer className="border-t-2 border-double border-[var(--ink)] px-4 py-3 text-center sm:px-8">
       <Reveal>
-        <p className="font-display text-lg font-black uppercase leading-snug sm:text-3xl">
-          Case Closed.
+        <p className="font-display text-lg font-black leading-snug sm:text-3xl">
+          வழக்கு முடிந்தது.
           <br />
-          Career Complete.
+          பணி முடிந்தது.
           <br />
-          Retirement Begins.
+          ஓய்வு தொடங்குகிறது.
         </p>
       </Reveal>
 
       <Reveal delay={0.1}>
         <p className="mx-auto mt-2 max-w-md text-xs leading-snug text-[var(--ink-soft)] sm:mt-6 sm:text-lg">
-          {dad.yearsOfService} years served.
-          <br />A city protected.
-          <br />A family proud.
+          {dad.yearsOfService} ஆண்டுகள் சேவை.
           <br />
-          Now it&apos;s time for the next chapter.
+          ஒரு நகரம் பாதுகாக்கப்பட்டது.
+          <br />
+          ஒரு குடும்பம் பெருமைப்படுகிறது.
+          <br />
+          இப்போது அடுத்த அத்தியாயம் தொடங்கும் நேரம்.
         </p>
       </Reveal>
 
       <Reveal delay={0.2}>
         <p className="font-display mx-auto mt-2 max-w-lg text-sm leading-snug italic sm:mt-6 sm:text-xl">
-          Come celebrate the man, the uniform, and the {dad.yearsOfService} years behind it.
+          அந்த மனிதரையும், சீருடையையும், அதன் பின்னால் இருக்கும் {dad.yearsOfService} ஆண்டுகளையும்
+          கொண்டாட வாருங்கள்.
         </p>
       </Reveal>
 

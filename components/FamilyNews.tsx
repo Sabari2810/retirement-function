@@ -6,15 +6,15 @@ export default function FamilyNews() {
     <section className="px-4 sm:px-8">
       <Reveal className="mx-auto max-w-sm border border-[var(--ink)]/30 p-5 text-center sm:p-8">
         <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--ink-faint)] sm:text-xs">
-          And in Other News
+          மற்றொரு செய்தி
         </p>
-        <p className="font-display mt-2 text-lg font-bold uppercase leading-snug sm:text-2xl">
-          Local Family Reportedly Concerned
+        <p className="font-display mt-2 text-lg font-bold leading-snug sm:text-2xl">
+          உள்ளூர் குடும்பம் கவலையில் இருப்பதாகத் தகவல்
         </p>
         <p className="mt-3 text-sm leading-relaxed text-[var(--ink-soft)] sm:mt-4 sm:text-base">
-          Sources confirm that {dad.name} will now be spending considerably more time at home.
-          Experts are currently assessing the situation. His family has been advised to remain
-          calm.
+          {dad.name} இனி வீட்டில் அதிக நேரம் செலவிடவிருப்பதாக ஆதாரங்கள் உறுதிப்படுத்துகின்றன.
+          நிபுணர்கள் தற்போது நிலைமையை மதிப்பீடு செய்து வருகின்றனர். அவரது குடும்பத்தினர்
+          அமைதியாக இருக்குமாறு அறிவுறுத்தப்பட்டுள்ளனர்.
         </p>
       </Reveal>
     </section>

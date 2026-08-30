@@ -17,11 +17,11 @@ export default function NewspaperHeader() {
       <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
         {masthead.volumeLine}
       </p>
-      <h1 className="font-display mt-1 text-3xl font-black leading-none sm:text-5xl lg:text-6xl">
+      <h1 className="font-display mt-1 text-3xl font-black leading-tight sm:text-5xl lg:text-6xl">
         {masthead.paperName}
       </h1>
-      <div className="mx-auto mt-1.5 flex max-w-md items-center justify-center gap-2 text-[9px] uppercase tracking-[0.2em] text-[var(--ink-soft)] sm:text-xs">
-        <span>Special Retirement Edition</span>
+      <div className="mx-auto mt-2.5 flex max-w-md items-center justify-center gap-2 text-[9px] uppercase tracking-[0.2em] text-[var(--ink-soft)] sm:mt-2 sm:text-xs">
+        <span>சிறப்பு ஓய்வூதிய பதிப்பு</span>
         <span aria-hidden>&bull;</span>
         <span>{event.dateLabel}</span>
       </div>

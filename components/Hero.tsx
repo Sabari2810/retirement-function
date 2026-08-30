@@ -6,9 +6,9 @@ import Stamp from "@/components/Stamp";
 import { dad } from "@/lib/config";
 
 const labels = [
-  { k: "CASE NO.", v: `${dad.yearsOfService}/${dad.yearsOfService}` },
-  { k: "STATUS", v: "CASE CLOSED" },
-  { k: "NEXT POSTING", v: "HOME" },
+  { k: "வழக்கு எண்.", v: `${dad.yearsOfService}/${dad.yearsOfService}` },
+  { k: "நிலை", v: "வழக்கு முடிவு" },
+  { k: "அடுத்த பணியிடம்", v: "வீடு" },
 ];
 
 export default function Hero() {
@@ -19,17 +19,17 @@ export default function Hero() {
   return (
     <section className="mx-auto max-w-3xl px-1 py-3 text-center">
       <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-[var(--stamp)] sm:text-xs">
-        Breaking News
+        உடனடி செய்தி
       </p>
 
       <motion.h2
-        className="font-display mt-2 text-xl font-black leading-[1.05] uppercase sm:text-3xl lg:text-4xl"
+        className="font-display mt-2 text-xl font-black leading-[1.05] sm:text-3xl lg:text-4xl"
         initial={reduce ? undefined : { opacity: 0, y: 20 }}
         animate={reduce ? undefined : { opacity: 1, y: 0 }}
         transition={stagger(1)}
       >
-        After {dad.yearsOfService} Years of Service, the Man Who Never Missed a Duty Is Finally
-        Missing One.
+        38 ஆண்டுகள் சேவை செய்த பிறகு, ஒருநாள் கூடத் தவறாமல் பணிக்குச் சென்ற அவர், இப்போது ஒரே ஒரு
+        பணியை மட்டும் தவறவிட்டிருக்கிறார்.
       </motion.h2>
 
       <motion.p
@@ -38,9 +38,9 @@ export default function Hero() {
         animate={reduce ? undefined : { opacity: 1, y: 0 }}
         transition={stagger(2)}
       >
-        {dad.department} confirms the retirement of one of its longest-serving officers.
-        After nearly four decades of faithfully serving Chennai, {dad.name} has finally been
-        sentenced to retirement.
+        {dad.department}, நீண்டகாலம் சேவை செய்த தனது அதிகாரிகளில் ஒருவரின் ஓய்வூதியத்தை
+        உறுதிப்படுத்துகிறது. கிட்டத்தட்ட நாற்பது ஆண்டுகள் சென்னைக்கு உண்மையாக சேவை செய்த{" "}
+        {dad.name}, இறுதியாக ஓய்வூதியம் என்ற தண்டனையைப் பெற்றுள்ளார்.
       </motion.p>
 
       <motion.div
@@ -49,7 +49,7 @@ export default function Hero() {
         transition={stagger(3)}
         className="mt-7 sm:mt-6"
       >
-        <Stamp rotate={-8}>Verdict: Retired</Stamp>
+        <Stamp rotate={-8}>தீர்ப்பு: ஓய்வு பெற்றார்</Stamp>
       </motion.div>
 
       <motion.dl
@@ -77,7 +77,7 @@ export default function Hero() {
           onClick={goNext}
           className="inline-flex items-center gap-2 border-2 border-[var(--ink)] px-4 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)] sm:px-6 sm:py-2.5 sm:text-xs"
         >
-          Read the Full Story
+          முழு செய்தியை படிக்க
           <span aria-hidden>&rarr;</span>
         </button>
       </motion.div>

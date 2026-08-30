@@ -6,35 +6,35 @@ export default function FeatureArticle() {
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
           <p className="font-mono text-[9px] uppercase tracking-[0.3em] opacity-60 sm:text-xs">
-            Behind the Headlines
+            தலைப்புச் செய்திக்குப் பின்னால்
           </p>
         </Reveal>
 
         <Reveal delay={0.1}>
           <p className="font-display mt-2 text-base leading-snug italic sm:mt-6 sm:text-2xl">
-            For 38 years, he wore the uniform with pride.
+            38 ஆண்டுகளாக, அவர் பெருமையுடன் சீருடை அணிந்தார்.
           </p>
           <p className="mt-1.5 text-xs leading-snug opacity-80 sm:mt-4 sm:text-lg">
-            He served a city. He protected people. He carried responsibilities most of us will
-            never fully understand.
+            அவர் ஒரு நகரத்திற்கு சேவை செய்தார். மக்களைப் பாதுகாத்தார். நம்மில் பெரும்பாலோர்
+            முழுமையாகப் புரிந்துகொள்ள முடியாத பொறுப்புகளைச் சுமந்தார்.
           </p>
           <p className="mt-1.5 text-xs leading-snug opacity-80 sm:mt-4 sm:text-lg">
-            And through it all, he came home to be Dad.
+            இவை எல்லாவற்றிற்கும் இடையில், அவர் வீட்டிற்கு வந்தபோது அப்பாவாக இருந்தார்.
           </p>
         </Reveal>
 
         <Reveal delay={0.2}>
           <p className="mt-3 text-xs leading-snug opacity-80 sm:mt-8 sm:text-lg">
-            Today, we don&apos;t just celebrate his retirement. We celebrate 38 years of service,
-            sacrifice, courage, and countless stories that will stay with us forever.
+            இன்று, நாங்கள் அவரது ஓய்வூதியத்தை மட்டும் கொண்டாடவில்லை. 38 ஆண்டுகால சேவை, தியாகம்,
+            தைரியம், என்றென்றும் எங்களுடன் நிலைத்திருக்கும் எண்ணற்ற நினைவுகளையும் கொண்டாடுகிறோம்.
           </p>
         </Reveal>
 
         <Reveal delay={0.3}>
-          <p className="font-display mt-3 text-lg font-black uppercase leading-tight sm:mt-10 sm:text-4xl">
-            The Uniform May Retire.
+          <p className="font-display mt-3 text-lg font-black leading-tight sm:mt-10 sm:text-4xl">
+            சீருடை ஓய்வு பெறலாம்.
             <br />
-            The Memories Never Will.
+            நினைவுகள் ஒருபோதும் ஓய்வு பெறாது.
           </p>
         </Reveal>
       </div>

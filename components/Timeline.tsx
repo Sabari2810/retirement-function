@@ -7,10 +7,10 @@ export default function Timeline() {
       <div className="mx-auto w-full max-w-5xl">
         <Reveal>
           <p className="text-center font-mono text-[9px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-            The Record
+            பணிப் பதிவேடு
           </p>
-          <h2 className="font-display mt-1 text-center text-lg font-black uppercase sm:mt-2 sm:text-2xl">
-            38 Years in the Record
+          <h2 className="font-display mt-1 text-center text-lg font-black sm:mt-2 sm:text-2xl">
+            பதிவேட்டில் 38 ஆண்டுகள்
           </h2>
         </Reveal>
 
