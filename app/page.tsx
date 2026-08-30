@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Countdown from "@/components/Countdown";
 import Sparkline from "@/components/Sparkline";
-import { galleryPlaceholders, invite } from "@/lib/data";
+import { galleryPhotos, invite } from "@/lib/data";
 
 function Rule() {
   return <div className="border-t-4 border-double border-[var(--ink)]" aria-hidden />;
@@ -80,16 +81,18 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center gap-3">
-            <div className="flex aspect-[4/5] w-full max-w-xs flex-col items-center justify-center gap-3 border-4 border-[var(--ink)] bg-[var(--ink)]/[0.06] p-6">
-              <span className="font-display text-6xl font-black">
-                {invite.retireeFirstName.charAt(0)}
-              </span>
-              <span className="text-center text-xs uppercase tracking-widest opacity-60">
-                Photo Coming Soon
-              </span>
+            <div className="relative aspect-[4/5] w-full max-w-xs overflow-hidden border-4 border-[var(--ink)]">
+              <Image
+                src={invite.heroPhoto}
+                alt={invite.retireeFullName}
+                fill
+                sizes="(min-width: 768px) 320px, 80vw"
+                className="object-cover object-top sepia-[0.25] contrast-105"
+                priority
+              />
             </div>
             <p className="text-center text-xs italic">
-              {invite.retireeFirstName}, on his first day, {invite.hireYear}
+              {invite.retireeFirstName}, in dress uniform
             </p>
           </div>
 
@@ -178,15 +181,20 @@ export default function Home() {
           <p className="text-center text-xs font-bold uppercase tracking-[0.3em]">
             Through the Years
           </p>
-          <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {galleryPlaceholders.map((caption) => (
-              <div
-                key={caption}
-                className="flex aspect-square flex-col items-center justify-center gap-1 border-2 border-[var(--ink)]/60 bg-[var(--ink)]/[0.04] p-2"
-              >
-                <span className="font-display text-2xl">✦</span>
+          <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
+            {galleryPhotos.map((photo) => (
+              <div key={photo.src} className="flex flex-col gap-1.5">
+                <div className="relative aspect-square overflow-hidden border-2 border-[var(--ink)]/60">
+                  <Image
+                    src={photo.src}
+                    alt={photo.caption}
+                    fill
+                    sizes="(min-width: 640px) 33vw, 50vw"
+                    className="object-cover sepia-[0.25] contrast-105"
+                  />
+                </div>
                 <span className="text-center text-[10px] uppercase tracking-wide opacity-70">
-                  {caption}
+                  {photo.caption}
                 </span>
               </div>
             ))}

@@ -76,11 +76,18 @@ export const invite = {
 
   closingLine:
     "Now it's time to relax and enjoy yourself, Prabhakaran, after 38 years of graft and hard work!",
+
+  heroPhoto: "/photos/photo-10.jpeg",
 } as const;
 
-export const galleryPlaceholders = [
-  "First Day, 1988",
-  "The 2000 Batch",
-  "CBCID Promotion, 2012",
-  "Farewell at the Station",
+export const galleryPhotos = [
+  { src: "/photos/photo-9.jpeg", caption: "At CBCID Headquarters" },
+  { src: "/photos/photo-7.jpeg", caption: "Flag Hoisting Ceremony" },
+  { src: "/photos/photo-6.jpeg", caption: "Certificate of Appreciation" },
+  { src: "/photos/photo-5.jpeg", caption: "With Colleagues" },
+  { src: "/photos/photo-4.jpeg", caption: "On Duty" },
+  { src: "/photos/photo-3.jpeg", caption: "On Duty" },
+  { src: "/photos/photo-1.jpeg", caption: "On Patrol" },
+  { src: "/photos/photo-2.jpeg", caption: "Target Practice" },
+  { src: "/photos/photo-8.jpeg", caption: "On Duty" },
 ];
