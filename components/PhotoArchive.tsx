@@ -4,37 +4,32 @@ import { photos } from "@/lib/config";
 
 export default function PhotoArchive() {
   return (
-    <section className="px-4 py-16 sm:px-8">
-      <div className="mx-auto max-w-5xl">
+    <section className="px-4 py-2 sm:px-8">
+      <div className="mx-auto max-w-4xl">
         <Reveal>
-          <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
+          <p className="text-center font-mono text-[9px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
             Photo Feature
           </p>
-          <h2 className="font-display mt-3 text-center text-3xl font-black uppercase sm:text-5xl">
+          <h2 className="font-display mt-1 text-center text-lg font-black uppercase sm:text-4xl">
             From the Archives
           </h2>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3">
+        <div className="mt-2 grid grid-cols-4 gap-1.5 sm:mt-6 sm:gap-3">
           {photos.archive.map((photo, i) => (
-            <Reveal key={photo.src} delay={(i % 3) * 0.08} className={photo.span}>
-              <figure className="flex flex-col gap-2">
-                <div className={`relative overflow-hidden border-2 border-[var(--ink)] ${photo.aspect}`}>
+            <Reveal key={photo.src} delay={(i % 4) * 0.06}>
+              <figure className="flex flex-col gap-0.5 sm:gap-1.5">
+                <div className="relative aspect-square overflow-hidden border-2 border-[var(--ink)]">
                   <Image
                     src={photo.src}
                     alt={photo.caption}
                     fill
-                    sizes="(min-width: 640px) 33vw, 50vw"
+                    sizes="(min-width: 640px) 20vw, 25vw"
                     className="object-cover sepia-[0.2] contrast-105"
                   />
                 </div>
-                <figcaption className="text-center">
-                  <p className="font-mono text-[9px] uppercase tracking-widest text-[var(--ink-faint)]">
-                    {photo.label}
-                  </p>
-                  <p className="text-xs italic text-[var(--ink-soft)] sm:text-sm">
-                    {photo.caption}
-                  </p>
+                <figcaption className="text-center text-[8px] italic leading-tight text-[var(--ink-soft)] sm:text-xs">
+                  {photo.caption}
                 </figcaption>
               </figure>
             </Reveal>

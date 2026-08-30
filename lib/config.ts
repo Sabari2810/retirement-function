@@ -33,14 +33,14 @@ export const photos = {
   hero: { src: "/photos/photo-10.jpeg", alt: `${dad.name} in dress uniform`, label: "OFFICIAL PORTRAIT" },
   wanted: { src: "/photos/photo-1.jpeg", alt: `${dad.name} on patrol`, label: "LAST SEEN ON DUTY" },
   archive: [
-    { src: "/photos/photo-9.jpeg", caption: "At CBCID Headquarters", label: "ON DUTY", aspect: "aspect-[3/4]", span: "" },
-    { src: "/photos/photo-7.jpeg", caption: "Flag Hoisting Ceremony", label: "THROUGH THE YEARS", aspect: "aspect-[16/9]", span: "sm:col-span-2" },
-    { src: "/photos/photo-6.jpeg", caption: "Certificate of Appreciation", label: "THE MAN BEHIND THE UNIFORM", aspect: "aspect-[4/3]", span: "" },
-    { src: "/photos/photo-5.jpeg", caption: "With Colleagues", label: "THROUGH THE YEARS", aspect: "aspect-[4/3]", span: "" },
-    { src: "/photos/photo-4.jpeg", caption: "On Duty", label: "ON DUTY", aspect: "aspect-[3/4]", span: "" },
-    { src: "/photos/photo-3.jpeg", caption: "On Duty", label: "ON DUTY", aspect: "aspect-[3/4]", span: "" },
-    { src: "/photos/photo-2.jpeg", caption: "Target Practice", label: "ON DUTY", aspect: "aspect-[4/3]", span: "" },
-    { src: "/photos/photo-8.jpeg", caption: "On Duty", label: "ON DUTY", aspect: "aspect-[3/4]", span: "" },
+    { src: "/photos/photo-9.jpeg", caption: "At CBCID Headquarters" },
+    { src: "/photos/photo-7.jpeg", caption: "Flag Hoisting Ceremony" },
+    { src: "/photos/photo-6.jpeg", caption: "Certificate of Appreciation" },
+    { src: "/photos/photo-5.jpeg", caption: "With Colleagues" },
+    { src: "/photos/photo-4.jpeg", caption: "On Duty" },
+    { src: "/photos/photo-3.jpeg", caption: "On Duty" },
+    { src: "/photos/photo-2.jpeg", caption: "Target Practice" },
+    { src: "/photos/photo-8.jpeg", caption: "On Duty" },
   ],
 };
 

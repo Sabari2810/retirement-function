@@ -25,11 +25,6 @@ export default function Newspaper({ pages, titles }: { pages: ReactNode[]; title
   }, []);
 
   const rotateY = useMotionValue(0);
-  const shadowOpacity = useTransform(rotateY, (v) => Math.min(Math.abs(v) / 95, 1) * 0.65);
-  const liftShadow = useTransform(rotateY, (v) => {
-    const progress = Math.min(Math.abs(v) / 180, 1);
-    return `0 ${10 + progress * 30}px ${30 + progress * 60}px rgba(0,0,0,${0.35 + progress * 0.25})`;
-  });
   // Paper compresses visually as it turns edge-on, then relaxes back out.
   const foldScale = useTransform(rotateY, (v) => {
     const a = Math.abs(v);
@@ -98,7 +93,7 @@ export default function Newspaper({ pages, titles }: { pages: ReactNode[]; title
             if (info.offset.x < -70) goNext();
             else if (info.offset.x > 70) goPrev();
           }}
-          style={{ perspective: 1100, boxShadow: "0 30px 80px rgba(0,0,0,0.55)" }}
+          style={{ perspective: 1100 }}
         >
           <div className="absolute inset-0">{pages[displayIndex]}</div>
 
@@ -120,11 +115,9 @@ export default function Newspaper({ pages, titles }: { pages: ReactNode[]; title
                 transformOrigin: flip.dir === "next" ? "0% 50%" : "100% 50%",
                 backfaceVisibility: "hidden",
                 WebkitBackfaceVisibility: "hidden",
-                boxShadow: liftShadow,
               }}
             >
               {pages[flip.from]}
-              <motion.div className="pointer-events-none absolute inset-0 bg-black" style={{ opacity: shadowOpacity }} />
             </motion.div>
           )}
         </motion.div>

@@ -4,47 +4,44 @@ import { photos, wantedHabits } from "@/lib/config";
 
 export default function HumourColumn() {
   return (
-    <section className="px-4 py-16 sm:px-8">
-      <Reveal className="mx-auto max-w-md border-4 border-double border-[var(--ink)] p-6 text-center sm:p-8">
-        <p className="font-display text-2xl font-black uppercase tracking-widest sm:text-3xl">
+    <section className="px-4 py-1 sm:px-8">
+      <Reveal className="mx-auto max-w-md border-4 border-double border-[var(--ink)] p-2 text-center sm:p-4">
+        <p className="font-display text-lg font-black uppercase tracking-widest sm:text-2xl">
           Wanted
         </p>
-        <p className="mt-1 text-sm uppercase tracking-wide text-[var(--ink-soft)]">
+        <p className="text-[10px] uppercase tracking-wide text-[var(--ink-soft)] sm:text-xs">
           One Retired Police Officer
         </p>
 
-        <div className="halftone relative mx-auto mt-6 aspect-[3/4] w-full max-w-[260px] overflow-hidden border-2 border-[var(--ink)] sm:max-w-[300px]">
+        <div className="halftone relative mx-auto mt-1.5 aspect-[3/4] w-full max-w-[min(220px,26vh)] overflow-hidden border-2 border-[var(--ink)] sm:max-w-[min(280px,38vh)]">
           <Image
             src={photos.wanted.src}
             alt={photos.wanted.alt}
             fill
-            sizes="(min-width: 640px) 300px, 260px"
+            sizes="(min-width: 640px) 280px, 220px"
             className="object-cover grayscale contrast-125"
           />
         </div>
-        <p className="mt-2 font-mono text-[10px] uppercase tracking-widest text-[var(--ink-faint)]">
-          {photos.wanted.label}
-        </p>
 
-        <p className="mt-6 text-sm italic text-[var(--ink-soft)]">
+        <p className="mt-1.5 text-[10px] italic text-[var(--ink-soft)] sm:mt-1.5 sm:text-xs">
           Last seen: trying to figure out what to do with all his free time.
         </p>
 
-        <p className="mt-6 text-left font-semibold uppercase tracking-wide text-sm">
+        <p className="mt-1.5 text-left text-[10px] font-semibold uppercase tracking-wide sm:mt-1.5 sm:text-xs">
           Known Habits
         </p>
-        <ul className="mt-3 space-y-2 text-left text-sm leading-relaxed">
+        <ul className="mt-0.5 space-y-0 text-left text-[10px] leading-tight sm:text-xs">
           {wantedHabits.map((habit) => (
-            <li key={habit} className="flex gap-2">
+            <li key={habit} className="flex gap-1.5">
               <span aria-hidden>&bull;</span>
               <span>{habit}</span>
             </li>
           ))}
         </ul>
 
-        <div className="mt-6 border-t border-[var(--ink)]/30 pt-4">
-          <p className="text-sm font-semibold uppercase tracking-wide">If Found</p>
-          <p className="mt-1 text-sm text-[var(--ink-soft)]">
+        <div className="mt-1.5 border-t border-[var(--ink)]/30 pt-1 sm:mt-2 sm:pt-1.5">
+          <p className="text-[10px] font-semibold uppercase tracking-wide sm:text-xs">If Found</p>
+          <p className="text-[10px] text-[var(--ink-soft)] sm:text-xs">
             Please do not return him to the department. Family is willing to keep him.
           </p>
         </div>

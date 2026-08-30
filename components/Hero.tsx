@@ -17,26 +17,23 @@ export default function Hero() {
   const stagger = (i: number) => (reduce ? undefined : { duration: 0.6, delay: 0.15 * i, ease: [0.22, 1, 0.36, 1] as const });
 
   return (
-    <section className="mx-auto max-w-3xl px-1 pt-10 pb-12 text-center sm:pt-14">
-      <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--stamp)] sm:text-xs">
+    <section className="mx-auto max-w-3xl px-1 py-3 text-center">
+      <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-[var(--stamp)] sm:text-xs">
         Breaking News
       </p>
 
       <motion.h2
-        className="font-display mt-4 text-3xl font-black leading-[1.05] uppercase sm:text-5xl lg:text-6xl"
+        className="font-display mt-2 text-xl font-black leading-[1.05] uppercase sm:text-3xl lg:text-4xl"
         initial={reduce ? undefined : { opacity: 0, y: 20 }}
         animate={reduce ? undefined : { opacity: 1, y: 0 }}
         transition={stagger(1)}
       >
-        After {dad.yearsOfService} Years of Service,
-        <br />
-        the Man Who Never Missed a Duty
-        <br />
-        Is Finally Missing One.
+        After {dad.yearsOfService} Years of Service, the Man Who Never Missed a Duty Is Finally
+        Missing One.
       </motion.h2>
 
       <motion.p
-        className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-[var(--ink-soft)] sm:text-lg"
+        className="mx-auto mt-2 max-w-xl text-xs leading-snug text-[var(--ink-soft)] sm:text-base"
         initial={reduce ? undefined : { opacity: 0, y: 16 }}
         animate={reduce ? undefined : { opacity: 1, y: 0 }}
         transition={stagger(2)}
@@ -50,13 +47,13 @@ export default function Hero() {
         initial={reduce ? undefined : { opacity: 0, scale: 0.9 }}
         animate={reduce ? undefined : { opacity: 1, scale: 1 }}
         transition={stagger(3)}
-        className="mt-8"
+        className="mt-7 sm:mt-6"
       >
         <Stamp rotate={-8}>Verdict: Retired</Stamp>
       </motion.div>
 
       <motion.dl
-        className="mx-auto mt-8 flex max-w-lg flex-wrap items-center justify-center gap-x-8 gap-y-3 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--ink-soft)] sm:text-xs"
+        className="mx-auto mt-3 flex max-w-lg flex-wrap items-center justify-center gap-x-6 gap-y-1 font-mono text-[9px] uppercase tracking-[0.15em] text-[var(--ink-soft)] sm:text-xs"
         initial={reduce ? undefined : { opacity: 0 }}
         animate={reduce ? undefined : { opacity: 1 }}
         transition={stagger(4)}
@@ -73,12 +70,12 @@ export default function Hero() {
         initial={reduce ? undefined : { opacity: 0 }}
         animate={reduce ? undefined : { opacity: 1 }}
         transition={stagger(5)}
-        className="mt-10"
+        className="mt-3"
       >
         <button
           type="button"
           onClick={goNext}
-          className="inline-flex items-center gap-2 border-2 border-[var(--ink)] px-6 py-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)]"
+          className="inline-flex items-center gap-2 border-2 border-[var(--ink)] px-4 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)] sm:px-6 sm:py-2.5 sm:text-xs"
         >
           Read the Full Story
           <span aria-hidden>&rarr;</span>
