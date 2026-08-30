@@ -2,7 +2,7 @@ import Reveal from "@/components/Reveal";
 
 export default function FeatureArticle() {
   return (
-    <section className="border-y-2 border-[var(--ink)]/20 bg-[var(--ink)] px-4 py-20 text-[var(--paper)] sm:px-8">
+    <section className="flex min-h-full flex-col justify-center bg-[var(--ink)] px-4 py-20 text-[var(--paper)] sm:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <Reveal>
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] opacity-60 sm:text-xs">

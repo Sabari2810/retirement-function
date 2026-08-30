@@ -3,7 +3,7 @@ import { timeline } from "@/lib/config";
 
 export default function Timeline() {
   return (
-    <section className="paper-alt border-y-2 border-[var(--ink)]/20 px-4 py-16 sm:px-8">
+    <section className="paper-alt flex min-h-full flex-col justify-center px-4 py-16 sm:px-8">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">

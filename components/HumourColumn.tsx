@@ -13,12 +13,12 @@ export default function HumourColumn() {
           One Retired Police Officer
         </p>
 
-        <div className="halftone relative mx-auto mt-6 aspect-square w-40 overflow-hidden border-2 border-[var(--ink)] sm:w-48">
+        <div className="halftone relative mx-auto mt-6 aspect-[3/4] w-full max-w-[260px] overflow-hidden border-2 border-[var(--ink)] sm:max-w-[300px]">
           <Image
             src={photos.wanted.src}
             alt={photos.wanted.alt}
             fill
-            sizes="192px"
+            sizes="(min-width: 640px) 300px, 260px"
             className="object-cover grayscale contrast-125"
           />
         </div>

@@ -13,6 +13,11 @@ export const dad = {
   retirementYear: 2026,
 };
 
+export const masthead = {
+  paperName: "The Retirement Times",
+  volumeLine: `Vol. ${dad.yearsOfService} · The Final Edition`,
+};
+
 export const event = {
   dateLabel: "September 6, 2026",
   isoDate: "2026-09-06T18:00:00",

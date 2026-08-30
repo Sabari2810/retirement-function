@@ -11,7 +11,7 @@ const fields = [
 
 export default function EventDetails() {
   return (
-    <section id="rsvp" className="paper-alt border-y-2 border-[var(--ink)]/20 px-4 py-16 sm:px-8">
+    <section className="paper-alt border-y-2 border-[var(--ink)]/20 px-4 py-16 sm:px-8">
       <Reveal className="mx-auto max-w-xl text-center">
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--stamp)] sm:text-xs">
           Special Edition Event

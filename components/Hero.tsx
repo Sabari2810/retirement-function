@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useNewspaperNav } from "@/components/NewspaperContext";
 import Stamp from "@/components/Stamp";
 import { dad } from "@/lib/config";
 
@@ -12,6 +13,7 @@ const labels = [
 
 export default function Hero() {
   const reduce = useReducedMotion();
+  const { goNext } = useNewspaperNav();
   const stagger = (i: number) => (reduce ? undefined : { duration: 0.6, delay: 0.15 * i, ease: [0.22, 1, 0.36, 1] as const });
 
   return (
@@ -73,13 +75,14 @@ export default function Hero() {
         transition={stagger(5)}
         className="mt-10"
       >
-        <a
-          href="#case-file"
+        <button
+          type="button"
+          onClick={goNext}
           className="inline-flex items-center gap-2 border-2 border-[var(--ink)] px-6 py-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)]"
         >
           Read the Full Story
-          <span aria-hidden>&darr;</span>
-        </a>
+          <span aria-hidden>&rarr;</span>
+        </button>
       </motion.div>
     </section>
   );

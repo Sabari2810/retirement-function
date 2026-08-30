@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { event } from "@/lib/config";
+import { event, masthead } from "@/lib/config";
 
 export default function NewspaperHeader() {
   const reduce = useReducedMotion();
@@ -15,10 +15,10 @@ export default function NewspaperHeader() {
       style={{ transformOrigin: "top center" }}
     >
       <p className="pt-6 font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-        Vol. XXXVIII &middot; No. 1 &middot; Special Retirement Edition
+        {masthead.volumeLine}
       </p>
       <h1 className="font-display mt-3 text-5xl font-black leading-none sm:text-7xl lg:text-8xl">
-        The Chennai Daily
+        {masthead.paperName}
       </h1>
       <div className="mx-auto mt-4 flex max-w-md items-center justify-center gap-3 text-[10px] uppercase tracking-[0.25em] text-[var(--ink-soft)] sm:text-xs">
         <span>Special Retirement Edition</span>

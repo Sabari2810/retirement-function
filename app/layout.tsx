@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Lora, Playfair_Display } from "next/font/google";
-import { dad } from "@/lib/config";
+import { dad, masthead } from "@/lib/config";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -24,7 +24,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: `The Chennai Daily: ${dad.name}'s Retirement Special Edition`,
+  title: `${masthead.paperName}: ${dad.name}'s Retirement Special Edition`,
   description: `A special-edition newspaper announcing ${dad.name}'s retirement after ${dad.yearsOfService} years of service. Come celebrate with us.`,
 };
 
