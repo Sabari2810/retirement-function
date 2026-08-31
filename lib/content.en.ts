@@ -25,6 +25,8 @@ export const content: Content = {
     eyebrow: "The Final Report",
     headline: ["After Almost Four Decades,", "the Final Shift Has Arrived."],
     servingSince: "Serving the city since 1988.",
+    dutyStatusLabel: "Duty Status",
+    dutyStatusValue: "Final Shift",
   },
   microNotes: {
     special: { k: "City Desk", v: "Chennai" },

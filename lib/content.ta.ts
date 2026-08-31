@@ -25,6 +25,8 @@ export const content: Content = {
     eyebrow: "இறுதி அறிக்கை",
     headline: ["நான்கு தசாப்தங்களை நெருங்கிய பணிக்கு…", "இறுதிப் பணி நிறைவு!"],
     servingSince: "தமிழ்நாடு காவல் பணியில் 1988 முதல்.",
+    dutyStatusLabel: "பணி நிலை",
+    dutyStatusValue: "இறுதிப் பணி",
   },
   microNotes: {
     special: { k: "நகர செய்தியகம்", v: "சென்னை" },

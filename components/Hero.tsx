@@ -77,6 +77,16 @@ export default function Hero() {
       >
         {hero.servingSince}
       </motion.p>
+
+      <motion.div
+        className="mt-4 inline-flex items-center gap-2 border border-[var(--ink)]/40 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--ink-soft)] sm:text-[10px]"
+        initial={reduce ? undefined : { opacity: 0 }}
+        animate={reduce ? undefined : { opacity: 1 }}
+        transition={stagger(6)}
+      >
+        <span>{hero.dutyStatusLabel}:</span>
+        <span className="font-bold text-[var(--stamp)]">{hero.dutyStatusValue}</span>
+      </motion.div>
     </section>
   );
 }
