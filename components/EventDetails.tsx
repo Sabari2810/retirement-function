@@ -13,7 +13,7 @@ export default function EventDetails() {
           {eventDetails.eyebrow}
         </p>
 
-        <p className="font-display mt-4 text-base italic leading-relaxed text-[var(--ink-soft)] sm:text-lg">
+        <p className="font-display mt-4 text-lg font-black uppercase tracking-wide sm:text-2xl">
           {eventDetails.dutyOrder}
         </p>
 

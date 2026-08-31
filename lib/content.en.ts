@@ -17,7 +17,7 @@ export const content: Content = {
     qualification: "M.A.",
     designation: "Sub-Inspector",
     department: "Greater Chennai Police",
-    serviceBranch: "Tamil Nadu Police Service",
+    serviceBranch: "Tamil Nadu Police Department",
     joinedDate: "09.05.1988",
     finalDay: "31.08.2026",
   },
@@ -33,7 +33,7 @@ export const content: Content = {
   },
   invitation: {
     lead: "After almost 4 decades of service in the Tamil Nadu Police Department, we invite you to join us in celebrating the retirement of",
-    body: "A career built on duty, responsibility, countless shifts and a lifetime of service to the city.",
+    body: "A career built on duty, responsibility, countless shifts and unwavering devotion to the people he served.",
     closing:
       "Come celebrate the man behind the uniform, the journey behind the years, and the beginning of everything that comes after.",
   },
@@ -46,7 +46,7 @@ export const content: Content = {
     findingsLabel: "Findings",
     fields: [
       { k: "Subject", v: name },
-      { k: "Service", v: "Tamil Nadu Police Service" },
+      { k: "Service", v: "Tamil Nadu Police Department" },
       { k: "Joined", v: "09.05.1988" },
       { k: "Final Day", v: "31.08.2026" },
       { k: "Status", v: "Retired" },
@@ -54,7 +54,7 @@ export const content: Content = {
     ],
     findings: [
       "Never once late for duty in 38 years, a record no one dares contest.",
-      "A city kept a little safer, one long shift at a time.",
+      "Zero blackmarks on the record, thirty-eight years running.",
       "A family that waited up more nights than they will ever admit.",
       "Enough stories collected to fill a second case file entirely.",
     ],
@@ -72,8 +72,7 @@ export const content: Content = {
   },
   eventDetails: {
     eyebrow: "Retirement Function",
-    dutyOrder:
-      "Duty Order: all units, family, friends & well-wishers are directed to report to the venue below. Full attendance expected, no leave applications accepted.",
+    dutyOrder: "Duty Order",
     dateFieldLabel: "Date",
     timeFieldLabel: "Time",
     venueFieldLabel: "Venue",
@@ -87,7 +86,7 @@ export const content: Content = {
   turnPage: { label: "Turn the Page" },
   careerRecord: {
     eyebrow: "Page 2 · The Career Record",
-    heading: "The Record",
+    heading: "The Career Record",
     sub: "A quick look at where he served and what he did on the force.",
     viewFullTimeline: "View Full Timeline",
     fullHeading: "The Full Record",
@@ -95,13 +94,13 @@ export const content: Content = {
   careerTimeline: [
     {
       date: "09.05.1988",
-      grade: "Constable",
+      grade: "Armed Reserve",
       department: "Police Department (Joined)",
       note: "Service begins.",
     },
     {
       date: "1988 – 1997",
-      grade: "Constable",
+      grade: "Armed Reserve",
       department: "Armed Reserve, Pudhupettai",
       note: "Nine years in this posting, the start of a long career.",
     },
