@@ -3,6 +3,17 @@
 import { motion, useReducedMotion } from "framer-motion";
 import Reveal from "@/components/Reveal";
 
+function StampTool({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 80 96" className={className} aria-hidden>
+      <rect x="32" y="2" width="16" height="24" rx="3" fill="#4a3626" />
+      <rect x="24" y="24" width="32" height="12" rx="4" fill="#6b5138" />
+      <rect x="8" y="36" width="64" height="42" rx="7" fill="#7a2f2a" stroke="#3f1815" strokeWidth="2" />
+      <rect x="15" y="43" width="50" height="28" rx="3" fill="#8f3a34" />
+    </svg>
+  );
+}
+
 export default function CaseFileBox({
   eyebrow,
   fields,
@@ -81,18 +92,40 @@ export default function CaseFileBox({
 
       <div className={stampVerdict ? "mt-3 text-center sm:mt-4" : "mt-6 text-center sm:mt-8"}>
         {stampVerdict ? (
-          <motion.p
-            className="stamp inline-block px-3 py-2 font-display text-lg font-black uppercase leading-snug tracking-wide sm:px-6 sm:py-2.5 sm:text-4xl"
-            initial={reduce ? undefined : { opacity: 0, y: -70, scale: 1.25, rotate: -6 }}
-            whileInView={
-              reduce ? undefined : { opacity: [0, 1, 1, 1], y: [-70, 0, 2, 0], scale: [1.25, 1, 0.96, 1] }
-            }
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, times: [0, 0.55, 0.8, 1], ease: ["easeIn", "easeOut", "easeOut"] }}
-            style={{ rotate: -6 }}
-          >
-            {verdictLines[0]}
-          </motion.p>
+          <div className="relative inline-block">
+            <motion.p
+              className="stamp inline-block px-3 py-2 font-display text-lg font-black uppercase leading-snug tracking-wide sm:px-6 sm:py-2.5 sm:text-4xl"
+              initial={reduce ? undefined : { opacity: 0, scale: 0.85 }}
+              whileInView={reduce ? undefined : { opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: reduce ? 0 : 0.32, duration: 0.1, ease: "easeOut" }}
+              style={{ rotate: -6 }}
+            >
+              {verdictLines[0]}
+            </motion.p>
+
+            {!reduce && (
+              <motion.div
+                className="pointer-events-none absolute left-1/2 top-1/2 h-16 w-14 sm:h-24 sm:w-20"
+                initial={{ opacity: 0, x: "-50%", y: "-160%", scale: 0.9, rotate: -6 }}
+                whileInView={{
+                  opacity: [0, 1, 1, 1, 0],
+                  x: "-50%",
+                  y: ["-160%", "-50%", "-50%", "-50%", "-115%"],
+                  scale: [0.9, 1.05, 0.95, 0.95, 0.95],
+                  rotate: -6,
+                }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.75,
+                  times: [0, 0.32, 0.45, 0.6, 1],
+                  ease: ["easeIn", "easeOut", "linear", "easeIn"],
+                }}
+              >
+                <StampTool className="h-full w-full drop-shadow-md" />
+              </motion.div>
+            )}
+          </div>
         ) : (
           <p className="font-display text-xl font-black uppercase leading-snug sm:text-3xl">
             {verdictLines[0]}
