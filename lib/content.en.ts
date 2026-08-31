@@ -58,10 +58,9 @@ export const content: Content = {
       { k: "Sentence", v: "Rest. For the rest of his life." },
     ],
     findings: [
-      "Never once late for duty in 38 years, a record no one dares contest.",
-      "Zero blackmarks on the record, thirty-eight years running.",
-      "A family that waited up more nights than they will ever admit.",
-      "Enough stories collected to fill a second case file entirely.",
+      "Never late for duty. Not once.",
+      "Zero black marks. Zero memos.",
+      "Still supervising, even when off duty.",
     ],
     verdict: ["Case Closed.", "Career Complete.", "Rest Starts."],
   },
@@ -90,11 +89,11 @@ export const content: Content = {
   },
   turnPage: { label: "Turn the Page" },
   careerRecord: {
-    eyebrow: "Page 2 · The Career Record",
+    eyebrow: "The Career Record",
     heading: "The Career Record",
     sub: "A quick look at where he served and what he did on the force.",
     viewFullTimeline: "View Full Timeline",
-    fullHeading: "The Full Record",
+    fullHeading: "The Career Record",
   },
   careerTimeline: [
     {

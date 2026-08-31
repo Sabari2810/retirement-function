@@ -98,7 +98,7 @@ export default function CaseFileBox({
               initial={reduce ? undefined : { opacity: 0, scale: 0.85 }}
               whileInView={reduce ? undefined : { opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: reduce ? 0 : 0.32, duration: 0.1, ease: "easeOut" }}
+              transition={{ delay: reduce ? 0 : 0.64, duration: 0.15, ease: "easeOut" }}
               style={{ rotate: -6 }}
             >
               {verdictLines[0]}
@@ -117,7 +117,7 @@ export default function CaseFileBox({
                 }}
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.75,
+                  duration: 1.5,
                   times: [0, 0.32, 0.45, 0.6, 1],
                   ease: ["easeIn", "easeOut", "linear", "easeIn"],
                 }}
