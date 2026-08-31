@@ -53,7 +53,7 @@ export default function Hero() {
         animate={reduce ? undefined : { opacity: 1, y: 0 }}
         transition={stagger(3)}
       >
-        {officer.name}, {officer.qualification}
+        {officer.name}, <span className="text-base sm:text-xl">{officer.qualification}</span>
       </motion.h3>
 
       <motion.p
