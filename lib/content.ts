@@ -39,7 +39,9 @@ export interface Content {
   invitation: {
     eyebrow: string;
     lead: string;
+    orderLine: string;
     body: string;
+    middle: string;
     closing: string;
   };
   preliminaryReport: {

@@ -28,7 +28,7 @@ export default function Hero() {
 
       <motion.h2
         key={`headline-${animKey}`}
-        className="font-display mt-3 text-3xl font-black uppercase leading-tight sm:text-5xl"
+        className="font-display mt-3 text-xl font-black uppercase leading-tight sm:text-4xl"
         initial={reduce ? undefined : { opacity: 0, y: 20 }}
         animate={reduce ? undefined : { opacity: ready ? 1 : 0, y: ready ? 0 : 20 }}
         transition={stagger(1)}

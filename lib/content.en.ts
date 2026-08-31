@@ -36,10 +36,12 @@ export const content: Content = {
   },
   invitation: {
     eyebrow: "A Special Announcement",
-    lead: "After almost 4 decades of service in the Tamil Nadu Police Department, we invite you to join us in celebrating the retirement of",
-    body: "A career built on duty, responsibility and countless memories.",
-    closing:
-      "Come celebrate the man behind the uniform, the journey behind the years, and the beginning of everything that comes after.",
+    lead: "After almost four decades of reporting for duty, Prabhakaran. V has finally received one last order:",
+    orderLine: "Retire. And Enjoy.",
+    body: "A career of duty, long days, sleepless nights and countless memories.",
+    middle:
+      "Now, it's time for slower mornings, lighter days and everything life has been waiting to give him.",
+    closing: "Come celebrate the man behind the uniform and the beautiful chapter ahead.",
   },
   preliminaryReport: {
     eyebrow: "Preliminary Report",
