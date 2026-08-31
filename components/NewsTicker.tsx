@@ -17,15 +17,13 @@ export default function NewsTicker({
     <div className="flex shrink-0 items-center" aria-hidden={hidden || undefined}>
       {[0, 1, 2].map((i) => (
         <span key={i} className="flex shrink-0 items-center whitespace-nowrap">
-          <span className="font-mono text-xs font-black uppercase tracking-[0.2em] text-[var(--paper)] sm:text-sm">
+          <span className="mx-4 font-mono text-xs font-black uppercase tracking-[0.2em] text-[var(--paper)] sm:text-sm">
             <span className="siren-light">&#x1F6A8;</span> {label}{" "}
             <span className="siren-light">&#x1F6A8;</span>
           </span>
-          <span className="mx-4 text-[var(--paper)]/50">&bull;</span>
-          <span className="font-mono text-xs font-black uppercase tracking-[0.2em] text-[var(--paper)] sm:text-sm">
+          <span className="mr-4 font-mono text-xs font-black uppercase tracking-[0.2em] text-[var(--paper)] sm:text-sm">
             {text}
           </span>
-          <span className="mx-4 text-[var(--paper)]/50">&bull;</span>
         </span>
       ))}
     </div>
