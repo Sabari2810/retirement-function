@@ -10,7 +10,7 @@ export default function Hero() {
     reduce ? undefined : { duration: 0.6, delay: 0.15 * i, ease: [0.22, 1, 0.36, 1] as const };
 
   return (
-    <section className="mx-auto max-w-3xl px-4 py-12 text-center sm:py-16">
+    <section className="mx-auto max-w-3xl px-4 pb-4 pt-12 text-center sm:pb-6 sm:pt-16">
       <motion.p
         className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--stamp)] sm:text-xs"
         initial={reduce ? undefined : { opacity: 0 }}
