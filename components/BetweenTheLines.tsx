@@ -6,12 +6,12 @@ export default function BetweenTheLines() {
     <section className="paper-alt border-y-2 border-[var(--ink)]/20 px-4 py-14 sm:py-20">
       <div className="mx-auto max-w-2xl">
         <Reveal>
-          <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-            Because a Service Record Never Tells the Whole Story
-          </p>
-          <h2 className="font-display mt-3 text-center text-3xl font-black uppercase sm:text-5xl">
+          <h2 className="font-display text-center text-3xl font-black uppercase sm:text-5xl">
             Between the Lines
           </h2>
+          <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
+            Because a service record can never tell the whole story
+          </p>
         </Reveal>
 
         <div className="mt-10 space-y-6 sm:mt-14 sm:space-y-8">

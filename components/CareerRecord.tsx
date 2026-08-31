@@ -7,17 +7,13 @@ import { careerTimeline, officer } from "@/lib/config";
 
 function TimelineEntry({ item, delay }: { item: (typeof careerTimeline)[number]; delay: number }) {
   return (
-    <Reveal
-      delay={delay}
-      className="mb-7 break-inside-avoid border-b border-[var(--ink)]/15 pb-7 sm:mb-9 sm:pb-9"
-    >
-      <p className="font-display text-2xl font-black leading-none sm:text-3xl">{item.date}</p>
-      {item.label && (
-        <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--stamp)] sm:text-xs">
-          {item.label}
-        </p>
-      )}
-      <p className="mt-1.5 text-base font-bold leading-snug sm:text-lg">{item.posting}</p>
+    <Reveal delay={delay} className="relative pb-9 pl-8 last:pb-0 sm:pl-10">
+      <span className="absolute left-0 top-1 h-3.5 w-3.5 rounded-full border-2 border-[var(--ink)] bg-[var(--paper)] sm:h-4 sm:w-4" />
+      <div className="inline-block border-2 border-[var(--ink)] px-3 py-1 font-mono text-xs font-bold sm:text-sm">
+        {item.date}
+      </div>
+      <p className="mt-2 text-lg font-bold leading-snug sm:text-xl">{item.grade}</p>
+      <p className="mt-0.5 text-base text-[var(--ink-soft)] sm:text-lg">{item.department}</p>
       {item.note && (
         <p className="mt-1 text-sm italic leading-snug text-[var(--ink-soft)] sm:text-base">
           {item.note}
@@ -49,7 +45,7 @@ export default function CareerRecord() {
 
   return (
     <section id="the-record" className="px-4 py-14 sm:py-20">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-2xl">
         <Reveal>
           <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
             Page 2 &middot; The Career Record
@@ -60,16 +56,18 @@ export default function CareerRecord() {
           <p className="mt-2 text-center font-mono text-sm uppercase tracking-[0.15em] text-[var(--ink-soft)] sm:text-base">
             {officer.totalService}
           </p>
-          <p className="mx-auto mt-4 max-w-xl text-center text-sm italic text-[var(--ink-soft)] sm:text-base">
-            A career measured not merely in years, but in places served, responsibilities carried
-            and shifts completed.
+          <p className="mx-auto mt-4 max-w-xl text-center text-sm text-[var(--ink-soft)] sm:text-base">
+            A quick look at where he served and what he did, over 38 years on the force.
           </p>
         </Reveal>
 
-        <div className="mt-10 border-t-2 border-[var(--ink)]/20 pt-8 sm:columns-2 sm:gap-10 sm:pt-12">
-          {preview.map((item, i) => (
-            <TimelineEntry key={item.date + item.posting} item={item} delay={Math.min(i * 0.05, 0.4)} />
-          ))}
+        <div className="mt-10 border-t-2 border-[var(--ink)]/20 pt-10 sm:pt-12">
+          <div className="relative">
+            <div className="absolute bottom-2 left-[6px] top-2 w-px bg-[var(--ink)]/25 sm:left-[7px]" />
+            {preview.map((item, i) => (
+              <TimelineEntry key={item.date + item.department} item={item} delay={Math.min(i * 0.05, 0.4)} />
+            ))}
+          </div>
         </div>
 
         <Reveal className="text-center">
@@ -97,7 +95,7 @@ export default function CareerRecord() {
             aria-label="Full career timeline"
           >
             <motion.div
-              className="paper-texture relative max-h-[85vh] w-full max-w-3xl overflow-y-auto border-4 border-double border-[var(--ink)] p-5 sm:p-10"
+              className="paper-texture relative max-h-[85vh] w-full max-w-2xl overflow-y-auto border-4 border-double border-[var(--ink)] p-5 sm:p-10"
               initial={{ opacity: 0, y: 16, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 16, scale: 0.98 }}
@@ -120,10 +118,13 @@ export default function CareerRecord() {
                 The Full Record
               </h2>
 
-              <div className="mt-8 border-t-2 border-[var(--ink)]/20 pt-8 sm:columns-2 sm:gap-10">
-                {careerTimeline.map((item) => (
-                  <TimelineEntry key={item.date + item.posting} item={item} delay={0} />
-                ))}
+              <div className="mt-8 border-t-2 border-[var(--ink)]/20 pt-8">
+                <div className="relative">
+                  <div className="absolute bottom-2 left-[6px] top-2 w-px bg-[var(--ink)]/25 sm:left-[7px]" />
+                  {careerTimeline.map((item) => (
+                    <TimelineEntry key={item.date + item.department} item={item} delay={0} />
+                  ))}
+                </div>
               </div>
             </motion.div>
           </motion.div>
