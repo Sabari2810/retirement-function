@@ -23,7 +23,7 @@ export const content: Content = {
   },
   hero: {
     eyebrow: "The Final Report",
-    headline: ["After 38 Years, 3 Months & 22 Days,", "the Final Shift Has Arrived."],
+    headline: ["After Almost Four Decades,", "the Final Shift Has Arrived."],
     servingSince: "Serving the city since 1988.",
   },
   microNotes: {
@@ -165,6 +165,13 @@ export const content: Content = {
       note: "The final posting. The final chapter. The final report.",
     },
   ],
+  beforeAfter: {
+    eyebrow: "38 Years Apart",
+    heading: "Then & Now",
+    sub: "The same uniform. A different lifetime.",
+    thenLabel: "The Beginning · 1988",
+    nowLabel: "The Final Chapter · 2026",
+  },
   betweenTheLines: {
     heading: "Between the Lines",
     sub: "Because a service record can never tell the whole story",

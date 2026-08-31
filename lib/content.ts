@@ -83,6 +83,13 @@ export interface Content {
     fullHeading: string;
   };
   careerTimeline: CareerEntry[];
+  beforeAfter: {
+    eyebrow: string;
+    heading: string;
+    sub: string;
+    thenLabel: string;
+    nowLabel: string;
+  };
   betweenTheLines: {
     heading: string;
     sub: string;

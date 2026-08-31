@@ -1,5 +1,6 @@
 "use client";
 
+import BeforeAfter from "@/components/BeforeAfter";
 import BetweenTheLines from "@/components/BetweenTheLines";
 import CareerRecord from "@/components/CareerRecord";
 import CaseFilePreview from "@/components/CaseFilePreview";
@@ -45,6 +46,7 @@ export default function Home() {
 
         <CareerRecord />
         <MicroNote k={microNotes.archive.k} v={microNotes.archive.v} />
+        <BeforeAfter />
         <BetweenTheLines />
         <NumbersPanel />
         <QuietHumor />
