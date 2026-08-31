@@ -17,9 +17,9 @@ export default function Hero() {
 
   return (
     <section className="mx-auto max-w-3xl pb-4 text-center sm:pb-6">
-      <NewsTicker label={quietHumor.breakingNews} text={quietHumor.headline} className="mb-8 sm:mb-10" />
+      <NewsTicker label={quietHumor.breakingNews} text={quietHumor.headline} className="mb-4 sm:mb-6" />
 
-      <div className="px-4 pt-12 sm:pt-16">
+      <div className="px-4 pt-6 sm:pt-8">
       <motion.h2
         key={`headline-${animKey}`}
         className="font-display text-xl font-black uppercase leading-tight sm:text-4xl"

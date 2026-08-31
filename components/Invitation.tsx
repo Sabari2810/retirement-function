@@ -16,12 +16,6 @@ export default function Invitation() {
         <h2 className="font-display mt-3 text-2xl font-black uppercase sm:text-4xl">
           {invitation.orderLine}
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-[var(--ink-soft)] sm:text-lg">
-          {invitation.body}
-        </p>
-        <p className="mt-4 text-base leading-relaxed text-[var(--ink-soft)] sm:text-lg">
-          {invitation.middle}
-        </p>
         <p className="font-display mt-4 text-base italic leading-relaxed sm:text-lg">
           {invitation.closing}
         </p>
