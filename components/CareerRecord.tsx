@@ -92,7 +92,7 @@ export default function CareerRecord() {
             aria-label="Full career timeline"
           >
             <motion.div
-              className="paper-texture relative max-h-[85vh] w-full max-w-2xl overflow-y-auto border-4 border-double border-[var(--ink)] p-5 sm:p-10"
+              className="paper-texture no-scrollbar relative max-h-[85vh] w-full max-w-2xl overflow-y-auto border-4 border-double border-[var(--ink)] p-5 sm:p-10"
               initial={{ opacity: 0, y: 16, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 16, scale: 0.98 }}
@@ -103,9 +103,9 @@ export default function CareerRecord() {
                 type="button"
                 onClick={() => setIsOpen(false)}
                 aria-label="Close"
-                className="absolute right-4 top-4 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-soft)] hover:text-[var(--ink)]"
+                className="absolute right-4 top-4 text-2xl leading-none text-[var(--ink-soft)] hover:text-[var(--ink)]"
               >
-                Close &times;
+                &times;
               </button>
 
               <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">

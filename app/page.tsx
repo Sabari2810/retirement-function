@@ -3,7 +3,6 @@ import CareerRecord from "@/components/CareerRecord";
 import CaseFilePreview from "@/components/CaseFilePreview";
 import EventDetails from "@/components/EventDetails";
 import FinalInvitation from "@/components/FinalInvitation";
-import FinalReport from "@/components/FinalReport";
 import FinalSmile from "@/components/FinalSmile";
 import Hero from "@/components/Hero";
 import Invitation from "@/components/Invitation";
@@ -42,7 +41,6 @@ export default function Home() {
         <NumbersPanel />
         <QuietHumor />
         <MicroNote k="Report Status" v="Complete" />
-        <FinalReport />
         <FinalSmile />
       </main>
 
