@@ -6,6 +6,8 @@ import { useContent } from "@/lib/LanguageContext";
 export default function Rsvp() {
   const { rsvp } = useContent();
 
+  if (!rsvp.heading || !rsvp.sub) return null;
+
   return (
     <section className="border-b-2 border-[var(--ink)]/20 px-4 py-10 text-center sm:py-14">
       <Reveal className="mx-auto max-w-md">

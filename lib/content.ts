@@ -68,8 +68,8 @@ export interface Content {
     viewLocation: string;
   };
   rsvp: {
-    heading: string[];
-    sub: string;
+    heading?: string[];
+    sub?: string;
   };
   turnPage: { label: string };
   careerRecord: {

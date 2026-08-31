@@ -78,10 +78,7 @@ export const content: Content = {
     landmarkFieldLabel: "அடையாளம்",
     viewLocation: "வரைபடத்தில் பாருங்கள்",
   },
-  rsvp: {
-    heading: ["அனைவரும் ஒன்றுகூடுவோம்,", "ஆஜராகிறோம்!"],
-    sub: "சரி சார், நேரத்துக்கு வந்துடுவோம்!",
-  },
+  rsvp: {},
   turnPage: { label: "அடுத்த பக்கம்" },
   careerRecord: {
     eyebrow: "காப்பகம்: 1988–2026",
