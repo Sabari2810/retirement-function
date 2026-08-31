@@ -32,7 +32,7 @@ export const content: Content = {
     status: { k: "Report Status", v: "Complete" },
   },
   invitation: {
-    lead: "After a long career in the Tamil Nadu Police Service, we invite you to join us in celebrating the retirement of",
+    lead: "After almost 4 decades of service in the Tamil Nadu Police Department, we invite you to join us in celebrating the retirement of",
     body: "A career built on duty, responsibility, countless shifts and a lifetime of service to the city.",
     closing:
       "Come celebrate the man behind the uniform, the journey behind the years, and the beginning of everything that comes after.",
@@ -236,7 +236,7 @@ export const content: Content = {
   finalInvitation: {
     heading: "We Would Love to Have You With Us.",
     landmarkLabel: "Landmark",
-    closing: "See You at the Final Report.",
+    closing: "Until the Next Edition.",
   },
   languageGate: {
     prompt: "Choose your language",
