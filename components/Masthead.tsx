@@ -10,9 +10,10 @@ export default function Masthead() {
 
   return (
     <motion.header
+      key={lang !== null ? "on" : "off"}
       className="relative border-b-4 border-double border-[var(--ink)] px-4 pb-4 pt-14 text-center sm:pt-12"
       initial={reduce ? undefined : { scaleY: 0.4, opacity: 0 }}
-      animate={reduce ? undefined : { scaleY: 1, opacity: 1 }}
+      animate={reduce ? undefined : { scaleY: lang !== null ? 1 : 0.4, opacity: lang !== null ? 1 : 0 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       style={{ transformOrigin: "top center" }}
     >
