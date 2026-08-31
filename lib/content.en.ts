@@ -89,7 +89,7 @@ export const content: Content = {
   careerRecord: {
     eyebrow: "The Career Record",
     heading: "The Career Record",
-    sub: "A quick look at where he served and what he did on the force.",
+    sub: "A quick journey through the years.",
     viewFullTimeline: "View Full Timeline",
     fullHeading: "The Career Record",
   },

@@ -89,7 +89,7 @@ export const content: Content = {
   careerRecord: {
     eyebrow: "பணிப்பதிவு",
     heading: "பணிப்பதிவு",
-    sub: "அவர் பணியாற்றிய ஆண்டுகளையும், செய்த பணிகளையும் ஒரு சிறிய பார்வை.",
+    sub: "ஆண்டுகள் வழியே ஒரு சிறிய பயணம்.",
     viewFullTimeline: "முழுப் பயணத்தையும் பார்க்க",
     fullHeading: "பணிப்பதிவு",
   },
