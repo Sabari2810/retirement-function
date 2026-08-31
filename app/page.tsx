@@ -12,7 +12,6 @@ import Invitation from "@/components/Invitation";
 import LanguageGate from "@/components/LanguageGate";
 import Masthead from "@/components/Masthead";
 import MicroNote from "@/components/MicroNote";
-import NewPosting from "@/components/NewPosting";
 import NumbersPanel from "@/components/NumbersPanel";
 import QuietHumor from "@/components/QuietHumor";
 import Rsvp from "@/components/Rsvp";
@@ -50,7 +49,6 @@ export default function Home() {
         <BetweenTheLines />
         <NumbersPanel />
         <QuietHumor />
-        <NewPosting />
         <FinalSmile />
       </main>
 

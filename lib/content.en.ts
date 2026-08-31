@@ -211,19 +211,6 @@ export const content: Content = {
     breakingNews: "Breaking News",
     headline: "Officer finally reports for duty… at home.",
   },
-  newPosting: {
-    eyebrow: "New Posting Order",
-    formerLabel: "Former",
-    former: "Sub-Inspector, Greater Chennai Police",
-    newLabel: "New",
-    newTitle: "Chief of Free Time",
-    fields: [
-      { k: "Shift", v: "Whenever he wants" },
-      { k: "Reporting Time", v: "No fixed time" },
-      { k: "Weekly Off", v: "Every day" },
-      { k: "Duty", v: "Enjoy retirement" },
-    ],
-  },
   finalSmile: {
     andNow: "And Now…",
     heading: "The Next Shift Is His Own.",
