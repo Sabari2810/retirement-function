@@ -46,7 +46,6 @@ export default function Home() {
         <TurnPage targetId="the-record" />
 
         <CareerRecord />
-        <MicroNote k={microNotes.archive.k} v={microNotes.archive.v} />
         <BeforeAfter />
         <BetweenTheLines />
         <NumbersPanel />
