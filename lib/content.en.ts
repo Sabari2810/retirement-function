@@ -178,40 +178,15 @@ export const content: Content = {
   },
   betweenTheLines: {
     heading: "Between the Lines",
-    sub: "Because a service record can never tell the whole story",
+    sub: "Because a service record can never tell the whole story.",
     lines: [
-      { top: "Some nights were for sleep.", bottom: "Too many were spent on duty instead." },
-      {
-        top: "Some mornings started early.",
-        bottom: "Some began with a call before sunrise, asking him to cover for someone else.",
-      },
-      {
-        top: "Some family functions needed everyone there.",
-        bottom: "Duty needed him more, more often than it should have.",
-      },
-      {
-        top: "Some celebrations were missed entirely.",
-        bottom: "Because someone had to be there when others couldn't.",
-      },
-      {
-        top: "Some shifts ended only for the next to begin.",
-        bottom: "Proper rest was often the first thing given up.",
-      },
-      {
-        top: "A few accidents came along the way.",
-        bottom: "Some minor, a couple not so minor. He still came back.",
-      },
-      {
-        top: "Some days were long, and some were longer.",
-        bottom: "He still showed up the next morning, smiling.",
-      },
-    ],
-    turnHeading: "Now, It's Our Turn.",
-    turnLines: [
-      "To make sure he doesn't have to rush anywhere.",
-      "To let him sleep without an alarm.",
-      "To celebrate him outside the uniform.",
-      "Nobody is calling him in for duty tomorrow.",
+      ["There were dinners he missed.", "Nights he wasn't home.", "Mornings he left before we woke."],
+      [
+        "There were a few bumps along the way,",
+        "some small, some harder to forget.",
+        "He always found his way back.",
+      ],
+      ["Still, he showed up.", "Because duty came first."],
     ],
     quote: "The years are easy to count. The moments he gave up for them are not.",
   },

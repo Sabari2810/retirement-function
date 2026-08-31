@@ -7,11 +7,6 @@ export interface CareerEntry {
   note: string;
 }
 
-export interface BetweenLine {
-  top: string;
-  bottom: string;
-}
-
 export interface Field {
   k: string;
   v: string;
@@ -96,9 +91,7 @@ export interface Content {
   betweenTheLines: {
     heading: string;
     sub: string;
-    lines: BetweenLine[];
-    turnHeading: string;
-    turnLines: string[];
+    lines: string[][];
     quote: string;
   };
   numbersPanel: {
