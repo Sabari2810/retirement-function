@@ -10,7 +10,7 @@ export default function Masthead() {
 
   return (
     <motion.header
-      className="relative border-b-4 border-double border-[var(--ink)] px-4 pb-4 pt-8 text-center sm:pt-12"
+      className="relative border-b-4 border-double border-[var(--ink)] px-4 pb-4 pt-14 text-center sm:pt-12"
       initial={reduce ? undefined : { scaleY: 0.4, opacity: 0 }}
       animate={reduce ? undefined : { scaleY: 1, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
