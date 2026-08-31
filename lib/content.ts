@@ -116,6 +116,14 @@ export interface Content {
     breakingNews: string;
     headline: string;
   };
+  newPosting: {
+    eyebrow: string;
+    formerLabel: string;
+    former: string;
+    newLabel: string;
+    newTitle: string;
+    fields: Field[];
+  };
   finalSmile: {
     andNow: string;
     heading: string;
