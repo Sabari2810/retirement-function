@@ -1,9 +1,11 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useContent } from "@/lib/LanguageContext";
 
 export default function TurnPage({ targetId }: { targetId: string }) {
   const reduce = useReducedMotion();
+  const { turnPage } = useContent();
 
   return (
     <div className="hidden py-10 text-center sm:block">
@@ -13,7 +15,7 @@ export default function TurnPage({ targetId }: { targetId: string }) {
         animate={reduce ? undefined : { y: [0, 6, 0] }}
         transition={reduce ? undefined : { duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
       >
-        Turn the Page
+        {turnPage.label}
         <span aria-hidden>&darr;</span>
       </motion.a>
     </div>

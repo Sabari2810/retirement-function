@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Reveal from "@/components/Reveal";
-import { careerTimeline } from "@/lib/config";
+import { useContent } from "@/lib/LanguageContext";
+import type { CareerEntry } from "@/lib/content";
 
-function TimelineEntry({ item, delay }: { item: (typeof careerTimeline)[number]; delay: number }) {
+function TimelineEntry({ item, delay }: { item: CareerEntry; delay: number }) {
   return (
     <Reveal delay={delay} className="relative pb-9 pl-8 last:pb-0 sm:pl-10">
       <span className="absolute left-0 top-1 h-3.5 w-3.5 rounded-full border-2 border-[var(--ink)] bg-[var(--paper)] sm:h-4 sm:w-4" />
@@ -25,6 +26,7 @@ function TimelineEntry({ item, delay }: { item: (typeof careerTimeline)[number];
 
 export default function CareerRecord() {
   const [isOpen, setIsOpen] = useState(false);
+  const { careerRecord, careerTimeline } = useContent();
   const preview = careerTimeline.slice(0, 2);
 
   useEffect(() => {
@@ -48,13 +50,13 @@ export default function CareerRecord() {
       <div className="mx-auto max-w-2xl">
         <Reveal>
           <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-            Page 2 &middot; The Career Record
+            {careerRecord.eyebrow}
           </p>
           <h2 className="font-display mt-3 text-center text-3xl font-black uppercase sm:text-5xl">
-            The Record
+            {careerRecord.heading}
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center text-sm text-[var(--ink-soft)] sm:text-base">
-            A quick look at where he served and what he did on the force.
+            {careerRecord.sub}
           </p>
         </Reveal>
 
@@ -73,7 +75,7 @@ export default function CareerRecord() {
             onClick={() => setIsOpen(true)}
             className="border-2 border-[var(--ink)] px-6 py-3 font-mono text-xs uppercase tracking-[0.2em] transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)]"
           >
-            View Full Timeline
+            {careerRecord.viewFullTimeline}
           </button>
         </Reveal>
       </div>
@@ -89,7 +91,7 @@ export default function CareerRecord() {
             onClick={() => setIsOpen(false)}
             role="dialog"
             aria-modal="true"
-            aria-label="Full career timeline"
+            aria-label={careerRecord.fullHeading}
           >
             <motion.div
               className="paper-texture no-scrollbar relative max-h-[85vh] w-full max-w-2xl overflow-y-auto border-4 border-double border-[var(--ink)] p-5 sm:p-10"
@@ -109,10 +111,10 @@ export default function CareerRecord() {
               </button>
 
               <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-                Page 2 &middot; The Career Record
+                {careerRecord.eyebrow}
               </p>
               <h2 className="font-display mt-3 text-center text-2xl font-black uppercase sm:text-4xl">
-                The Full Record
+                {careerRecord.fullHeading}
               </h2>
 
               <div className="mt-8 border-t-2 border-[var(--ink)]/20 pt-8">

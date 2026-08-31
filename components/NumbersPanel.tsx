@@ -1,20 +1,17 @@
+"use client";
+
 import Counter from "@/components/Counter";
 import Reveal from "@/components/Reveal";
-import { officer } from "@/lib/config";
-
-const facts = [
-  { k: "Joined", v: officer.joinedDate },
-  { k: "Retired", v: officer.finalDay },
-  { k: "Department", v: officer.department },
-  { k: "Final Designation", v: officer.designation },
-];
+import { useContent } from "@/lib/LanguageContext";
 
 export default function NumbersPanel() {
+  const { numbersPanel } = useContent();
+
   return (
     <section className="px-4 py-14 text-center sm:py-20">
       <Reveal>
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-          The Numbers Behind the Uniform
+          {numbersPanel.eyebrow}
         </p>
       </Reveal>
 
@@ -22,26 +19,26 @@ export default function NumbersPanel() {
         <div>
           <Counter to={38} className="font-display text-6xl font-black leading-none sm:text-8xl" />
           <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-[var(--ink-soft)] sm:text-xs">
-            Years
+            {numbersPanel.years}
           </p>
         </div>
         <div>
           <Counter to={3} pad={2} className="font-display text-4xl font-black leading-none sm:text-6xl" />
           <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-[var(--ink-soft)] sm:text-xs">
-            Months
+            {numbersPanel.months}
           </p>
         </div>
         <div>
           <Counter to={22} className="font-display text-4xl font-black leading-none sm:text-6xl" />
           <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-[var(--ink-soft)] sm:text-xs">
-            Days
+            {numbersPanel.days}
           </p>
         </div>
       </Reveal>
 
       <Reveal delay={0.2}>
         <dl className="mx-auto mt-8 grid max-w-md grid-cols-2 gap-x-6 gap-y-3 text-left sm:mt-12">
-          {facts.map((f) => (
+          {numbersPanel.facts.map((f) => (
             <div key={f.k}>
               <dt className="font-mono text-[9px] uppercase tracking-widest text-[var(--ink-soft)] sm:text-[10px]">
                 {f.k}

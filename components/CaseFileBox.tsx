@@ -7,6 +7,7 @@ export default function CaseFileBox({
   eyebrow,
   fields,
   findings,
+  findingsLabel = "Findings",
   verdictLines,
   corner,
   emphasize = false,
@@ -15,8 +16,9 @@ export default function CaseFileBox({
   eyebrow: string;
   fields: { k: string; v: string }[];
   findings?: string[];
+  findingsLabel?: string;
   verdictLines: string[];
-  corner?: { caseNo: string; place: string };
+  corner?: { caseNoLabel: string; caseNo: string; placeLabel: string; place: string };
   emphasize?: boolean;
   stampVerdict?: boolean;
 }) {
@@ -30,9 +32,9 @@ export default function CaseFileBox({
 
       {corner && (
         <p className="mt-1.5 text-center font-mono text-[9px] uppercase tracking-[0.15em] text-[var(--ink-soft)] sm:text-[11px]">
-          Case No. <span className="font-bold text-[var(--ink)]">{corner.caseNo}</span>
+          {corner.caseNoLabel} <span className="font-bold text-[var(--ink)]">{corner.caseNo}</span>
           <span className="mx-2">&middot;</span>
-          Place: <span className="font-bold text-[var(--ink)]">{corner.place}</span>
+          {corner.placeLabel}: <span className="font-bold text-[var(--ink)]">{corner.place}</span>
         </p>
       )}
 
@@ -61,7 +63,7 @@ export default function CaseFileBox({
       {findings && (
         <div className="mt-4 border-t border-[var(--ink)]/20 pt-4 sm:mt-6 sm:pt-6">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-            Findings
+            {findingsLabel}
           </p>
           <ul
             className={

@@ -1,3 +1,5 @@
+"use client";
+
 import BetweenTheLines from "@/components/BetweenTheLines";
 import CareerRecord from "@/components/CareerRecord";
 import CaseFilePreview from "@/components/CaseFilePreview";
@@ -6,28 +8,34 @@ import FinalInvitation from "@/components/FinalInvitation";
 import FinalSmile from "@/components/FinalSmile";
 import Hero from "@/components/Hero";
 import Invitation from "@/components/Invitation";
+import LanguageGate from "@/components/LanguageGate";
 import Masthead from "@/components/Masthead";
 import MicroNote from "@/components/MicroNote";
 import NumbersPanel from "@/components/NumbersPanel";
 import QuietHumor from "@/components/QuietHumor";
 import Rsvp from "@/components/Rsvp";
 import TurnPage from "@/components/TurnPage";
+import { useContent } from "@/lib/LanguageContext";
 
 export default function Home() {
+  const { skipLink, microNotes } = useContent();
+
   return (
     <div className="paper-texture flex-1">
+      <LanguageGate />
+
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:border-2 focus:border-[var(--ink)] focus:bg-[var(--paper)] focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase"
       >
-        Skip to content
+        {skipLink}
       </a>
 
       <Masthead />
 
       <main id="main">
         <Hero />
-        <MicroNote k="Special Correspondent" v="Retirement Desk" />
+        <MicroNote k={microNotes.special.k} v={microNotes.special.v} />
         <Invitation />
         <CaseFilePreview />
         <EventDetails />
@@ -36,11 +44,11 @@ export default function Home() {
         <TurnPage targetId="the-record" />
 
         <CareerRecord />
-        <MicroNote k="Archive No." v="1988–2026" />
+        <MicroNote k={microNotes.archive.k} v={microNotes.archive.v} />
         <BetweenTheLines />
         <NumbersPanel />
         <QuietHumor />
-        <MicroNote k="Report Status" v="Complete" />
+        <MicroNote k={microNotes.status.k} v={microNotes.status.v} />
         <FinalSmile />
       </main>
 

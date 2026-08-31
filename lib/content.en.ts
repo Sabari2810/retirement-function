@@ -1,0 +1,247 @@
+import type { Content } from "./content";
+
+const name = "Prabhakaran. V";
+
+export const content: Content = {
+  meta: {
+    title: `The Retirement Times: ${name}'s Final Report`,
+    description: `A special-edition newspaper honouring ${name}'s 38 Years, 3 Months, 22 Days of service. Come celebrate the final shift.`,
+  },
+  skipLink: "Skip to content",
+  masthead: {
+    paperName: "The Retirement Times",
+    volumeLine: "Vol. 38 · Final Edition · 06 September 2026",
+  },
+  officer: {
+    name,
+    qualification: "M.A.",
+    designation: "Sub-Inspector",
+    department: "Greater Chennai Police",
+    serviceBranch: "Tamil Nadu Police Service",
+    joinedDate: "09.05.1988",
+    finalDay: "31.08.2026",
+  },
+  hero: {
+    eyebrow: "The Final Report",
+    headline: ["After 38 Years, 3 Months & 22 Days,", "the Final Shift Has Arrived."],
+    servingSince: "Serving the city since 1988.",
+  },
+  microNotes: {
+    special: { k: "Special Correspondent", v: "Retirement Desk" },
+    archive: { k: "Archive No.", v: "1988–2026" },
+    status: { k: "Report Status", v: "Complete" },
+  },
+  invitation: {
+    lead: "After a long career in the Tamil Nadu Police Service, we invite you to join us in celebrating the retirement of",
+    body: "A career built on duty, responsibility, countless shifts and a lifetime of service to the city.",
+    closing:
+      "Come celebrate the man behind the uniform, the journey behind the years, and the beginning of everything that comes after.",
+  },
+  preliminaryReport: {
+    eyebrow: "Preliminary Report",
+    caseNoLabel: "Case No.",
+    placeLabel: "Place",
+    cornerPlace: "Chennai",
+    caseNo: "38",
+    findingsLabel: "Findings",
+    fields: [
+      { k: "Subject", v: name },
+      { k: "Service", v: "Tamil Nadu Police Service" },
+      { k: "Joined", v: "09.05.1988" },
+      { k: "Final Day", v: "31.08.2026" },
+      { k: "Status", v: "Retired" },
+      { k: "Sentence", v: "Rest. For the rest of his life." },
+    ],
+    findings: [
+      "Never once late for duty in 38 years — a record no one dares contest.",
+      "A city kept a little safer, one long shift at a time.",
+      "A family that waited up more nights than they will ever admit.",
+      "Enough stories collected to fill a second case file entirely.",
+    ],
+    verdict: ["Case Closed.", "Career Complete.", "Rest Starts."],
+  },
+  event: {
+    dateLabel: "06.09.2026 · Sunday",
+    time: "18:00 – 21:00 Hrs",
+    venueName: "Vijayalakshmi Party Hall A/C",
+    addressLines: ["#98B, Sabari Salai,", "Madipakkam,", "Chennai – 600 091"],
+    landmark: "Madipakkam Iyappan Temple",
+    mapsUrl: "https://share.google/6s2Cy8kdROrbxm0rx",
+    rsvpUrl: "https://wa.me/919876543210?text=I'll%20be%20there%20to%20celebrate%20Prabhakaran%20sir's%20retirement!",
+  },
+  eventDetails: {
+    eyebrow: "Retirement Function",
+    dutyOrder:
+      "Duty Order: all units, family, friends & well-wishers are directed to report to the venue below. Full attendance expected, no leave applications accepted.",
+    dateFieldLabel: "Date",
+    timeFieldLabel: "Time",
+    venueFieldLabel: "Venue",
+    landmarkFieldLabel: "Landmark",
+    viewLocation: "View Location",
+  },
+  rsvp: {
+    heading: ["All Units, Family & Friends", "Report for Duty."],
+    sub: "Your presence would make this celebration even more special.",
+  },
+  turnPage: { label: "Turn the Page" },
+  careerRecord: {
+    eyebrow: "Page 2 · The Career Record",
+    heading: "The Record",
+    sub: "A quick look at where he served and what he did on the force.",
+    viewFullTimeline: "View Full Timeline",
+    fullHeading: "The Full Record",
+  },
+  careerTimeline: [
+    {
+      date: "09.05.1988",
+      grade: "Constable",
+      department: "Police Department (Joined)",
+      note: "Service begins.",
+    },
+    {
+      date: "1988 – 1997",
+      grade: "Constable",
+      department: "Armed Reserve, Pudhupettai",
+      note: "Nine years in this posting — the start of a long career.",
+    },
+    {
+      date: "1997 – 2003",
+      grade: "Grade I",
+      department: "E3 Teynampet Traffic",
+      note: "Handled documentation and daily records.",
+    },
+    {
+      date: "2003 – 2008",
+      grade: "Head Constable",
+      department: "R4 Traffic Investigation",
+      note: "Five years in this posting.",
+    },
+    {
+      date: "2008 – 2011",
+      grade: "Head Constable",
+      department: "E3 Traffic",
+      note: "Continued handling documentation and records.",
+    },
+    {
+      date: "2012 – 2013",
+      grade: "Head Constable",
+      department: "R5 Virugambakkam Traffic",
+      note: "Continued the same records duty.",
+    },
+    {
+      date: "2013 – 2018",
+      grade: "Special Sub-Inspector",
+      department: "E3 Crime",
+      note: "Handled documentation and case records.",
+    },
+    {
+      date: "2018 – 2019",
+      grade: "Special Sub-Inspector",
+      department: "E3 Traffic",
+      note: "Back to handling documentation and records.",
+    },
+    {
+      date: "Jun 2019 – Aug 2019",
+      grade: "Sub-Inspector (Training)",
+      department: "RR Stadium, Pudupet",
+      note: "A new chapter begins.",
+    },
+    {
+      date: "Aug 2019 – Nov 2019",
+      grade: "Sub-Inspector (Practical Training)",
+      department: "F3 Nungambakkam",
+      note: "",
+    },
+    {
+      date: "2019 – 2021",
+      grade: "Sub-Inspector",
+      department: "Crime Record Bureau",
+      note: "A new responsibility. A new role.",
+    },
+    {
+      date: "2022 – 31.08.2026",
+      grade: "Sub-Inspector",
+      department: "Crime Branch, CID Head Quarters",
+      note: "The final posting. The final chapter. The final report.",
+    },
+  ],
+  betweenTheLines: {
+    heading: "Between the Lines",
+    sub: "Because a service record can never tell the whole story",
+    lines: [
+      { top: "Some nights were for sleep.", bottom: "Too many were spent on duty instead." },
+      {
+        top: "Some mornings started early.",
+        bottom: "Some began with a call before sunrise, asking him to cover for someone else.",
+      },
+      {
+        top: "Some family functions needed everyone there.",
+        bottom: "Duty needed him more, more often than it should have.",
+      },
+      {
+        top: "Some celebrations were missed entirely.",
+        bottom: "Because someone had to be there when others couldn't.",
+      },
+      {
+        top: "Some shifts ended only for the next to begin.",
+        bottom: "Proper rest was often the first thing given up.",
+      },
+      {
+        top: "A few accidents came along the way.",
+        bottom: "Some minor, a couple not so minor — he still came back.",
+      },
+      {
+        top: "Some days were long, and some were longer.",
+        bottom: "He still showed up the next morning, smiling.",
+      },
+    ],
+    quote: "The years are easy to count. The moments he gave up for them are not.",
+  },
+  numbersPanel: {
+    eyebrow: "The Numbers Behind the Uniform",
+    years: "Years",
+    months: "Months",
+    days: "Days",
+    facts: [
+      { k: "Joined", v: "09.05.1988" },
+      { k: "Retired", v: "31.08.2026" },
+      { k: "Department", v: "Greater Chennai Police" },
+      { k: "Final Designation", v: "Sub-Inspector" },
+    ],
+  },
+  quietHumor: {
+    officialNotice: "Official Notice",
+    body: "After 38 years of service, the department has finally approved something he may not be accustomed to:",
+    dayOff: "A Day Off.",
+    note: "Further details regarding what exactly he intends to do with this newfound freedom remain unavailable.",
+    breakingNews: "Breaking News",
+    headline: "Officer finally reports for duty… at home.",
+  },
+  finalSmile: {
+    andNow: "And Now…",
+    heading: "The Next Shift Is His Own.",
+    quote: "After years of reporting for duty, it is finally time to report to nobody.",
+    lines: [
+      "No early alarms for duty.",
+      "No rushing out because the city needs him.",
+      "No checking the clock because a shift is waiting.",
+      "Just more mornings.",
+      "More time, more family, more stories.",
+      "And, hopefully, absolutely no one calling him in for duty.",
+    ],
+    closing: ["The Uniform May Retire.", "The Man Doesn't."],
+    chapter: "Here's to the Next Chapter.",
+    loveNote: "With Love, Pride & Gratitude.",
+  },
+  finalInvitation: {
+    heading: "We Would Love to Have You With Us.",
+    landmarkLabel: "Landmark",
+    closing: "See You at the Final Report.",
+  },
+  languageGate: {
+    prompt: "Choose your language",
+    english: "English",
+    tamil: "தமிழ்",
+  },
+  languageToggle: { en: "EN", ta: "TA" },
+};

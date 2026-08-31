@@ -1,12 +1,16 @@
+"use client";
+
 import Reveal from "@/components/Reveal";
-import { event } from "@/lib/config";
+import { useContent } from "@/lib/LanguageContext";
 
 export default function FinalInvitation() {
+  const { event, finalInvitation } = useContent();
+
   return (
     <footer className="border-t-4 border-double border-[var(--ink)] px-4 py-14 text-center sm:py-20">
       <Reveal className="mx-auto max-w-md">
         <h2 className="font-display text-xl font-black uppercase leading-snug sm:text-2xl">
-          We Would Love to Have You With Us.
+          {finalInvitation.heading}
         </h2>
 
         <p className="font-display mt-5 text-lg font-bold sm:mt-6 sm:text-xl">
@@ -23,11 +27,11 @@ export default function FinalInvitation() {
           ))}
         </p>
         <p className="mt-1 text-sm italic text-[var(--ink-soft)] sm:text-base">
-          Landmark: {event.landmark}
+          {finalInvitation.landmarkLabel}: {event.landmark}
         </p>
 
         <p className="font-display mt-8 text-xl italic sm:mt-10 sm:text-2xl">
-          See You at the Final Report.
+          {finalInvitation.closing}
         </p>
       </Reveal>
     </footer>

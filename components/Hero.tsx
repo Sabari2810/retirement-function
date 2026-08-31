@@ -2,10 +2,13 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { heroPhoto, officer } from "@/lib/config";
+import { useContent } from "@/lib/LanguageContext";
+
+const heroPhoto = { src: "/photos/photo-10.jpeg" };
 
 export default function Hero() {
   const reduce = useReducedMotion();
+  const { hero, officer } = useContent();
   const stagger = (i: number) =>
     reduce ? undefined : { duration: 0.6, delay: 0.15 * i, ease: [0.22, 1, 0.36, 1] as const };
 
@@ -17,7 +20,7 @@ export default function Hero() {
         animate={reduce ? undefined : { opacity: 1 }}
         transition={stagger(0)}
       >
-        The Final Report
+        {hero.eyebrow}
       </motion.p>
 
       <motion.h2
@@ -26,9 +29,9 @@ export default function Hero() {
         animate={reduce ? undefined : { opacity: 1, y: 0 }}
         transition={stagger(1)}
       >
-        After 38 Years, 3 Months &amp; 22 Days,
+        {hero.headline[0]}
         <br />
-        the Final Shift Has Arrived.
+        {hero.headline[1]}
       </motion.h2>
 
       <motion.div
@@ -39,7 +42,7 @@ export default function Hero() {
       >
         <Image
           src={heroPhoto.src}
-          alt={heroPhoto.alt}
+          alt={`${officer.name} in dress uniform`}
           fill
           sizes="(min-width: 640px) 320px, 280px"
           className="object-cover object-top sepia-[0.15] contrast-105"
@@ -72,7 +75,7 @@ export default function Hero() {
         animate={reduce ? undefined : { opacity: 1 }}
         transition={stagger(5)}
       >
-        Serving the city since 1988.
+        {hero.servingSince}
       </motion.p>
     </section>
   );
