@@ -16,23 +16,13 @@ export default function Hero() {
   const stagger = (i: number) => (reduce ? undefined : { duration: 0.6, delay: 0.15 * i, ease: [0.22, 1, 0.36, 1] as const });
 
   return (
-    <section className="mx-auto max-w-3xl pb-4 pt-12 text-center sm:pb-6 sm:pt-16">
+    <section className="mx-auto max-w-3xl pb-4 text-center sm:pb-6">
       <NewsTicker label={quietHumor.breakingNews} text={quietHumor.headline} className="mb-8 sm:mb-10" />
 
-      <div className="px-4">
-      <motion.p
-        key={`eyebrow-${animKey}`}
-        className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--stamp)] sm:text-xs"
-        initial={reduce ? undefined : { opacity: 0 }}
-        animate={reduce ? undefined : { opacity: ready ? 1 : 0 }}
-        transition={stagger(0)}
-      >
-        {hero.eyebrow}
-      </motion.p>
-
+      <div className="px-4 pt-12 sm:pt-16">
       <motion.h2
         key={`headline-${animKey}`}
-        className="font-display mt-3 text-xl font-black uppercase leading-tight sm:text-4xl"
+        className="font-display text-xl font-black uppercase leading-tight sm:text-4xl"
         initial={reduce ? undefined : { opacity: 0, y: 20 }}
         animate={reduce ? undefined : { opacity: ready ? 1 : 0, y: ready ? 0 : 20 }}
         transition={stagger(1)}
