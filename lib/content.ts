@@ -62,6 +62,7 @@ export interface Content {
   eventDetails: {
     eyebrow: string;
     dutyOrder: string;
+    dutyOrderNote: string;
     dateFieldLabel: string;
     timeFieldLabel: string;
     venueFieldLabel: string;

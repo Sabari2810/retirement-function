@@ -76,7 +76,8 @@ export const content: Content = {
   },
   eventDetails: {
     eyebrow: "Now It's Time for You to Report to Duty",
-    dutyOrder: "Duty Order (Retirement Function)",
+    dutyOrder: "Duty Order",
+    dutyOrderNote: "(Retirement Function)",
     dateFieldLabel: "Date",
     timeFieldLabel: "Time",
     venueFieldLabel: "Venue",

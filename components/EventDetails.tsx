@@ -16,6 +16,9 @@ export default function EventDetails() {
         <p className="font-display mt-4 text-lg font-black uppercase tracking-wide sm:text-2xl">
           {eventDetails.dutyOrder}
         </p>
+        <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-[var(--ink-soft)] sm:text-xs">
+          {eventDetails.dutyOrderNote}
+        </p>
 
         <dl className="mx-auto mt-6 max-w-sm space-y-4 text-left">
           <div className="border-b border-[var(--ink)]/20 pb-3">

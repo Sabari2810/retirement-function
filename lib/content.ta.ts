@@ -76,7 +76,8 @@ export const content: Content = {
   },
   eventDetails: {
     eyebrow: "இப்போது நீங்கள் பணிக்கு வர வேண்டிய நேரம்",
-    dutyOrder: "பணி உத்தரவு (பணி ஓய்வு விழா)",
+    dutyOrder: "பணி உத்தரவு",
+    dutyOrderNote: "(பணி ஓய்வு விழா)",
     dateFieldLabel: "தேதி",
     timeFieldLabel: "நேரம்",
     venueFieldLabel: "இடம்",
