@@ -205,7 +205,6 @@ export const content: Content = {
     headline: "Officer finally reports for duty… at home.",
   },
   finalSmile: {
-    andNow: "And Now…",
     quote: "After all these years of reporting for duty, it's finally time to report to life.",
     closing: ["The Uniform May Retire.", "The Man Doesn't."],
     chapter: "Here's to the Next Chapter.",

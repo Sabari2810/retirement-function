@@ -10,10 +10,7 @@ export default function FinalSmile() {
     <section className="border-y-2 border-[var(--ink)]/20 bg-[var(--ink)] px-4 py-16 text-center text-[var(--paper)] sm:py-24">
       <div className="mx-auto max-w-xl">
         <Reveal>
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] opacity-60 sm:text-xs">
-            {finalSmile.andNow}
-          </p>
-          <p className="font-display mt-3 text-2xl font-black uppercase leading-snug sm:text-4xl">
+          <p className="font-display text-2xl font-black uppercase leading-snug sm:text-4xl">
             {finalSmile.closing[0]}
             <br />
             {finalSmile.closing[1]}
