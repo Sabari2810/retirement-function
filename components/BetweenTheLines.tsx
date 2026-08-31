@@ -31,7 +31,7 @@ export default function BetweenTheLines() {
                       className={
                         emphasize
                           ? "font-display text-lg font-bold uppercase leading-snug sm:text-2xl"
-                          : "text-base uppercase leading-snug text-[var(--ink-soft)] sm:text-xl"
+                          : "text-base uppercase leading-snug tracking-wide text-[var(--ink)] sm:text-xl"
                       }
                     >
                       {line}
