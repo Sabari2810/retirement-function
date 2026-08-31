@@ -41,7 +41,7 @@ export default function CareerRecord() {
   }, [isOpen]);
 
   return (
-    <section id="the-record" className="px-4 pb-4 pt-10 sm:pb-6 sm:pt-14">
+    <section id="the-record" className="paper-alt px-4 pb-4 pt-10 sm:pb-6 sm:pt-14">
       <div className="mx-auto max-w-2xl">
         <Reveal>
           <p className="hidden text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:block sm:text-xs">
