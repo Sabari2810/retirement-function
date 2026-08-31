@@ -76,6 +76,47 @@ body {
   animation: marquee 16s linear infinite;
 }
 
+@keyframes siren-flash {
+  0%,
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px #ff2b2b) drop-shadow(0 0 10px #ff2b2b);
+  }
+  12% {
+    opacity: 0.35;
+    filter: none;
+  }
+  25% {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px #2b6bff) drop-shadow(0 0 10px #2b6bff);
+  }
+  37% {
+    opacity: 0.35;
+    filter: none;
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px #ff2b2b) drop-shadow(0 0 10px #ff2b2b);
+  }
+  62% {
+    opacity: 0.35;
+    filter: none;
+  }
+  75% {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px #2b6bff) drop-shadow(0 0 10px #2b6bff);
+  }
+  87% {
+    opacity: 0.35;
+    filter: none;
+  }
+}
+
+.siren-light {
+  display: inline-block;
+  animation: siren-flash 1.2s steps(1, end) infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
