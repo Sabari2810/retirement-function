@@ -27,7 +27,7 @@ export const content: Content = {
     servingSince: "Serving the city since 1988.",
   },
   microNotes: {
-    special: { k: "Special Correspondent", v: "Retirement Desk" },
+    special: { k: "City Desk", v: "Chennai" },
     archive: { k: "Archive No.", v: "1988–2026" },
     status: { k: "Report Status", v: "Complete" },
   },
