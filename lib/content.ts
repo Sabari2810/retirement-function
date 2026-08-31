@@ -39,6 +39,7 @@ export interface Content {
   };
   microNotes: { special: Field; archive: Field; status: Field };
   invitation: {
+    eyebrow: string;
     lead: string;
     body: string;
     closing: string;

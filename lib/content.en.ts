@@ -34,6 +34,7 @@ export const content: Content = {
     status: { k: "Report Status", v: "Complete" },
   },
   invitation: {
+    eyebrow: "A Special Announcement",
     lead: "After almost 4 decades of service in the Tamil Nadu Police Department, we invite you to join us in celebrating the retirement of",
     body: "A career built on duty, responsibility, countless shifts and unwavering devotion to the people he served.",
     closing:
