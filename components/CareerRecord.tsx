@@ -44,7 +44,7 @@ export default function CareerRecord() {
   }, [isOpen]);
 
   return (
-    <section id="the-record" className="px-4 py-14 sm:py-20">
+    <section id="the-record" className="px-4 pb-4 pt-14 sm:pb-6 sm:pt-20">
       <div className="mx-auto max-w-2xl">
         <Reveal>
           <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">

@@ -25,9 +25,7 @@ export default function FinalSmile() {
             <p>No rushing out because the city needs him.</p>
             <p>No checking the clock because a shift is waiting.</p>
             <p>Just more mornings.</p>
-            <p>More time.</p>
-            <p>More family.</p>
-            <p>More stories.</p>
+            <p>More time, more family, more stories.</p>
             <p>And, hopefully, absolutely no one calling him in for duty.</p>
           </div>
         </Reveal>
