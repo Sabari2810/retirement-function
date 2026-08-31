@@ -17,12 +17,6 @@ export default function Masthead() {
       <h1 className="font-masthead text-5xl leading-none sm:text-7xl lg:text-8xl">
         {masthead.paperName}
       </h1>
-      <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--ink-soft)] sm:text-xs">
-        {masthead.strapline}
-      </p>
-      <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--ink-faint)] sm:text-[11px]">
-        {masthead.volumeLine}
-      </p>
     </motion.header>
   );
 }

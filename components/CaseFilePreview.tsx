@@ -14,7 +14,7 @@ export default function CaseFilePreview() {
   return (
     <section className="px-4 py-12 sm:py-16">
       <CaseFileBox
-        eyebrow="Final Report"
+        eyebrow="Preliminary Report"
         fields={fields}
         verdictLines={["Case Closed.", "Career Complete.", "Rest Starts."]}
       />

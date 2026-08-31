@@ -20,8 +20,6 @@ export const officer = {
 
 export const masthead = {
   paperName: "The Retirement Times",
-  strapline: "A Special Edition Honouring 38 Years of Service",
-  volumeLine: "Vol. 38 · Final Edition · 06 September 2026",
 };
 
 export const event = {
