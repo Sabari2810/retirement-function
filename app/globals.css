@@ -1,35 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #efe6cf;
-  --ink: #2a2016;
+  --paper: #f2ead9;
+  --paper-alt: #eae0c9;
+  --ink: #221f1a;
+  --ink-soft: rgba(34, 31, 26, 0.65);
+  --ink-faint: rgba(34, 31, 26, 0.4);
+  --navy: #232f42;
+  --stamp: #7a2f2a;
 }
 
 @theme inline {
   --font-sans: var(--font-serif);
   --font-serif: var(--font-serif);
   --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
   --font-masthead: var(--font-masthead);
 }
 
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--font-serif), Georgia, serif;
+  font-family: var(--font-serif), var(--font-sans-ta), Georgia, serif;
 }
 
 .font-display {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--font-display), var(--font-display-ta), Georgia, serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), var(--font-sans-ta), "Courier New", monospace;
 }
 
 .font-masthead {
-  font-family: var(--font-masthead), Georgia, serif;
+  font-family: var(--font-masthead), var(--font-display-ta), Georgia, serif;
 }
 
 .paper-texture {
   background-color: var(--paper);
   background-image:
-    radial-gradient(ellipse at top left, rgba(0, 0, 0, 0.06), transparent 55%),
-    radial-gradient(ellipse at bottom right, rgba(0, 0, 0, 0.08), transparent 55%),
+    radial-gradient(ellipse at top left, rgba(0, 0, 0, 0.05), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(0, 0, 0, 0.07), transparent 55%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+.paper-alt {
+  background-color: var(--paper-alt);
+}
+
+.stamp {
+  color: var(--stamp);
+  border: 3px solid var(--stamp);
+  transform: rotate(-6deg);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
