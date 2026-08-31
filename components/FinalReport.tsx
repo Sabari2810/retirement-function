@@ -10,7 +10,6 @@ const fields = [
   { k: "Department", v: officer.department },
   { k: "Service", v: officer.serviceBranch },
   { k: "Service Period", v: `${officer.joinedDate} – ${officer.finalDay}` },
-  { k: "Total Service", v: officer.totalService },
 ];
 
 const findings = [

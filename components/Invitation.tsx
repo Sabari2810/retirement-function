@@ -6,8 +6,8 @@ export default function Invitation() {
     <section className="paper-alt border-y-2 border-[var(--ink)]/20 px-4 py-12 sm:py-16">
       <Reveal className="mx-auto max-w-xl text-center">
         <p className="text-base leading-relaxed sm:text-lg">
-          After {officer.totalService} of service in the {officer.serviceBranch}, we invite you to
-          join us in celebrating the retirement of
+          After a long career in the {officer.serviceBranch}, we invite you to join us in
+          celebrating the retirement of
         </p>
         <h2 className="font-display mt-3 text-2xl font-black uppercase sm:text-4xl">
           {officer.name}

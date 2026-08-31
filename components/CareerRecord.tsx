@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Reveal from "@/components/Reveal";
-import { careerTimeline, officer } from "@/lib/config";
+import { careerTimeline } from "@/lib/config";
 
 function TimelineEntry({ item, delay }: { item: (typeof careerTimeline)[number]; delay: number }) {
   return (
@@ -53,11 +53,8 @@ export default function CareerRecord() {
           <h2 className="font-display mt-3 text-center text-3xl font-black uppercase sm:text-5xl">
             The Record
           </h2>
-          <p className="mt-2 text-center font-mono text-sm uppercase tracking-[0.15em] text-[var(--ink-soft)] sm:text-base">
-            {officer.totalService}
-          </p>
           <p className="mx-auto mt-4 max-w-xl text-center text-sm text-[var(--ink-soft)] sm:text-base">
-            A quick look at where he served and what he did, over 38 years on the force.
+            A quick look at where he served and what he did on the force.
           </p>
         </Reveal>
 
