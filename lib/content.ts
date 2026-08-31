@@ -97,6 +97,8 @@ export interface Content {
     heading: string;
     sub: string;
     lines: BetweenLine[];
+    turnHeading: string;
+    turnLines: string[];
     quote: string;
   };
   numbersPanel: {

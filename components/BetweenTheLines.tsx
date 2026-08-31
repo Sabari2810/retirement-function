@@ -29,8 +29,19 @@ export default function BetweenTheLines() {
           ))}
         </div>
 
-        <Reveal delay={0.3}>
-          <p className="font-display mx-auto mt-12 max-w-lg text-center text-xl italic leading-relaxed sm:mt-16 sm:text-3xl">
+        <Reveal delay={0.3} className="mt-14 border-t-2 border-[var(--ink)]/20 pt-10 text-center sm:mt-16 sm:pt-12">
+          <h3 className="font-display text-2xl font-black uppercase leading-snug sm:text-4xl">
+            {betweenTheLines.turnHeading}
+          </h3>
+          <div className="mx-auto mt-6 max-w-md space-y-1.5 text-base leading-relaxed text-[var(--ink-soft)] sm:text-lg">
+            {betweenTheLines.turnLines.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.35}>
+          <p className="font-display mx-auto mt-10 max-w-lg text-center text-xl italic leading-relaxed sm:mt-14 sm:text-3xl">
             &ldquo;{betweenTheLines.quote}&rdquo;
           </p>
         </Reveal>

@@ -205,6 +205,13 @@ export const content: Content = {
         bottom: "He still showed up the next morning, smiling.",
       },
     ],
+    turnHeading: "Now, It's Our Turn.",
+    turnLines: [
+      "To make sure he doesn't have to rush anywhere.",
+      "To let him sleep without an alarm.",
+      "To celebrate him outside the uniform.",
+      "Nobody is calling him in for duty tomorrow.",
+    ],
     quote: "The years are easy to count. The moments he gave up for them are not.",
   },
   numbersPanel: {
