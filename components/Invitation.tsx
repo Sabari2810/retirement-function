@@ -24,7 +24,7 @@ function OrderLine({ text }: { text: string }) {
         i % 2 === 1 ? (
           <span
             key={i}
-            className="font-display text-xl font-black uppercase text-[var(--stamp)] sm:text-2xl"
+            className="font-display text-2xl font-black uppercase text-[var(--stamp)] sm:text-4xl"
           >
             {part}
           </span>
