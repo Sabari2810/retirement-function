@@ -3,6 +3,18 @@
 import Reveal from "@/components/Reveal";
 import { useContent } from "@/lib/LanguageContext";
 
+function withHighlight(text: string) {
+  return text.split(/“([^”]+)”/g).map((part, i) =>
+    i % 2 === 1 ? (
+      <span key={i} className="text-[var(--stamp)]">
+        {part}
+      </span>
+    ) : (
+      part
+    )
+  );
+}
+
 export default function Invitation() {
   const { invitation } = useContent();
 
@@ -14,7 +26,7 @@ export default function Invitation() {
         </p>
         <p className="mt-4 text-base leading-relaxed sm:text-lg">{invitation.lead}</p>
         <h2 className="font-display mt-3 text-2xl font-black uppercase sm:text-4xl">
-          {invitation.orderLine}
+          {withHighlight(invitation.orderLine)}
         </h2>
         <p className="font-display mt-4 text-base italic leading-relaxed sm:text-lg">
           {invitation.closing}
