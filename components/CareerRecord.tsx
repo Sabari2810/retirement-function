@@ -15,11 +15,6 @@ function TimelineEntry({ item, delay }: { item: CareerEntry; delay: number }) {
       </div>
       <p className="mt-2 text-lg font-bold leading-snug sm:text-xl">{item.grade}</p>
       <p className="mt-0.5 text-base text-[var(--ink-soft)] sm:text-lg">{item.department}</p>
-      {item.note && (
-        <p className="mt-1 text-sm italic leading-snug text-[var(--ink-soft)] sm:text-base">
-          {item.note}
-        </p>
-      )}
     </Reveal>
   );
 }
@@ -49,7 +44,7 @@ export default function CareerRecord() {
     <section id="the-record" className="px-4 pb-4 pt-14 sm:pb-6 sm:pt-20">
       <div className="mx-auto max-w-2xl">
         <Reveal>
-          <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
+          <p className="hidden text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:block sm:text-xs">
             {careerRecord.eyebrow}
           </p>
           <h2 className="font-display mt-3 text-center text-3xl font-black uppercase sm:text-5xl">
