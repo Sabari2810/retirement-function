@@ -32,7 +32,7 @@ export const content: Content = {
     status: { k: "Report Status", v: "Complete" },
   },
   invitation: {
-    lead: "After a long career in the Tamil Nadu Police Service, we invite you to join us in celebrating the retirement of",
+    lead: "After almost 4 decades of service in the Tamil Nadu Police Department, we invite you to join us in celebrating the retirement of",
     body: "A career built on duty, responsibility, countless shifts and a lifetime of service to the city.",
     closing:
       "Come celebrate the man behind the uniform, the journey behind the years, and the beginning of everything that comes after.",
@@ -66,7 +66,8 @@ export const content: Content = {
     venueName: "Vijayalakshmi Party Hall A/C",
     addressLines: ["#98B, Sabari Salai,", "Madipakkam,", "Chennai – 600 091"],
     landmark: "Madipakkam Iyappan Temple",
-    mapsUrl: "https://share.google/6s2Cy8kdROrbxm0rx",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Vijayalakshmi%20Party%20Hall%20A%2FC%2C%20%2398B%2C%20Sabari%20Salai%2C%20Madipakkam%2C%20Chennai%20-%20600091",
     rsvpUrl: "https://wa.me/919876543210?text=I'll%20be%20there%20to%20celebrate%20Prabhakaran%20sir's%20retirement!",
   },
   eventDetails: {
@@ -220,7 +221,7 @@ export const content: Content = {
   finalSmile: {
     andNow: "And Now…",
     heading: "The Next Shift Is His Own.",
-    quote: "After years of reporting for duty, it is finally time to report to nobody.",
+    quote: "After all these years of reporting for duty, it's finally time to report to life.",
     lines: [
       "No early alarms for duty.",
       "No rushing out because the city needs him.",
@@ -236,7 +237,7 @@ export const content: Content = {
   finalInvitation: {
     heading: "We Would Love to Have You With Us.",
     landmarkLabel: "Landmark",
-    closing: "See You at the Final Report.",
+    closing: "Until the Next Edition.",
   },
   languageGate: {
     prompt: "Choose your language",

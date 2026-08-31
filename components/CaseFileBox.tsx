@@ -83,10 +83,13 @@ export default function CaseFileBox({
         {stampVerdict ? (
           <motion.p
             className="stamp inline-block px-3 py-2 font-display text-lg font-black uppercase leading-snug tracking-wide sm:px-6 sm:py-2.5 sm:text-4xl"
-            initial={reduce ? undefined : { opacity: 0, scale: 1.6, rotate: -18 }}
-            whileInView={reduce ? undefined : { opacity: 1, scale: 1, rotate: -6 }}
+            initial={reduce ? undefined : { opacity: 0, y: -70, scale: 1.25, rotate: -6 }}
+            whileInView={
+              reduce ? undefined : { opacity: [0, 1, 1, 1], y: [-70, 0, 2, 0], scale: [1.25, 1, 0.96, 1] }
+            }
             viewport={{ once: true }}
-            transition={{ duration: 0.35, ease: "easeOut" }}
+            transition={{ duration: 0.4, times: [0, 0.55, 0.8, 1], ease: ["easeIn", "easeOut", "easeOut"] }}
+            style={{ rotate: -6 }}
           >
             {verdictLines[0]}
           </motion.p>

@@ -37,7 +37,7 @@ export default function NumbersPanel() {
       </Reveal>
 
       <Reveal delay={0.2}>
-        <dl className="mx-auto mt-8 grid max-w-md grid-cols-2 gap-x-6 gap-y-3 text-left sm:mt-12">
+        <dl className="mx-auto mt-8 grid max-w-md grid-cols-2 gap-x-6 gap-y-3 text-center sm:mt-12">
           {numbersPanel.facts.map((f) => (
             <div key={f.k}>
               <dt className="font-mono text-[9px] uppercase tracking-widest text-[var(--ink-soft)] sm:text-[10px]">
