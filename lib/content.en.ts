@@ -55,7 +55,6 @@ export const content: Content = {
       { k: "Service", v: "Tamil Nadu Police Department" },
       { k: "Joined", v: "09.05.1988" },
       { k: "Final Day", v: "31.08.2026" },
-      { k: "Status", v: "Retired" },
       { k: "Sentence", v: "Rest. For the rest of his life." },
     ],
     findings: [
