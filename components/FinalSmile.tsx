@@ -13,22 +13,16 @@ export default function FinalSmile() {
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] opacity-60 sm:text-xs">
             {finalSmile.andNow}
           </p>
-          <h2 className="font-display mt-3 text-2xl font-black uppercase leading-tight sm:text-4xl">
-            {finalSmile.heading}
-          </h2>
+          <p className="font-display mt-3 text-2xl font-black uppercase leading-snug sm:text-4xl">
+            {finalSmile.closing[0]}
+            <br />
+            {finalSmile.closing[1]}
+          </p>
         </Reveal>
 
         <Reveal delay={0.1}>
           <p className="font-display mt-6 text-lg italic leading-relaxed sm:mt-8 sm:text-xl">
             &ldquo;{finalSmile.quote}&rdquo;
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.3}>
-          <p className="font-display mt-10 text-2xl font-black uppercase leading-snug sm:mt-14 sm:text-4xl">
-            {finalSmile.closing[0]}
-            <br />
-            {finalSmile.closing[1]}
           </p>
         </Reveal>
 

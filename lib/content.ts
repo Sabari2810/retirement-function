@@ -106,7 +106,6 @@ export interface Content {
   };
   finalSmile: {
     andNow: string;
-    heading: string;
     quote: string;
     closing: string[];
     chapter: string;

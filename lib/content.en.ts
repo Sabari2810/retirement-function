@@ -206,7 +206,6 @@ export const content: Content = {
   },
   finalSmile: {
     andNow: "And Now…",
-    heading: "The Next Shift Is His Own.",
     quote: "After all these years of reporting for duty, it's finally time to report to life.",
     closing: ["The Uniform May Retire.", "The Man Doesn't."],
     chapter: "Here's to the Next Chapter.",
