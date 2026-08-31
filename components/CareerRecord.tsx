@@ -105,10 +105,7 @@ export default function CareerRecord() {
                 &times;
               </button>
 
-              <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-                {careerRecord.eyebrow}
-              </p>
-              <h2 className="font-display mt-3 text-center text-2xl font-black uppercase sm:text-4xl">
+              <h2 className="font-display text-center text-2xl font-black uppercase sm:text-4xl">
                 {careerRecord.fullHeading}
               </h2>
 
