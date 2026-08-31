@@ -89,9 +89,9 @@ export const content: Content = {
   turnPage: { label: "அடுத்த பக்கம்" },
   careerRecord: {
     eyebrow: "பக்கம் 2 · பணிப் பதிவேடு",
-    heading: "பணிப் பதிவேடு",
-    sub: "அவர் பணியாற்றிய இடங்களையும், செய்த பணிகளையும் ஒரு பார்வையில்.",
-    viewFullTimeline: "முழு காலவரிசையைக் காண",
+    heading: "பணிப்பதிவு",
+    sub: "அவர் பணியாற்றிய ஆண்டுகளையும், செய்த பணிகளையும் ஒரு சிறிய பார்வை.",
+    viewFullTimeline: "முழுப் பயணத்தையும் பார்க்க",
     fullHeading: "முழு பதிவேடு",
   },
   careerTimeline: [
@@ -170,10 +170,10 @@ export const content: Content = {
   ],
   beforeAfter: {
     eyebrow: "38 ஆண்டுகள் இடைவெளி",
-    heading: "அப்போதும் இப்போதும்",
-    sub: "அதே சீருடை. வேறொரு காலம்.",
+    heading: "அன்றும் இன்றும்",
+    sub: "அதே சீருடை. புதிய வாழ்க்கை.",
     thenLabel: "தொடக்கம் · 1988",
-    nowLabel: "இறுதி அத்தியாயம் · 2026",
+    nowLabel: "புதிய தொடக்கம் · 2026",
   },
   betweenTheLines: {
     heading: "வரிகளுக்கு அப்பால்",
