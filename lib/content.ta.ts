@@ -63,8 +63,8 @@ export const content: Content = {
     dateLabel: "06.09.2026 · ஞாயிறு",
     time: "மாலை 6:00 முதல் இரவு 9:00 மணி வரை",
     venueName: "விஜயலட்சுமி பார்ட்டி ஹால் ஏசி",
-    addressLines: ["#98B, சபரி சாலை,", "மாதிப்பாக்கம்,", "சென்னை – 600 091"],
-    landmark: "மாதிப்பாக்கம் ஐயப்பன் கோயில்",
+    addressLines: ["#98B, சபரி சாலை,", "மடிப்பாக்கம்,", "சென்னை – 600 091"],
+    landmark: "மடிப்பாக்கம் ஐயப்பன் கோயில்",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Vijayalakshmi%20Party%20Hall%20A%2FC%2C%20%2398B%2C%20Sabari%20Salai%2C%20Madipakkam%2C%20Chennai%20-%20600091",
     rsvpUrl: "https://wa.me/919876543210?text=I'll%20be%20there%20to%20celebrate%20Prabhakaran%20sir's%20retirement!",
