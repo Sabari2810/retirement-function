@@ -26,24 +26,17 @@ export default function Hero() {
         {hero.eyebrow}
       </motion.p>
 
-      <motion.div
+      <motion.h2
         key={`headline-${animKey}`}
-        className="mt-3 overflow-hidden whitespace-nowrap border-y-2 border-[var(--ink)]/20 py-2"
-        initial={reduce ? undefined : { opacity: 0 }}
-        animate={reduce ? undefined : { opacity: ready ? 1 : 0 }}
+        className="font-display mt-3 text-xl font-black uppercase leading-tight sm:text-4xl"
+        initial={reduce ? undefined : { opacity: 0, y: 20 }}
+        animate={reduce ? undefined : { opacity: ready ? 1 : 0, y: ready ? 0 : 20 }}
         transition={stagger(1)}
       >
-        <div className={reduce ? "flex" : "flex w-max animate-marquee"}>
-          <h2 className="font-display shrink-0 px-4 text-lg font-black uppercase leading-tight sm:text-2xl">
-            {hero.headline[0]} &middot; {hero.headline[1]}
-          </h2>
-          {!reduce && (
-            <h2 className="font-display shrink-0 px-4 text-lg font-black uppercase leading-tight sm:text-2xl" aria-hidden>
-              {hero.headline[0]} &middot; {hero.headline[1]}
-            </h2>
-          )}
-        </div>
-      </motion.div>
+        {hero.headline[0]}
+        <br />
+        {hero.headline[1]}
+      </motion.h2>
 
       <motion.div
         key={`photo-${animKey}`}
