@@ -22,7 +22,7 @@ export default function NewsTicker({
             <span className="siren-light">&#x1F6A8;</span>
           </span>
           <span className="mx-4 text-[var(--paper)]/50">&bull;</span>
-          <span className="font-display text-base font-bold uppercase text-[var(--paper)] sm:text-lg">
+          <span className="font-mono text-xs font-black uppercase tracking-[0.2em] text-[var(--paper)] sm:text-sm">
             {text}
           </span>
           <span className="mx-4 text-[var(--paper)]/50">&bull;</span>
