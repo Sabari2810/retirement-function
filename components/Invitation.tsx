@@ -41,9 +41,6 @@ export default function Invitation() {
         </p>
         <p className="mt-4 text-base leading-relaxed sm:text-lg">{invitation.lead}</p>
         <OrderLine text={invitation.orderLine} />
-        <p className="font-display mt-4 text-base italic leading-relaxed sm:text-lg">
-          {invitation.closing}
-        </p>
       </Reveal>
     </section>
   );

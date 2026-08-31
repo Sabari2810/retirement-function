@@ -38,7 +38,6 @@ export const content: Content = {
     eyebrow: "A Special Announcement",
     lead: "After almost four decades of reporting for duty, V. Prabhakaran has finally received one last order:",
     orderLine: "Retire. And Enjoy.",
-    closing: "Come celebrate the man behind the uniform and the beautiful chapter ahead.",
   },
   preliminaryReport: {
     eyebrow: "Preliminary Report",
