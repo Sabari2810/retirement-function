@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ImageLightbox from "@/components/ImageLightbox";
 import Reveal from "@/components/Reveal";
 import { useContent } from "@/lib/LanguageContext";
 
@@ -23,15 +23,13 @@ export default function BeforeAfter() {
 
       <div className="mx-auto mt-10 flex max-w-2xl flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-center sm:gap-8">
         <Reveal className="flex w-full max-w-[240px] flex-col items-center">
-          <div className="relative aspect-[4/5] w-full overflow-hidden border-4 border-[var(--ink)]">
-            <Image
-              src="/photos/young.jpeg"
-              alt={`${officer.name}, early in his career`}
-              fill
-              sizes="240px"
-              className="object-cover object-top sepia-[0.15] contrast-105"
-            />
-          </div>
+          <ImageLightbox
+            src="/photos/young.jpeg"
+            alt={`${officer.name}, early in his career`}
+            sizes="240px"
+            wrapperClassName="relative aspect-[4/5] w-full overflow-hidden border-4 border-[var(--ink)]"
+            imgClassName="object-cover object-top sepia-[0.15] contrast-105"
+          />
           <p className="mt-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-soft)] sm:text-sm">
             {beforeAfter.thenLabel}
           </p>
@@ -42,15 +40,13 @@ export default function BeforeAfter() {
         </div>
 
         <Reveal delay={0.1} className="flex w-full max-w-[240px] flex-col items-center">
-          <div className="relative aspect-[4/5] w-full overflow-hidden border-4 border-[var(--ink)]">
-            <Image
-              src="/photos/photo-10.jpeg"
-              alt={`${officer.name}, in his final days of service`}
-              fill
-              sizes="240px"
-              className="object-cover object-top sepia-[0.15] contrast-105"
-            />
-          </div>
+          <ImageLightbox
+            src="/photos/photo-10.jpeg"
+            alt={`${officer.name}, in his final days of service`}
+            sizes="240px"
+            wrapperClassName="relative aspect-[4/5] w-full overflow-hidden border-4 border-[var(--ink)]"
+            imgClassName="object-cover object-top sepia-[0.15] contrast-105"
+          />
           <p className="mt-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--ink-soft)] sm:text-sm">
             {beforeAfter.nowLabel}
           </p>

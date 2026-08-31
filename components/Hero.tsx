@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
+import ImageLightbox from "@/components/ImageLightbox";
 import { useContent, useLanguage } from "@/lib/LanguageContext";
 
 const heroPhoto = { src: "/photos/photo-10.jpeg" };
@@ -45,12 +45,12 @@ export default function Hero() {
         animate={reduce ? undefined : { opacity: ready ? 1 : 0, scale: ready ? 1 : 0.95 }}
         transition={stagger(2)}
       >
-        <Image
+        <ImageLightbox
           src={heroPhoto.src}
           alt={`${officer.name} in dress uniform`}
-          fill
           sizes="(min-width: 640px) 320px, 280px"
-          className="object-cover object-top sepia-[0.15] contrast-105"
+          wrapperClassName="absolute inset-0"
+          imgClassName="object-cover object-top sepia-[0.15] contrast-105"
           priority
         />
       </motion.div>
