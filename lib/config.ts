@@ -20,6 +20,7 @@ export const officer = {
 
 export const masthead = {
   paperName: "The Retirement Times",
+  volumeLine: "Vol. 38 · Final Edition · 06 September 2026",
 };
 
 export const event = {
