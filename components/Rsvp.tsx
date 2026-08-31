@@ -19,7 +19,7 @@ export default function Rsvp() {
           rel="noopener noreferrer"
           className="mt-6 inline-flex min-h-12 items-center gap-2 border-2 border-[var(--ink)] bg-[var(--ink)] px-8 py-3 font-mono text-sm font-semibold uppercase tracking-[0.25em] text-[var(--paper)] transition-opacity hover:opacity-85"
         >
-          RSVP
+          Roger That
         </a>
       </Reveal>
     </section>

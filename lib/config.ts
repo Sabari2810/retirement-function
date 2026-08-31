@@ -30,7 +30,7 @@ export const event = {
   addressLines: ["#98B, Sabari Salai,", "Madipakkam,", "Chennai – 600 091"],
   landmark: "Madipakkam Iyappan Temple",
   // Configure these to real destinations before sending the invite.
-  mapsUrl: "https://maps.google.com/?q=Vijayalakshmi+Party+Hall+Madipakkam+Chennai",
+  mapsUrl: "https://share.google/6s2Cy8kdROrbxm0rx",
   rsvpUrl: "https://wa.me/919876543210?text=I'll%20be%20there%20to%20celebrate%20Prabhakaran%20sir's%20retirement!",
 };
 

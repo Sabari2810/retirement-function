@@ -9,26 +9,31 @@ export default function EventDetails() {
           Retirement Function
         </p>
 
+        <p className="font-display mt-4 text-base italic leading-relaxed text-[var(--ink-soft)] sm:text-lg">
+          Duty Order: all units, family, friends &amp; well-wishers are directed to report to the
+          venue below. Full attendance expected, no leave applications accepted.
+        </p>
+
         <dl className="mx-auto mt-6 max-w-sm space-y-4 text-left">
           <div className="border-b border-[var(--ink)]/20 pb-3">
             <dt className="font-mono text-[10px] uppercase tracking-widest text-[var(--ink-soft)]">
               Date
             </dt>
-            <dd className="font-display text-lg font-bold sm:text-xl">{event.dateLabel}</dd>
+            <dd className="font-display text-xl font-black sm:text-2xl">{event.dateLabel}</dd>
           </div>
 
           <div className="border-b border-[var(--ink)]/20 pb-3">
             <dt className="font-mono text-[10px] uppercase tracking-widest text-[var(--ink-soft)]">
               Time
             </dt>
-            <dd className="font-display text-lg font-bold sm:text-xl">{event.time}</dd>
+            <dd className="font-display text-xl font-black sm:text-2xl">{event.time}</dd>
           </div>
 
           <div className="border-b border-[var(--ink)]/20 pb-3">
             <dt className="font-mono text-[10px] uppercase tracking-widest text-[var(--ink-soft)]">
               Venue
             </dt>
-            <dd className="font-display text-lg font-bold sm:text-xl">{event.venueName}</dd>
+            <dd className="font-display text-xl font-black sm:text-2xl">{event.venueName}</dd>
             <dd className="mt-1 text-sm text-[var(--ink-soft)] sm:text-base">
               {event.addressLines.map((line) => (
                 <span key={line} className="block">
@@ -42,7 +47,7 @@ export default function EventDetails() {
             <dt className="font-mono text-[10px] uppercase tracking-widest text-[var(--ink-soft)]">
               Landmark
             </dt>
-            <dd className="font-display text-lg font-bold sm:text-xl">{event.landmark}</dd>
+            <dd className="font-display text-xl font-black sm:text-2xl">{event.landmark}</dd>
           </div>
         </dl>
 

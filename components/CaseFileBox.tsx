@@ -80,10 +80,10 @@ export default function CaseFileBox({
         </div>
       )}
 
-      <div className="mt-6 text-center sm:mt-8">
+      <div className={stampVerdict ? "mt-3 text-center sm:mt-4" : "mt-6 text-center sm:mt-8"}>
         {stampVerdict ? (
           <motion.p
-            className="stamp inline-block px-6 py-2.5 font-display text-2xl font-black uppercase leading-snug tracking-wide sm:text-4xl"
+            className="stamp inline-block px-3 py-2 font-display text-lg font-black uppercase leading-snug tracking-wide sm:px-6 sm:py-2.5 sm:text-4xl"
             initial={reduce ? undefined : { opacity: 0, scale: 1.6, rotate: -18 }}
             whileInView={reduce ? undefined : { opacity: 1, scale: 1, rotate: -6 }}
             viewport={{ once: true }}
@@ -96,8 +96,15 @@ export default function CaseFileBox({
             {verdictLines[0]}
           </p>
         )}
-        {verdictLines.slice(1).map((line) => (
-          <p key={line} className="font-display mt-1 text-sm font-bold uppercase tracking-wide sm:text-lg">
+        {verdictLines.slice(1).map((line, i) => (
+          <p
+            key={line}
+            className={
+              i === 0 && stampVerdict
+                ? "font-display mt-4 text-sm font-bold uppercase tracking-wide sm:mt-5 sm:text-lg"
+                : "font-display mt-1 text-sm font-bold uppercase tracking-wide sm:text-lg"
+            }
+          >
             {line}
           </p>
         ))}
