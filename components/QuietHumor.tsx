@@ -8,10 +8,27 @@ export default function QuietHumor() {
   const { quietHumor } = useContent();
   const reduce = useReducedMotion();
 
+  const tickerGroup = (hidden: boolean) => (
+    <div className="flex shrink-0 items-center" aria-hidden={hidden || undefined}>
+      {[0, 1, 2].map((i) => (
+        <span key={i} className="flex shrink-0 items-center whitespace-nowrap py-2 sm:py-3">
+          <span className="font-mono text-xs font-black uppercase tracking-[0.2em] text-[var(--paper)] sm:text-sm">
+            {quietHumor.breakingNews}
+          </span>
+          <span className="mx-4 text-[var(--paper)]/50">&bull;</span>
+          <span className="font-display text-base font-bold uppercase text-[var(--paper)] sm:text-lg">
+            {quietHumor.headline}
+          </span>
+          <span className="mx-4 text-[var(--paper)]/50">&bull;</span>
+        </span>
+      ))}
+    </div>
+  );
+
   return (
-    <section className="paper-alt border-y-2 border-[var(--ink)]/20 px-4 py-12 sm:py-16">
-      <div className="mx-auto flex max-w-3xl flex-col gap-8 sm:flex-row sm:gap-10">
-        <Reveal className="flex-1 border border-[var(--ink)]/30 p-5 text-center sm:p-6">
+    <section className="paper-alt border-y-2 border-[var(--ink)]/20 py-12 sm:py-16">
+      <div className="mx-auto max-w-xl px-4">
+        <Reveal className="border border-[var(--ink)]/30 p-5 text-center sm:p-6">
           <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--ink-faint)]">
             {quietHumor.officialNotice}
           </p>
@@ -23,25 +40,17 @@ export default function QuietHumor() {
             {quietHumor.note}
           </p>
         </Reveal>
-
-        <Reveal delay={0.1} className="flex-1 border border-[var(--ink)]/30 p-5 text-center sm:p-6">
-          <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--stamp)]">
-            {quietHumor.breakingNews}
-          </p>
-          <div className="mt-2 overflow-hidden whitespace-nowrap">
-            <div className={reduce ? "flex" : "flex w-max animate-marquee"}>
-              <p className="font-display shrink-0 pr-8 text-lg font-bold leading-snug sm:text-xl">
-                {quietHumor.headline}
-              </p>
-              {!reduce && (
-                <p className="font-display shrink-0 pr-8 text-lg font-bold leading-snug sm:text-xl" aria-hidden>
-                  {quietHumor.headline}
-                </p>
-              )}
-            </div>
-          </div>
-        </Reveal>
       </div>
+
+      <Reveal
+        delay={0.1}
+        className="relative left-1/2 mt-8 w-screen -translate-x-1/2 overflow-hidden border-y-2 border-[var(--stamp)] bg-[var(--stamp)] sm:mt-10"
+      >
+        <div className={reduce ? "flex" : "flex w-max animate-marquee"}>
+          {tickerGroup(false)}
+          {!reduce && tickerGroup(true)}
+        </div>
+      </Reveal>
     </section>
   );
 }
