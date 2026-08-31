@@ -2,13 +2,15 @@
 
 import Counter from "@/components/Counter";
 import Reveal from "@/components/Reveal";
-import { useContent } from "@/lib/LanguageContext";
+import { useContent, useLanguage } from "@/lib/LanguageContext";
 
 export default function NumbersPanel() {
   const { numbersPanel } = useContent();
+  const { lang } = useLanguage();
+  const altBg = lang === "ta" ? "paper-alt " : "";
 
   return (
-    <section className="px-4 py-14 text-center sm:py-20">
+    <section className={`${altBg}px-4 py-14 text-center sm:py-20`}>
       <Reveal>
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
           {numbersPanel.eyebrow}

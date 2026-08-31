@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Reveal from "@/components/Reveal";
-import { useContent } from "@/lib/LanguageContext";
+import { useContent, useLanguage } from "@/lib/LanguageContext";
 import type { CareerEntry } from "@/lib/content";
 
 function TimelineEntry({ item, delay }: { item: CareerEntry; delay: number }) {
@@ -22,7 +22,11 @@ function TimelineEntry({ item, delay }: { item: CareerEntry; delay: number }) {
 export default function CareerRecord() {
   const [isOpen, setIsOpen] = useState(false);
   const { careerRecord, careerTimeline } = useContent();
+  const { lang } = useLanguage();
   const preview = careerTimeline.slice(0, 2);
+  // RSVP section is hidden in Tamil, so every section from here on flips
+  // background to keep the alternating paper/paper-alt rhythm intact.
+  const altBg = lang === "ta" ? "" : "paper-alt ";
 
   useEffect(() => {
     if (!isOpen) return;
@@ -41,7 +45,7 @@ export default function CareerRecord() {
   }, [isOpen]);
 
   return (
-    <section id="the-record" className="paper-alt px-4 pb-4 pt-10 sm:pb-6 sm:pt-14">
+    <section id="the-record" className={`${altBg}px-4 pb-4 pt-10 sm:pb-6 sm:pt-14`}>
       <div className="mx-auto max-w-2xl">
         <Reveal>
           <p className="hidden text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:block sm:text-xs">

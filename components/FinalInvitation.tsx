@@ -1,13 +1,15 @@
 "use client";
 
 import Reveal from "@/components/Reveal";
-import { useContent } from "@/lib/LanguageContext";
+import { useContent, useLanguage } from "@/lib/LanguageContext";
 
 export default function FinalInvitation() {
   const { event, finalInvitation } = useContent();
+  const { lang } = useLanguage();
+  const altBg = lang === "ta" ? "paper-alt " : "";
 
   return (
-    <footer className="border-t-4 border-double border-[var(--ink)] px-4 py-14 text-center sm:py-20">
+    <footer className={`${altBg}border-t-4 border-double border-[var(--ink)] px-4 py-14 text-center sm:py-20`}>
       <Reveal className="mx-auto max-w-md">
         <h2 className="font-display text-xl font-black uppercase leading-snug sm:text-2xl">
           {finalInvitation.heading}

@@ -2,13 +2,15 @@
 
 import ImageLightbox from "@/components/ImageLightbox";
 import Reveal from "@/components/Reveal";
-import { useContent } from "@/lib/LanguageContext";
+import { useContent, useLanguage } from "@/lib/LanguageContext";
 
 export default function BeforeAfter() {
   const { beforeAfter, officer } = useContent();
+  const { lang } = useLanguage();
+  const altBg = lang === "ta" ? "paper-alt " : "";
 
   return (
-    <section className="border-t-2 border-[var(--ink)]/20 px-4 py-14 sm:py-20">
+    <section className={`${altBg}border-t-2 border-[var(--ink)]/20 px-4 py-14 sm:py-20`}>
       <Reveal>
         <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
           {beforeAfter.eyebrow}

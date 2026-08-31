@@ -2,13 +2,14 @@
 
 import NewsTicker from "@/components/NewsTicker";
 import Reveal from "@/components/Reveal";
-import { useContent } from "@/lib/LanguageContext";
+import { useContent, useLanguage } from "@/lib/LanguageContext";
 
 export default function QuietHumor() {
   const { quietHumor } = useContent();
+  const { lang } = useLanguage();
 
   return (
-    <section className="paper-alt">
+    <section className={lang === "ta" ? "" : "paper-alt"}>
       <Reveal>
         <NewsTicker label={quietHumor.breakingNews} text={quietHumor.headline} />
       </Reveal>

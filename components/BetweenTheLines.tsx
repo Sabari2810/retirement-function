@@ -1,13 +1,15 @@
 "use client";
 
 import Reveal from "@/components/Reveal";
-import { useContent } from "@/lib/LanguageContext";
+import { useContent, useLanguage } from "@/lib/LanguageContext";
 
 export default function BetweenTheLines() {
   const { betweenTheLines } = useContent();
+  const { lang } = useLanguage();
+  const altBg = lang === "ta" ? "" : "paper-alt ";
 
   return (
-    <section className="paper-alt border-y-2 border-[var(--ink)]/20 px-4 py-14 sm:py-20">
+    <section className={`${altBg}border-y-2 border-[var(--ink)]/20 px-4 py-14 sm:py-20`}>
       <div className="mx-auto max-w-2xl">
         <Reveal>
           <h2 className="font-display text-center text-3xl font-black uppercase sm:text-5xl">
