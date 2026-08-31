@@ -24,14 +24,6 @@ export default function FinalSmile() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.2}>
-          <div className="mt-8 space-y-2 text-base leading-relaxed opacity-85 sm:mt-10 sm:text-lg">
-            {finalSmile.lines.map((line) => (
-              <p key={line}>{line}</p>
-            ))}
-          </div>
-        </Reveal>
-
         <Reveal delay={0.3}>
           <p className="font-display mt-10 text-2xl font-black uppercase leading-snug sm:mt-14 sm:text-4xl">
             {finalSmile.closing[0]}

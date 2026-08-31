@@ -103,10 +103,6 @@ export interface Content {
     facts: Field[];
   };
   quietHumor: {
-    officialNotice: string;
-    body: string;
-    dayOff: string;
-    note: string;
     breakingNews: string;
     headline: string;
   };
@@ -114,7 +110,6 @@ export interface Content {
     andNow: string;
     heading: string;
     quote: string;
-    lines: string[];
     closing: string[];
     chapter: string;
     loveNote: string;
