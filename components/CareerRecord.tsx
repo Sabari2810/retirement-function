@@ -55,7 +55,7 @@ export default function CareerRecord() {
           </p>
         </Reveal>
 
-        <div className="mt-10 border-t-2 border-[var(--ink)]/20 pt-10 sm:pt-12">
+        <div className="mt-6 border-t-2 border-[var(--ink)]/20 pt-6 sm:mt-8 sm:pt-8">
           <div className="relative">
             <div className="absolute bottom-2 left-[6px] top-2 w-px bg-[var(--ink)]/25 sm:left-[7px]" />
             {preview.map((item, i) => (
