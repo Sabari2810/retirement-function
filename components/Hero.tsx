@@ -42,10 +42,23 @@ export default function Hero() {
           alt={heroPhoto.alt}
           fill
           sizes="(min-width: 640px) 320px, 280px"
-          className="object-cover object-top sepia-[0.15] contrast-105"
+          className="object-cover object-top grayscale contrast-110"
           priority
         />
+        <div
+          className="pointer-events-none absolute inset-0 mix-blend-multiply opacity-40"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, rgba(0,0,0,0.9) 0.35px, transparent 0.85px)",
+            backgroundSize: "2px 2px",
+          }}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-[var(--paper)] mix-blend-color opacity-30" />
       </motion.div>
+
+      <p className="mt-2 font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--ink-faint)] sm:text-[10px]">
+        File Photo &middot; Staff Archive
+      </p>
 
       <motion.h3
         className="font-display mt-8 text-2xl font-black uppercase sm:text-4xl"
