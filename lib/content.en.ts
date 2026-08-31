@@ -75,8 +75,8 @@ export const content: Content = {
     rsvpUrl: "https://wa.me/919876543210?text=I'll%20be%20there%20to%20celebrate%20Prabhakaran%20sir's%20retirement!",
   },
   eventDetails: {
-    eyebrow: "Retirement Function",
-    dutyOrder: "Duty Order",
+    eyebrow: "Now It's Time for You to Report to Duty",
+    dutyOrder: "Duty Order (Retirement Function)",
     dateFieldLabel: "Date",
     timeFieldLabel: "Time",
     venueFieldLabel: "Venue",

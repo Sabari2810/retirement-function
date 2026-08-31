@@ -75,8 +75,8 @@ export const content: Content = {
     rsvpUrl: "https://wa.me/919876543210?text=I'll%20be%20there%20to%20celebrate%20Prabhakaran%20sir's%20retirement!",
   },
   eventDetails: {
-    eyebrow: "பணி ஓய்வு விழா",
-    dutyOrder: "பணி உத்தரவு",
+    eyebrow: "இப்போது நீங்கள் பணிக்கு வர வேண்டிய நேரம்",
+    dutyOrder: "பணி உத்தரவு (பணி ஓய்வு விழா)",
     dateFieldLabel: "தேதி",
     timeFieldLabel: "நேரம்",
     venueFieldLabel: "இடம்",
