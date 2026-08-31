@@ -28,7 +28,11 @@ export default function BetweenTheLines() {
                   return (
                     <p
                       key={line}
-                      className={`font-display text-lg uppercase leading-snug sm:text-2xl ${emphasize ? "font-bold" : "font-normal"}`}
+                      className={
+                        emphasize
+                          ? "font-display text-lg font-bold uppercase leading-snug sm:text-2xl"
+                          : "text-base uppercase leading-snug text-[var(--ink-soft)] sm:text-xl"
+                      }
                     >
                       {line}
                     </p>
