@@ -221,7 +221,7 @@ export const content: Content = {
   finalSmile: {
     andNow: "And Now…",
     heading: "The Next Shift Is His Own.",
-    quote: "After years of reporting for duty, it is finally time to report to nobody.",
+    quote: "After all these years of reporting for duty, it's finally time to report to life.",
     lines: [
       "No early alarms for duty.",
       "No rushing out because the city needs him.",
