@@ -34,8 +34,6 @@ export interface Content {
     eyebrow: string;
     headline: string[];
     servingSince: string;
-    dutyStatusLabel: string;
-    dutyStatusValue: string;
   };
   microNotes: { special: Field; archive: Field; status: Field };
   invitation: {

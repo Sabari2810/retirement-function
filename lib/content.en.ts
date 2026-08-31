@@ -22,11 +22,12 @@ export const content: Content = {
     finalDay: "31.08.2026",
   },
   hero: {
-    eyebrow: "The Final Report",
-    headline: ["After 38 Years, 3 Months & 22 Days,", "the Final Shift Has Arrived."],
+    eyebrow: "Breaking News",
+    headline: [
+      "After 38 Years, 3 Months & 22 Days of Service,",
+      "Officer Has Officially Been Released From Duty.",
+    ],
     servingSince: "Serving the city since 1988.",
-    dutyStatusLabel: "Duty Status",
-    dutyStatusValue: "Final Shift",
   },
   microNotes: {
     special: { k: "City Desk", v: "Chennai" },

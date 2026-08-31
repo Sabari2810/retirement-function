@@ -41,9 +41,9 @@ export default function Hero() {
       <motion.div
         key={`photo-${animKey}`}
         className="relative mx-auto mt-8 aspect-[4/5] w-full max-w-[280px] overflow-hidden border-4 border-[var(--ink)] sm:max-w-xs"
-        initial={reduce ? undefined : { opacity: 0, scale: 0.95 }}
-        animate={reduce ? undefined : { opacity: ready ? 1 : 0, scale: ready ? 1 : 0.95 }}
-        transition={stagger(2)}
+        initial={reduce ? undefined : { opacity: 0, scale: 0.5 }}
+        animate={reduce ? undefined : { opacity: ready ? 1 : 0, scale: ready ? 1 : 0.5 }}
+        transition={reduce ? undefined : { type: "spring", stiffness: 260, damping: 16, delay: 0.3 }}
       >
         <ImageLightbox
           src={heroPhoto.src}
@@ -85,17 +85,6 @@ export default function Hero() {
       >
         {hero.servingSince}
       </motion.p>
-
-      <motion.div
-        key={`duty-${animKey}`}
-        className="mt-4 inline-flex items-center gap-2 border border-[var(--ink)]/40 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--ink-soft)] sm:text-[10px]"
-        initial={reduce ? undefined : { opacity: 0 }}
-        animate={reduce ? undefined : { opacity: ready ? 1 : 0 }}
-        transition={stagger(6)}
-      >
-        <span>{hero.dutyStatusLabel}:</span>
-        <span className="font-bold text-[var(--stamp)]">{hero.dutyStatusValue}</span>
-      </motion.div>
     </section>
   );
 }
