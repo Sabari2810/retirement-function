@@ -53,7 +53,7 @@ export const content: Content = {
       { k: "Sentence", v: "Rest. For the rest of his life." },
     ],
     findings: [
-      "Never once late for duty in 38 years — a record no one dares contest.",
+      "Never once late for duty in 38 years, a record no one dares contest.",
       "A city kept a little safer, one long shift at a time.",
       "A family that waited up more nights than they will ever admit.",
       "Enough stories collected to fill a second case file entirely.",
@@ -103,7 +103,7 @@ export const content: Content = {
       date: "1988 – 1997",
       grade: "Constable",
       department: "Armed Reserve, Pudhupettai",
-      note: "Nine years in this posting — the start of a long career.",
+      note: "Nine years in this posting, the start of a long career.",
     },
     {
       date: "1997 – 2003",
@@ -189,7 +189,7 @@ export const content: Content = {
       },
       {
         top: "A few accidents came along the way.",
-        bottom: "Some minor, a couple not so minor — he still came back.",
+        bottom: "Some minor, a couple not so minor. He still came back.",
       },
       {
         top: "Some days were long, and some were longer.",
