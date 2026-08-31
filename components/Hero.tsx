@@ -66,7 +66,7 @@ export default function Hero() {
         animate={reduce ? undefined : { opacity: 1, y: 0 }}
         transition={stagger(3)}
       >
-        {officer.name}
+        {officer.name}, {officer.qualification}
       </motion.h3>
 
       <motion.p
@@ -75,7 +75,7 @@ export default function Hero() {
         animate={reduce ? undefined : { opacity: 1 }}
         transition={stagger(4)}
       >
-        {officer.qualification} · {officer.designation}
+        {officer.designation}
         <br className="sm:hidden" /> {officer.department}
       </motion.p>
 
