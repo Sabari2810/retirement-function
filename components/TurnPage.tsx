@@ -6,7 +6,7 @@ export default function TurnPage({ targetId }: { targetId: string }) {
   const reduce = useReducedMotion();
 
   return (
-    <div className="hidden border-t-4 border-double border-[var(--ink)] py-10 text-center sm:block">
+    <div className="hidden py-10 text-center sm:block">
       <motion.a
         href={`#${targetId}`}
         className="inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.3em] text-[var(--ink-soft)] transition-colors hover:text-[var(--ink)]"
