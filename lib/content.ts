@@ -35,6 +35,7 @@ export interface Content {
     eyebrow: string;
     lead: string;
     orderLine: string;
+    closing?: string;
   };
   preliminaryReport: {
     eyebrow: string;
