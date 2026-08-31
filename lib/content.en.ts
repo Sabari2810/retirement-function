@@ -23,7 +23,7 @@ export const content: Content = {
   },
   hero: {
     eyebrow: "The Final Report",
-    headline: ["After Almost Four Decades,", "the Final Shift Has Arrived."],
+    headline: ["After 38 Years, 3 Months & 22 Days,", "the Final Shift Has Arrived."],
     servingSince: "Serving the city since 1988.",
     dutyStatusLabel: "Duty Status",
     dutyStatusValue: "Final Shift",
