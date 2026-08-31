@@ -41,7 +41,7 @@ export default function BeforeAfter() {
 
         <Reveal delay={0.1} className="flex w-full max-w-[240px] flex-col items-center">
           <ImageLightbox
-            src="/photos/photo-10.jpeg"
+            src="/photos/now.jpeg"
             alt={`${officer.name}, in his final days of service`}
             sizes="240px"
             wrapperClassName="relative aspect-[4/5] w-full overflow-hidden border-4 border-[var(--ink)]"
