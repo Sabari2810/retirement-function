@@ -8,7 +8,7 @@ export default function BeforeAfter() {
   const { beforeAfter, officer } = useContent();
 
   return (
-    <section className="px-4 py-14 sm:py-20">
+    <section className="border-t-2 border-[var(--ink)]/20 px-4 py-14 sm:py-20">
       <Reveal>
         <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
           {beforeAfter.eyebrow}
