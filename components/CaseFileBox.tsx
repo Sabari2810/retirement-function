@@ -23,21 +23,18 @@ export default function CaseFileBox({
   const reduce = useReducedMotion();
 
   return (
-    <Reveal className="relative mx-auto max-w-xl border-2 border-[var(--ink)] p-5 sm:p-8">
-      {corner && (
-        <div className="absolute left-4 top-4 text-left sm:left-6 sm:top-6">
-          <p className="font-mono text-[9px] uppercase leading-snug tracking-[0.15em] text-[var(--ink-soft)] sm:text-[11px]">
-            Case No. <span className="font-bold text-[var(--ink)]">{corner.caseNo}</span>
-          </p>
-          <p className="font-mono text-[9px] uppercase leading-snug tracking-[0.15em] text-[var(--ink-soft)] sm:text-[11px]">
-            Place: <span className="font-bold text-[var(--ink)]">{corner.place}</span>
-          </p>
-        </div>
-      )}
-
+    <Reveal className="mx-auto max-w-xl border-2 border-[var(--ink)] p-5 sm:p-8">
       <p className="text-center font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
         {eyebrow}
       </p>
+
+      {corner && (
+        <p className="mt-1.5 text-center font-mono text-[9px] uppercase tracking-[0.15em] text-[var(--ink-soft)] sm:text-[11px]">
+          Case No. <span className="font-bold text-[var(--ink)]">{corner.caseNo}</span>
+          <span className="mx-2">&middot;</span>
+          Place: <span className="font-bold text-[var(--ink)]">{corner.place}</span>
+        </p>
+      )}
 
       <dl className="mt-4 divide-y divide-dotted divide-[var(--ink)]/30 sm:mt-6">
         {fields.map((f) => (

@@ -70,7 +70,7 @@ export default function CareerRecord() {
           </div>
         </div>
 
-        <Reveal className="text-center">
+        <Reveal className="mt-8 text-center sm:mt-10">
           <button
             type="button"
             onClick={() => setIsOpen(true)}
