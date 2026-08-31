@@ -3,6 +3,12 @@
 import Reveal from "@/components/Reveal";
 import { useContent } from "@/lib/LanguageContext";
 
+function withBoldQuotes(text: string) {
+  return text
+    .split(/“([^”]+)”/g)
+    .map((part, i) => (i % 2 === 1 ? <strong key={i}>{part}</strong> : part));
+}
+
 function OrderLine({ text }: { text: string }) {
   const parts = text.split(/“([^”]+)”/g);
 
@@ -39,7 +45,7 @@ export default function Invitation() {
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
           {invitation.eyebrow}
         </p>
-        <p className="mt-4 text-base leading-relaxed sm:text-lg">{invitation.lead}</p>
+        <p className="mt-4 text-base leading-relaxed sm:text-lg">{withBoldQuotes(invitation.lead)}</p>
         <OrderLine text={invitation.orderLine} />
         {invitation.closing && (
           <p className="font-display mt-4 text-base italic leading-relaxed sm:text-lg">
