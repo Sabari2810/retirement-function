@@ -19,15 +19,24 @@ export default function BetweenTheLines() {
         </Reveal>
 
         <div className="mt-10 space-y-8 sm:mt-14 sm:space-y-10">
-          {betweenTheLines.lines.map((stanza, i) => (
-            <Reveal key={stanza[0]} delay={i * 0.08} className="text-center">
-              {stanza.map((line) => (
-                <p key={line} className="font-display text-lg font-bold leading-snug sm:text-2xl">
-                  {line}
-                </p>
-              ))}
-            </Reveal>
-          ))}
+          {betweenTheLines.lines.map((stanza, i) => {
+            const isLastStanza = i === betweenTheLines.lines.length - 1;
+            return (
+              <Reveal key={stanza[0]} delay={i * 0.08} className="text-center">
+                {stanza.map((line, j) => {
+                  const emphasize = isLastStanza && j === stanza.length - 1;
+                  return (
+                    <p
+                      key={line}
+                      className={`font-display text-lg uppercase leading-snug sm:text-2xl ${emphasize ? "font-bold" : "font-normal"}`}
+                    >
+                      {line}
+                    </p>
+                  );
+                })}
+              </Reveal>
+            );
+          })}
         </div>
 
         <Reveal delay={0.35} className="mt-14 border-t-2 border-[var(--ink)]/20 pt-10 sm:mt-16 sm:pt-12">

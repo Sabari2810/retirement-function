@@ -50,7 +50,6 @@ export default function Home() {
         <BetweenTheLines />
         <NumbersPanel />
         <QuietHumor />
-        <MicroNote k={microNotes.status.k} v={microNotes.status.v} />
         <NewPosting />
         <FinalSmile />
       </main>

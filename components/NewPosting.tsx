@@ -7,7 +7,7 @@ export default function NewPosting() {
   const { newPosting } = useContent();
 
   return (
-    <section className="px-4 py-14 sm:py-20">
+    <section className="px-4 pb-14 pt-8 sm:pb-20 sm:pt-10">
       <Reveal className="mx-auto max-w-md border-2 border-[var(--ink)] p-5 text-center sm:p-8">
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
           {newPosting.eyebrow}
