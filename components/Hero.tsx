@@ -2,7 +2,6 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import ImageLightbox from "@/components/ImageLightbox";
-import NewsTicker from "@/components/NewsTicker";
 import { useContent, useLanguage } from "@/lib/LanguageContext";
 
 const heroPhoto = { src: "/photos/photo-10.jpeg" };
@@ -10,16 +9,13 @@ const heroPhoto = { src: "/photos/photo-10.jpeg" };
 export default function Hero() {
   const reduce = useReducedMotion();
   const { lang } = useLanguage();
-  const { hero, officer, quietHumor } = useContent();
+  const { hero, officer } = useContent();
   const ready = lang !== null;
   const animKey = ready ? "on" : "off";
   const stagger = (i: number) => (reduce ? undefined : { duration: 0.6, delay: 0.15 * i, ease: [0.22, 1, 0.36, 1] as const });
 
   return (
-    <section className="mx-auto max-w-3xl pb-4 pt-12 text-center sm:pb-6 sm:pt-16">
-      <NewsTicker label={quietHumor.breakingNews} text={quietHumor.headline} className="mb-8 sm:mb-10" />
-
-      <div className="px-4">
+    <section className="mx-auto max-w-3xl px-4 pb-4 pt-12 text-center sm:pb-6 sm:pt-16">
       <motion.p
         key={`eyebrow-${animKey}`}
         className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--stamp)] sm:text-xs"
@@ -89,7 +85,6 @@ export default function Hero() {
       >
         {hero.servingSince}
       </motion.p>
-      </div>
     </section>
   );
 }
