@@ -62,7 +62,7 @@ export const content: Content = {
       "Zero black marks. Zero memos.",
       "Still supervising, even when off duty.",
     ],
-    verdict: ["Case Closed.", "Career Complete.", "Rest Starts."],
+    verdict: ["Retirement Approved.", "Case Closed."],
   },
   event: {
     dateLabel: "06.09.2026 · Sunday",
