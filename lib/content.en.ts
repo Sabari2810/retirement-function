@@ -63,7 +63,7 @@ export const content: Content = {
   },
   event: {
     dateLabel: "06.09.2026 · Sunday",
-    time: "18:00 – 21:00 Hrs",
+    time: "17:30 – 20:30 Hrs",
     venueName: "Vijayalakshmi Party Hall A/C",
     addressLines: ["#98B, Sabari Salai,", "Madipakkam,", "Chennai – 600 091"],
     landmark: "Madipakkam Iyappan Temple",
