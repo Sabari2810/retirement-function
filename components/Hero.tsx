@@ -44,7 +44,7 @@ export default function Hero() {
           alt={`${officer.name} in dress uniform`}
           sizes="(min-width: 640px) 320px, 280px"
           wrapperClassName="absolute inset-0"
-          imgClassName="object-cover object-[75%_top] grayscale contrast-150 brightness-95"
+          imgClassName="object-cover object-top sepia-[0.15] contrast-105"
           priority
         />
       </motion.div>
