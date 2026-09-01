@@ -5,7 +5,7 @@ import ImageLightbox from "@/components/ImageLightbox";
 import NewsTicker from "@/components/NewsTicker";
 import { useContent, useLanguage } from "@/lib/LanguageContext";
 
-const heroPhoto = { src: "/photos/photo-10.jpeg" };
+const heroPhoto = { src: "/photos/office-celebration.jpeg" };
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -44,7 +44,7 @@ export default function Hero() {
           alt={`${officer.name} in dress uniform`}
           sizes="(min-width: 640px) 320px, 280px"
           wrapperClassName="absolute inset-0"
-          imgClassName="object-cover object-top sepia-[0.15] contrast-105"
+          imgClassName="object-cover object-[75%_top] sepia-[0.15] contrast-105"
           priority
         />
       </motion.div>
