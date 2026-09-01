@@ -77,7 +77,12 @@ export default function Hero() {
         animate={reduce ? undefined : { opacity: ready ? 1 : 0 }}
         transition={stagger(5)}
       >
-        {hero.servingSince}
+        {hero.servingSince.split(" · ").map((line, i, arr) => (
+          <span key={line}>
+            {line}
+            {i < arr.length - 1 && <br />}
+          </span>
+        ))}
       </motion.p>
       </div>
     </section>
