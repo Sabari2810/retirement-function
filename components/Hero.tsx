@@ -5,7 +5,7 @@ import ImageLightbox from "@/components/ImageLightbox";
 import NewsTicker from "@/components/NewsTicker";
 import { useContent, useLanguage } from "@/lib/LanguageContext";
 
-const heroPhoto = { src: "/photos/office-celebration.jpeg" };
+const heroPhoto = { src: "/photos/photo-10.jpeg" };
 
 export default function Hero() {
   const reduce = useReducedMotion();
