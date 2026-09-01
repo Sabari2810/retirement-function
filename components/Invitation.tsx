@@ -19,20 +19,22 @@ function OrderLine({ text }: { text: string }) {
   }
 
   return (
-    <p className="mt-3 text-base leading-relaxed sm:text-lg">
+    <div className="mt-3">
       {parts.map((part, i) =>
-        i % 2 === 1 ? (
-          <span
+        part.trim() === "" ? null : i % 2 === 1 ? (
+          <p
             key={i}
             className="font-display text-2xl font-black uppercase text-[var(--stamp)] sm:text-4xl"
           >
-            {part}
-          </span>
+            {part.trim()}
+          </p>
         ) : (
-          part
+          <p key={i} className="text-base leading-relaxed sm:text-lg">
+            {part.trim()}
+          </p>
         )
       )}
-    </p>
+    </div>
   );
 }
 
