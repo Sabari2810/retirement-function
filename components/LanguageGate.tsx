@@ -18,21 +18,22 @@ export default function LanguageGate() {
         >
           <div className="mx-auto w-full max-w-sm border-4 border-double border-[var(--ink)] p-6 text-center sm:p-10">
             <h1 className="font-display text-lg font-black uppercase leading-snug sm:text-2xl">
-              {enContent.languageGate.prompt} &middot; உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்
+              {enContent.languageGate.prompt}
             </h1>
 
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8">
+            <div className="mt-6 flex flex-row items-center justify-center gap-3 sm:mt-8">
               <button
                 type="button"
                 onClick={() => setLang("en")}
-                className="border-2 border-[var(--ink)] px-6 py-3 font-mono text-sm font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)]"
+                className="border-2 border-[var(--ink)] px-4 py-2 font-mono text-sm font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)]"
               >
                 {enContent.languageGate.english}
               </button>
+              <span className="text-[var(--ink-faint)]">&middot;</span>
               <button
                 type="button"
                 onClick={() => setLang("ta")}
-                className="border-2 border-[var(--ink)] px-6 py-3 font-mono text-sm font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)]"
+                className="border-2 border-[var(--ink)] px-4 py-2 font-mono text-sm font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)]"
               >
                 {enContent.languageGate.tamil}
               </button>

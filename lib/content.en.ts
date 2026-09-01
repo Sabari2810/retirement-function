@@ -216,7 +216,7 @@ export const content: Content = {
     closing: "Until the Next Edition.",
   },
   languageGate: {
-    prompt: "Choose your language",
+    prompt: "Select Your Edition",
     english: "English",
     tamil: "தமிழ்",
   },
