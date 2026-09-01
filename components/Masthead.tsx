@@ -18,7 +18,7 @@ export default function Masthead() {
       style={{ transformOrigin: "top center" }}
     >
       {lang !== null && (
-        <div className="absolute right-4 top-4 flex overflow-hidden border border-[var(--ink)] font-mono text-[10px] uppercase tracking-wide sm:right-6 sm:top-6">
+        <div className="fixed right-4 top-4 z-40 flex overflow-hidden border border-[var(--ink)] bg-[var(--paper)] font-mono text-[10px] uppercase tracking-wide sm:right-6 sm:top-6">
           <button
             type="button"
             onClick={() => setLang("en")}
