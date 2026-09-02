@@ -235,8 +235,7 @@ export default function Masthead() {
                 &times;
               </button>
 
-              <p className="font-display text-base font-bold italic sm:text-lg">P.S.</p>
-              <p className="font-display mt-4 text-base leading-relaxed sm:text-lg">
+              <p className="font-display text-base leading-relaxed sm:text-lg">
                 Hey, Jakkamma! You found the random little page made just for you.
               </p>
 
