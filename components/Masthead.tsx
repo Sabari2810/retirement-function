@@ -125,7 +125,7 @@ export default function Masthead() {
 
               <p className="font-display text-base font-bold italic sm:text-lg">P.S.</p>
               <p className="font-display mt-4 text-base leading-relaxed sm:text-lg">
-                Hey, Sowmi! You found the random little page I made just for you. Hi. &#x1F90D;
+                Hey, Jakkamma! You found the random little page made just for you. &#x1F90D;
               </p>
 
               <div className="mt-6 flex items-center justify-center gap-3 border-t border-[var(--ink)]/20 pt-5">
