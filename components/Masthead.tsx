@@ -10,16 +10,7 @@ const EGG_ROLL_MS = 2200;
 const EGG_CRACK_MS = 900;
 
 function EggIllustration({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 100 130" className={className} aria-hidden>
-      <ellipse cx="50" cy="68" rx="46" ry="58" fill="#f0c85e" stroke="#221f1a" strokeWidth="2" />
-      <path d="M6,46 Q50,26 94,46" stroke="#7a2f2a" strokeWidth="8" fill="none" strokeLinecap="round" />
-      <path d="M6,86 Q50,106 94,86" stroke="#232f42" strokeWidth="8" fill="none" strokeLinecap="round" />
-      <circle cx="27" cy="36" r="4.5" fill="#c94f4f" />
-      <circle cx="73" cy="38" r="4.5" fill="#c94f4f" />
-      <circle cx="50" cy="98" r="4.5" fill="#c94f4f" />
-    </svg>
-  );
+  return <img src="/photos/easter-egg.png" alt="" aria-hidden className={className} />;
 }
 
 const SHARD_COLORS = ["#f0c85e", "#7a2f2a", "#232f42", "#c94f4f"];
