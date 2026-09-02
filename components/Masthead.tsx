@@ -123,15 +123,12 @@ export default function Masthead() {
               <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
                 A Special Notice
               </p>
-              <p className="font-display mt-4 text-base leading-relaxed sm:text-lg">
-                Some people are always doing something for someone else, and rarely stop to
-                notice.
-              </p>
+              <p className="font-display mt-4 text-base font-bold italic sm:text-lg">P.S.</p>
               <p className="font-display mt-3 text-base leading-relaxed sm:text-lg">
-                They just carry things, quietly, until it&rsquo;s done.
+                There&rsquo;s always one little thing hidden in the margins.
               </p>
-              <p className="font-display mt-4 text-lg font-bold italic sm:text-xl">
-                This page is for you, Sowmi.
+              <p className="font-display mt-3 text-lg font-bold italic sm:text-xl">
+                You found yours.
               </p>
             </motion.div>
           </motion.div>
