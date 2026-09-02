@@ -4,6 +4,7 @@ import BeforeAfter from "@/components/BeforeAfter";
 import BetweenTheLines from "@/components/BetweenTheLines";
 import CareerRecord from "@/components/CareerRecord";
 import CaseFilePreview from "@/components/CaseFilePreview";
+import DesktopBlock from "@/components/DesktopBlock";
 import EventDetails from "@/components/EventDetails";
 import FinalInvitation from "@/components/FinalInvitation";
 import FinalSmile from "@/components/FinalSmile";
@@ -23,36 +24,40 @@ export default function Home() {
 
   return (
     <div className="paper-texture flex-1">
-      <LanguageGate />
+      <DesktopBlock />
 
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:border-2 focus:border-[var(--ink)] focus:bg-[var(--paper)] focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase"
-      >
-        {skipLink}
-      </a>
+      <div className="md:hidden">
+        <LanguageGate />
 
-      <Masthead />
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:border-2 focus:border-[var(--ink)] focus:bg-[var(--paper)] focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase"
+        >
+          {skipLink}
+        </a>
 
-      <main id="main">
-        <Hero />
-        <MicroNote k={microNotes.special.k} v={microNotes.special.v} />
-        <Invitation />
-        <CaseFilePreview />
-        <EventDetails />
-        <Rsvp />
+        <Masthead />
 
-        <TurnPage targetId="the-record" />
+        <main id="main">
+          <Hero />
+          <MicroNote k={microNotes.special.k} v={microNotes.special.v} />
+          <Invitation />
+          <CaseFilePreview />
+          <EventDetails />
+          <Rsvp />
 
-        <CareerRecord />
-        <BeforeAfter />
-        <BetweenTheLines />
-        <NumbersPanel />
-        <QuietHumor />
-        <FinalSmile />
-      </main>
+          <TurnPage targetId="the-record" />
 
-      <FinalInvitation />
+          <CareerRecord />
+          <BeforeAfter />
+          <BetweenTheLines />
+          <NumbersPanel />
+          <QuietHumor />
+          <FinalSmile />
+        </main>
+
+        <FinalInvitation />
+      </div>
     </div>
   );
 }
