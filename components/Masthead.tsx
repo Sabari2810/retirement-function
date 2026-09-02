@@ -53,7 +53,7 @@ function RollingEgg({
       {phase === "rolling" ? (
         <motion.div
           initial={{ x: "70vw", rotate: 0 }}
-          animate={{ x: 0, rotate: 900 }}
+          animate={{ x: 0, rotate: 1080 }}
           transition={{ duration: EGG_ROLL_MS / 1000, ease: [0.32, 0, 0.2, 1] }}
           onAnimationComplete={onRollComplete}
         >
