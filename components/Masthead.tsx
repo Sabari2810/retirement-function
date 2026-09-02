@@ -48,6 +48,14 @@ function RollingEgg({
 }) {
   const [shattered, setShattered] = useState(false);
 
+  useEffect(() => {
+    if (!shattered) return;
+    // Reveal the note while the shards are still finishing their fade, so it
+    // feels like the note grows directly out of the break instead of waiting.
+    const t = setTimeout(onCrackComplete, SHATTER_MS * 0.55);
+    return () => clearTimeout(t);
+  }, [shattered, onCrackComplete]);
+
   return (
     <div className="pointer-events-none fixed inset-0 z-[115] flex items-center justify-center">
       {phase === "rolling" ? (
@@ -84,7 +92,6 @@ function RollingEgg({
                 initial={{ x: 0, y: 0, rotate: 0, opacity: 1 }}
                 animate={{ x: m.x, y: m.y, rotate: m.rotate, opacity: 0 }}
                 transition={{ duration: SHATTER_MS / 1000, ease: "easeOut" }}
-                onAnimationComplete={i === SHARDS.length - 1 ? onCrackComplete : undefined}
               >
                 <img
                   src={EGG_SRC}
@@ -212,7 +219,7 @@ export default function Masthead() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.15 }}
             onClick={() => setShowNote(false)}
             role="dialog"
             aria-modal="true"
@@ -220,10 +227,10 @@ export default function Masthead() {
           >
             <motion.div
               className="paper-texture no-scrollbar relative max-h-[85vh] w-full max-w-md overflow-y-auto border-4 border-double border-[var(--ink)] p-6 text-center sm:p-8"
-              initial={{ opacity: 0, scale: 0.1 }}
+              initial={{ opacity: 0, scale: 0.25 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.1 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              exit={{ opacity: 0, scale: 0.25 }}
+              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
               onClick={(e) => e.stopPropagation()}
             >
               <button
