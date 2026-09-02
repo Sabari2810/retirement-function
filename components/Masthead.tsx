@@ -242,8 +242,8 @@ export default function Masthead() {
                 &times;
               </button>
 
-              <p className="font-display text-base leading-relaxed sm:text-lg">
-                Hey, Jakkamma! You found the random little page made just for you.
+              <p className="text-base leading-relaxed sm:text-lg">
+                Hey, Jakkamma. You found the random little page made just for you.
               </p>
 
               <div className="mt-6 flex items-center justify-center gap-3 border-t border-[var(--ink)]/20 pt-5">
