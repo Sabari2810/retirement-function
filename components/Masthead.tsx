@@ -7,6 +7,82 @@ import { useContent, useLanguage } from "@/lib/LanguageContext";
 const TAPS_NEEDED = 10;
 const TAP_RESET_MS = 2000;
 const CONFETTI_EMOJI = ["✨", "🎉", "💫", "🎊", "⭐"];
+const EGG_ROLL_MS = 900;
+const EGG_CRACK_MS = 450;
+
+function EggIllustration({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 130" className={className} aria-hidden>
+      <ellipse cx="50" cy="68" rx="46" ry="58" fill="#f0c85e" stroke="#221f1a" strokeWidth="2" />
+      <path d="M6,46 Q50,26 94,46" stroke="#7a2f2a" strokeWidth="8" fill="none" strokeLinecap="round" />
+      <path d="M6,86 Q50,106 94,86" stroke="#232f42" strokeWidth="8" fill="none" strokeLinecap="round" />
+      <circle cx="27" cy="36" r="4.5" fill="#c94f4f" />
+      <circle cx="73" cy="38" r="4.5" fill="#c94f4f" />
+      <circle cx="50" cy="98" r="4.5" fill="#c94f4f" />
+    </svg>
+  );
+}
+
+const SHARD_COLORS = ["#f0c85e", "#7a2f2a", "#232f42", "#c94f4f"];
+
+function RollingEgg({
+  phase,
+  onRollComplete,
+  onCrackComplete,
+}: {
+  phase: "rolling" | "cracking";
+  onRollComplete: () => void;
+  onCrackComplete: () => void;
+}) {
+  const shards = useMemo(
+    () =>
+      Array.from({ length: 10 }, (_, i) => ({
+        id: i,
+        x: (Math.random() - 0.5) * 220,
+        y: (Math.random() - 0.5) * 180 - 20,
+        rotate: Math.random() * 360,
+        color: SHARD_COLORS[i % SHARD_COLORS.length],
+        size: 8 + Math.random() * 10,
+      })),
+    []
+  );
+
+  return (
+    <div className="pointer-events-none fixed inset-0 z-[115] flex items-center justify-center">
+      {phase === "rolling" ? (
+        <motion.div
+          initial={{ x: "70vw", rotate: 0 }}
+          animate={{ x: 0, rotate: 900 }}
+          transition={{ duration: EGG_ROLL_MS / 1000, ease: [0.32, 0, 0.2, 1] }}
+          onAnimationComplete={onRollComplete}
+        >
+          <EggIllustration className="h-24 w-auto drop-shadow-md" />
+        </motion.div>
+      ) : (
+        <>
+          <motion.div
+            initial={{ scale: 1, opacity: 1 }}
+            animate={{ scale: [1, 1.15, 0], opacity: [1, 1, 0] }}
+            transition={{ duration: EGG_CRACK_MS / 1000, times: [0, 0.35, 1] }}
+            onAnimationComplete={onCrackComplete}
+          >
+            <EggIllustration className="h-24 w-auto drop-shadow-md" />
+          </motion.div>
+          {shards.map((s) => (
+            <motion.span
+              key={s.id}
+              className="absolute rounded-sm"
+              style={{ width: s.size, height: s.size, backgroundColor: s.color }}
+              initial={{ x: 0, y: 0, opacity: 1, rotate: 0 }}
+              animate={{ x: s.x, y: s.y, opacity: 0, rotate: s.rotate }}
+              transition={{ duration: EGG_CRACK_MS / 1000 + 0.3, ease: "easeOut" }}
+            />
+          ))}
+        </>
+      )}
+    </div>
+  );
+}
 
 function Confetti() {
   const pieces = useMemo(
@@ -53,6 +129,7 @@ export default function Masthead() {
   const { masthead, languageToggle } = useContent();
   const { lang, setLang } = useLanguage();
   const [showNote, setShowNote] = useState(false);
+  const [eggPhase, setEggPhase] = useState<"idle" | "rolling" | "cracking">("idle");
   const [audioPlaying, setAudioPlaying] = useState(false);
   const tapCount = useRef(0);
   const tapTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -63,8 +140,12 @@ export default function Masthead() {
     if (tapTimer.current) clearTimeout(tapTimer.current);
 
     if (tapCount.current >= TAPS_NEEDED) {
-      setShowNote(true);
       tapCount.current = 0;
+      if (reduce) {
+        setShowNote(true);
+      } else {
+        setEggPhase("rolling");
+      }
       return;
     }
 
@@ -74,7 +155,7 @@ export default function Masthead() {
   };
 
   useEffect(() => {
-    if (!showNote) return;
+    if (!showNote && eggPhase === "idle") return;
 
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setShowNote(false);
@@ -88,7 +169,7 @@ export default function Masthead() {
       document.body.style.overflow = overflow;
       audioRef.current?.pause();
     };
-  }, [showNote]);
+  }, [showNote, eggPhase]);
 
   return (
     <motion.header
@@ -133,6 +214,17 @@ export default function Masthead() {
       <p className="mt-3 font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--ink-faint)] sm:text-[11px]">
         {masthead.volumeLine}
       </p>
+
+      {eggPhase !== "idle" && (
+        <RollingEgg
+          phase={eggPhase}
+          onRollComplete={() => setEggPhase("cracking")}
+          onCrackComplete={() => {
+            setEggPhase("idle");
+            setShowNote(true);
+          }}
+        />
+      )}
 
       {showNote && !reduce && <Confetti />}
 
