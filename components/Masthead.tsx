@@ -104,7 +104,7 @@ export default function Masthead() {
             aria-label="A special notice"
           >
             <motion.div
-              className="paper-texture relative w-full max-w-sm border-4 border-double border-[var(--ink)] p-6 text-center sm:p-8"
+              className="paper-texture no-scrollbar relative max-h-[85vh] w-full max-w-md overflow-y-auto border-4 border-double border-[var(--ink)] p-6 text-center sm:p-8"
               initial={{ opacity: 0, y: 16, scale: 0.96 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 16, scale: 0.96 }}
@@ -120,16 +120,23 @@ export default function Masthead() {
                 &times;
               </button>
 
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--ink-soft)] sm:text-xs">
-                A Special Notice
-              </p>
-              <p className="font-display mt-4 text-base font-bold italic sm:text-lg">P.S.</p>
+              <p className="font-display text-base font-bold italic sm:text-lg">P.S.</p>
+              <p className="font-display mt-4 text-base leading-relaxed sm:text-lg">Sowmi,</p>
               <p className="font-display mt-3 text-base leading-relaxed sm:text-lg">
-                There&rsquo;s always one little thing hidden in the margins.
+                There are quite a few things in this edition that deserve to be read.
               </p>
-              <p className="font-display mt-3 text-lg font-bold italic sm:text-xl">
-                You found yours.
+              <p className="font-display mt-3 text-base leading-relaxed sm:text-lg">
+                This isn&rsquo;t one of them.
               </p>
+              <p className="font-display mt-3 text-base font-bold leading-relaxed sm:text-lg">
+                This one is just for you.
+              </p>
+              <p className="font-display mt-4 text-base leading-relaxed sm:text-lg">No occasion.</p>
+              <p className="font-display text-base leading-relaxed sm:text-lg">No explanation.</p>
+              <p className="font-display mt-3 text-base leading-relaxed sm:text-lg">
+                Just a little corner of the page with your name on it.
+              </p>
+              <p className="font-display mt-4 text-lg italic sm:text-xl">That&rsquo;s all.</p>
             </motion.div>
           </motion.div>
         )}
