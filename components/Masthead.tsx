@@ -7,8 +7,8 @@ import { useContent, useLanguage } from "@/lib/LanguageContext";
 const TAPS_NEEDED = 10;
 const TAP_RESET_MS = 2000;
 const CONFETTI_EMOJI = ["✨", "🎉", "💫", "🎊", "⭐"];
-const EGG_ROLL_MS = 900;
-const EGG_CRACK_MS = 450;
+const EGG_ROLL_MS = 2200;
+const EGG_CRACK_MS = 900;
 
 function EggIllustration({ className }: { className?: string }) {
   return (
@@ -38,11 +38,11 @@ function RollingEgg({
     () =>
       Array.from({ length: 10 }, (_, i) => ({
         id: i,
-        x: (Math.random() - 0.5) * 220,
-        y: (Math.random() - 0.5) * 180 - 20,
+        x: (Math.random() - 0.5) * 300,
+        y: (Math.random() - 0.5) * 240 - 30,
         rotate: Math.random() * 360,
         color: SHARD_COLORS[i % SHARD_COLORS.length],
-        size: 8 + Math.random() * 10,
+        size: 12 + Math.random() * 14,
       })),
     []
   );
@@ -56,7 +56,7 @@ function RollingEgg({
           transition={{ duration: EGG_ROLL_MS / 1000, ease: [0.32, 0, 0.2, 1] }}
           onAnimationComplete={onRollComplete}
         >
-          <EggIllustration className="h-24 w-auto drop-shadow-md" />
+          <EggIllustration className="h-40 w-auto drop-shadow-md" />
         </motion.div>
       ) : (
         <>
@@ -66,7 +66,7 @@ function RollingEgg({
             transition={{ duration: EGG_CRACK_MS / 1000, times: [0, 0.35, 1] }}
             onAnimationComplete={onCrackComplete}
           >
-            <EggIllustration className="h-24 w-auto drop-shadow-md" />
+            <EggIllustration className="h-40 w-auto drop-shadow-md" />
           </motion.div>
           {shards.map((s) => (
             <motion.span
