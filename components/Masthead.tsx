@@ -186,6 +186,8 @@ export default function Masthead() {
         </div>
       )}
 
+      <img src="/photos/easter-egg.png" alt="" aria-hidden className="hidden" />
+
       <h1
         onClick={handleTitleTap}
         className="font-masthead cursor-default select-none text-5xl leading-none sm:text-7xl lg:text-8xl"
