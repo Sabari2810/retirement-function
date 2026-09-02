@@ -220,10 +220,10 @@ export default function Masthead() {
           >
             <motion.div
               className="paper-texture no-scrollbar relative max-h-[85vh] w-full max-w-md overflow-y-auto border-4 border-double border-[var(--ink)] p-6 text-center sm:p-8"
-              initial={{ opacity: 0, y: 16, scale: 0.96 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 16, scale: 0.96 }}
-              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+              initial={{ opacity: 0, scale: 0.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.1 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               onClick={(e) => e.stopPropagation()}
             >
               <button
