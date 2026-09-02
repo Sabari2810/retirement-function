@@ -12,8 +12,10 @@ export default function Masthead() {
   const { masthead, languageToggle } = useContent();
   const { lang, setLang } = useLanguage();
   const [showNote, setShowNote] = useState(false);
+  const [audioPlaying, setAudioPlaying] = useState(false);
   const tapCount = useRef(0);
   const tapTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const handleTitleTap = () => {
     tapCount.current += 1;
@@ -43,6 +45,7 @@ export default function Masthead() {
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = overflow;
+      audioRef.current?.pause();
     };
   }, [showNote]);
 
@@ -121,22 +124,39 @@ export default function Masthead() {
               </button>
 
               <p className="font-display text-base font-bold italic sm:text-lg">P.S.</p>
-              <p className="font-display mt-4 text-base leading-relaxed sm:text-lg">Sowmi,</p>
-              <p className="font-display mt-3 text-base leading-relaxed sm:text-lg">
-                There are quite a few things in this edition that deserve to be read.
+              <p className="font-display mt-4 text-base leading-relaxed sm:text-lg">
+                Hey, Sowmi! You found the random little page I made just for you. I don&rsquo;t
+                really know what else to say here, so&hellip; hi. &#x1F90D;
               </p>
-              <p className="font-display mt-3 text-base leading-relaxed sm:text-lg">
-                This isn&rsquo;t one of them.
-              </p>
-              <p className="font-display mt-3 text-base font-bold leading-relaxed sm:text-lg">
-                This one is just for you.
-              </p>
-              <p className="font-display mt-4 text-base leading-relaxed sm:text-lg">No occasion.</p>
-              <p className="font-display text-base leading-relaxed sm:text-lg">No explanation.</p>
-              <p className="font-display mt-3 text-base leading-relaxed sm:text-lg">
-                Just a little corner of the page with your name on it.
-              </p>
-              <p className="font-display mt-4 text-lg italic sm:text-xl">That&rsquo;s all.</p>
+
+              <div className="mt-6 flex items-center justify-center gap-3 border-t border-[var(--ink)]/20 pt-5">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const el = audioRef.current;
+                    if (!el) return;
+                    if (audioPlaying) {
+                      el.pause();
+                    } else {
+                      void el.play();
+                    }
+                  }}
+                  aria-label={audioPlaying ? "Pause audio" : "Play audio"}
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[var(--ink)] text-sm transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)]"
+                >
+                  {audioPlaying ? "⏸" : "▶"}
+                </button>
+                <span className="font-mono text-xs uppercase tracking-[0.15em] text-[var(--ink-soft)]">
+                  A little something for you
+                </span>
+                <audio
+                  ref={audioRef}
+                  src="/audio/sowmi-note.mp3"
+                  onPlay={() => setAudioPlaying(true)}
+                  onPause={() => setAudioPlaying(false)}
+                  onEnded={() => setAudioPlaying(false)}
+                />
+              </div>
             </motion.div>
           </motion.div>
         )}
