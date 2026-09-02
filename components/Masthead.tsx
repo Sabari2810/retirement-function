@@ -1,19 +1,41 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useContent, useLanguage } from "@/lib/LanguageContext";
 
 const TAPS_NEEDED = 10;
 const TAP_RESET_MS = 2000;
 const EGG_ROLL_MS = 3600;
-const EGG_CRACK_MS = 900;
+const SHAKE_MS = 500;
+const SHATTER_MS = 750;
+const EGG_SRC = "/photos/easter-egg.png";
+const SHARD_W = 220;
+const SHARD_H = 160;
 
 function EggIllustration({ className }: { className?: string }) {
-  return <img src="/photos/easter-egg.png" alt="" aria-hidden className={className} />;
+  return <img src={EGG_SRC} alt="" aria-hidden className={className} />;
 }
 
-const SHARD_COLORS = ["#f0c85e", "#7a2f2a", "#232f42", "#c94f4f"];
+// Six irregular wedges radiating from an off-center point, together tiling the
+// whole box seamlessly (so at rest the shards reconstruct the intact egg).
+const CRACK_CENTER = "47% 50%";
+const CRACK_BOUNDARY = ["22% 0%", "78% 0%", "100% 38%", "82% 100%", "24% 100%", "0% 55%"];
+const SHARDS = CRACK_BOUNDARY.map((p, i) => {
+  const next = CRACK_BOUNDARY[(i + 1) % CRACK_BOUNDARY.length];
+  return {
+    id: i,
+    clipPath: `polygon(${CRACK_CENTER}, ${p}, ${next})`,
+  };
+});
+const SHARD_MOTION = [
+  { x: 0, y: -85, rotate: 22 },
+  { x: 70, y: -55, rotate: -28 },
+  { x: 90, y: 45, rotate: 34 },
+  { x: 15, y: 95, rotate: -24 },
+  { x: -75, y: 55, rotate: 30 },
+  { x: -85, y: -35, rotate: -34 },
+];
 
 function RollingEgg({
   phase,
@@ -24,18 +46,7 @@ function RollingEgg({
   onRollComplete: () => void;
   onCrackComplete: () => void;
 }) {
-  const shards = useMemo(
-    () =>
-      Array.from({ length: 10 }, (_, i) => ({
-        id: i,
-        x: (Math.random() - 0.5) * 300,
-        y: (Math.random() - 0.5) * 240 - 30,
-        rotate: Math.random() * 360,
-        color: SHARD_COLORS[i % SHARD_COLORS.length],
-        size: 12 + Math.random() * 14,
-      })),
-    []
-  );
+  const [shattered, setShattered] = useState(false);
 
   return (
     <div className="pointer-events-none fixed inset-0 z-[115] flex items-center justify-center">
@@ -48,57 +59,42 @@ function RollingEgg({
         >
           <EggIllustration className="h-40 w-auto drop-shadow-md" />
         </motion.div>
+      ) : !shattered ? (
+        <motion.div
+          initial={{ x: 0, rotate: 0, scale: 1 }}
+          animate={{
+            x: [0, -6, 6, -7, 7, -5, 5, 0],
+            rotate: [0, -3, 3, -4, 4, -2, 2, 0],
+            scale: [1, 1, 1, 1, 1, 1, 1.08, 1],
+          }}
+          transition={{ duration: SHAKE_MS / 1000, times: [0, 0.14, 0.28, 0.42, 0.56, 0.7, 0.85, 1] }}
+          onAnimationComplete={() => setShattered(true)}
+        >
+          <EggIllustration className="h-40 w-auto drop-shadow-md" />
+        </motion.div>
       ) : (
-        <div className="relative flex items-center justify-center">
-          <motion.div
-            className="absolute rounded-full"
-            style={{
-              width: 320,
-              height: 320,
-              background:
-                "radial-gradient(circle, rgba(244,201,94,0.95) 0%, rgba(244,201,94,0.5) 35%, rgba(244,201,94,0) 70%)",
-            }}
-            initial={{ opacity: 0, scale: 0.3 }}
-            animate={{ opacity: [0, 0, 1, 0.9, 0], scale: [0.3, 0.3, 1.3, 1.7, 2] }}
-            transition={{
-              duration: EGG_CRACK_MS / 1000 + 0.35,
-              times: [0, 0.55, 0.7, 0.85, 1],
-              ease: "easeOut",
-            }}
-          />
-
-          <motion.div
-            initial={{ x: 0, y: 0, rotate: 0, scale: 1, opacity: 1 }}
-            animate={{
-              x: [0, -6, 6, -7, 7, -5, 5, 0, 0],
-              y: [0, 1, -1, 1, -1, 0, 0, 0, 0],
-              rotate: [0, -3, 3, -4, 4, -2, 2, 0, 0],
-              scale: [1, 1, 1, 1, 1, 1, 1, 1.2, 0],
-              opacity: [1, 1, 1, 1, 1, 1, 1, 1, 0],
-            }}
-            transition={{
-              duration: EGG_CRACK_MS / 1000,
-              times: [0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72, 0.86, 1],
-            }}
-            onAnimationComplete={onCrackComplete}
-          >
-            <EggIllustration className="h-40 w-auto drop-shadow-md" />
-          </motion.div>
-
-          {shards.map((s) => (
-            <motion.span
-              key={s.id}
-              className="absolute rounded-sm"
-              style={{ width: s.size, height: s.size, backgroundColor: s.color }}
-              initial={{ x: 0, y: 0, opacity: 0, rotate: 0 }}
-              animate={{ x: [0, 0, s.x], y: [0, 0, s.y], opacity: [0, 1, 0], rotate: [0, 0, s.rotate] }}
-              transition={{
-                duration: EGG_CRACK_MS / 1000 + 0.3,
-                times: [0, 0.72, 1],
-                ease: "easeOut",
-              }}
-            />
-          ))}
+        <div className="relative" style={{ width: SHARD_W, height: SHARD_H }}>
+          {SHARDS.map((s, i) => {
+            const m = SHARD_MOTION[i];
+            return (
+              <motion.div
+                key={s.id}
+                className="absolute inset-0"
+                style={{ clipPath: s.clipPath }}
+                initial={{ x: 0, y: 0, rotate: 0, opacity: 1 }}
+                animate={{ x: m.x, y: m.y, rotate: m.rotate, opacity: 0 }}
+                transition={{ duration: SHATTER_MS / 1000, ease: "easeOut" }}
+                onAnimationComplete={i === SHARDS.length - 1 ? onCrackComplete : undefined}
+              >
+                <img
+                  src={EGG_SRC}
+                  alt=""
+                  aria-hidden
+                  className="h-full w-full object-cover drop-shadow-md"
+                />
+              </motion.div>
+            );
+          })}
         </div>
       )}
     </div>
@@ -201,10 +197,7 @@ export default function Masthead() {
       {eggPhase !== "idle" && (
         <RollingEgg
           phase={eggPhase}
-          onRollComplete={() => {
-            setEggPhase("idle");
-            setShowNote(true);
-          }}
+          onRollComplete={() => setEggPhase("cracking")}
           onCrackComplete={() => {
             setEggPhase("idle");
             setShowNote(true);
