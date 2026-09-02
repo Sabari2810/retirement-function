@@ -6,7 +6,7 @@ import { useContent, useLanguage } from "@/lib/LanguageContext";
 
 const TAPS_NEEDED = 10;
 const TAP_RESET_MS = 2000;
-const EGG_ROLL_MS = 2200;
+const EGG_ROLL_MS = 3600;
 const EGG_CRACK_MS = 900;
 
 function EggIllustration({ className }: { className?: string }) {
@@ -199,7 +199,10 @@ export default function Masthead() {
       {eggPhase !== "idle" && (
         <RollingEgg
           phase={eggPhase}
-          onRollComplete={() => setEggPhase("cracking")}
+          onRollComplete={() => {
+            setEggPhase("idle");
+            setShowNote(true);
+          }}
           onCrackComplete={() => {
             setEggPhase("idle");
             setShowNote(true);
