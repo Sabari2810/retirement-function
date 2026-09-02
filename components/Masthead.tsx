@@ -1,11 +1,52 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useContent, useLanguage } from "@/lib/LanguageContext";
 
 const TAPS_NEEDED = 10;
 const TAP_RESET_MS = 2000;
+const CONFETTI_EMOJI = ["✨", "🎉", "💫", "🎊", "⭐"];
+
+function Confetti() {
+  const pieces = useMemo(
+    () =>
+      Array.from({ length: 36 }, (_, i) => ({
+        id: i,
+        x: (Math.random() - 0.5) * 360,
+        fall: 420 + Math.random() * 160,
+        rotate: (Math.random() - 0.5) * 720,
+        delay: Math.random() * 0.25,
+        duration: 1.6 + Math.random() * 0.7,
+        size: 14 + Math.random() * 14,
+        emoji: CONFETTI_EMOJI[i % CONFETTI_EMOJI.length],
+      })),
+    []
+  );
+
+  return (
+    <div className="pointer-events-none fixed inset-0 z-[120] overflow-hidden">
+      {pieces.map((p) => (
+        <motion.span
+          key={p.id}
+          className="absolute left-1/2 top-1/3"
+          style={{ fontSize: p.size }}
+          initial={{ x: 0, y: 0, opacity: 1, rotate: 0, scale: 0.3 }}
+          animate={{
+            x: [0, p.x * 0.6, p.x],
+            y: [0, -60 - Math.random() * 60, p.fall],
+            opacity: [1, 1, 0],
+            rotate: [0, p.rotate * 0.5, p.rotate],
+            scale: [0.3, 1.1, 0.9],
+          }}
+          transition={{ duration: p.duration, delay: p.delay, times: [0, 0.3, 1], ease: "easeOut" }}
+        >
+          {p.emoji}
+        </motion.span>
+      ))}
+    </div>
+  );
+}
 
 export default function Masthead() {
   const reduce = useReducedMotion();
@@ -93,6 +134,8 @@ export default function Masthead() {
         {masthead.volumeLine}
       </p>
 
+      {showNote && !reduce && <Confetti />}
+
       <AnimatePresence>
         {showNote && (
           <motion.div
@@ -125,7 +168,7 @@ export default function Masthead() {
 
               <p className="font-display text-base font-bold italic sm:text-lg">P.S.</p>
               <p className="font-display mt-4 text-base leading-relaxed sm:text-lg">
-                Hey, Jakkamma! You found the random little page made just for you. &#x1F90D;
+                Hey, Jakkamma! You found the random little page made just for you.
               </p>
 
               <div className="mt-6 flex items-center justify-center gap-3 border-t border-[var(--ink)]/20 pt-5">
