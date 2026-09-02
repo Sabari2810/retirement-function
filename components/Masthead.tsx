@@ -124,11 +124,15 @@ export default function Masthead() {
                 A Special Notice
               </p>
               <p className="font-display mt-4 text-base leading-relaxed sm:text-lg">
-                This whole edition exists because one daughter wanted her father&rsquo;s 38 years to
-                be remembered properly.
+                Every headline in this paper is about him: the years, the uniform, the quiet ways
+                he showed up.
+              </p>
+              <p className="font-display mt-3 text-base leading-relaxed sm:text-lg">
+                But behind every good story is someone who made sure it got told.
               </p>
               <p className="font-display mt-4 text-lg font-bold italic sm:text-xl">
-                Sowmi, this one&rsquo;s for you. &#x1F48C;
+                This page isn&rsquo;t for him. It&rsquo;s for you, Sowmi, for loving him loud enough
+                that the world had to notice too. &#x1F48C;
               </p>
             </motion.div>
           </motion.div>
