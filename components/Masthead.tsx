@@ -6,7 +6,6 @@ import { useContent, useLanguage } from "@/lib/LanguageContext";
 
 const TAPS_NEEDED = 10;
 const TAP_RESET_MS = 2000;
-const CONFETTI_EMOJI = ["✨", "🎉", "💫", "🎊", "⭐"];
 const EGG_ROLL_MS = 2200;
 const EGG_CRACK_MS = 900;
 
@@ -59,67 +58,58 @@ function RollingEgg({
           <EggIllustration className="h-40 w-auto drop-shadow-md" />
         </motion.div>
       ) : (
-        <>
+        <div className="relative flex items-center justify-center">
           <motion.div
-            initial={{ scale: 1, opacity: 1 }}
-            animate={{ scale: [1, 1.15, 0], opacity: [1, 1, 0] }}
-            transition={{ duration: EGG_CRACK_MS / 1000, times: [0, 0.35, 1] }}
+            className="absolute rounded-full"
+            style={{
+              width: 320,
+              height: 320,
+              background:
+                "radial-gradient(circle, rgba(244,201,94,0.95) 0%, rgba(244,201,94,0.5) 35%, rgba(244,201,94,0) 70%)",
+            }}
+            initial={{ opacity: 0, scale: 0.3 }}
+            animate={{ opacity: [0, 0, 1, 0.9, 0], scale: [0.3, 0.3, 1.3, 1.7, 2] }}
+            transition={{
+              duration: EGG_CRACK_MS / 1000 + 0.35,
+              times: [0, 0.55, 0.7, 0.85, 1],
+              ease: "easeOut",
+            }}
+          />
+
+          <motion.div
+            initial={{ x: 0, y: 0, rotate: 0, scale: 1, opacity: 1 }}
+            animate={{
+              x: [0, -6, 6, -7, 7, -5, 5, 0, 0],
+              y: [0, 1, -1, 1, -1, 0, 0, 0, 0],
+              rotate: [0, -3, 3, -4, 4, -2, 2, 0, 0],
+              scale: [1, 1, 1, 1, 1, 1, 1, 1.2, 0],
+              opacity: [1, 1, 1, 1, 1, 1, 1, 1, 0],
+            }}
+            transition={{
+              duration: EGG_CRACK_MS / 1000,
+              times: [0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72, 0.86, 1],
+            }}
             onAnimationComplete={onCrackComplete}
           >
             <EggIllustration className="h-40 w-auto drop-shadow-md" />
           </motion.div>
+
           {shards.map((s) => (
             <motion.span
               key={s.id}
               className="absolute rounded-sm"
               style={{ width: s.size, height: s.size, backgroundColor: s.color }}
-              initial={{ x: 0, y: 0, opacity: 1, rotate: 0 }}
-              animate={{ x: s.x, y: s.y, opacity: 0, rotate: s.rotate }}
-              transition={{ duration: EGG_CRACK_MS / 1000 + 0.3, ease: "easeOut" }}
+              initial={{ x: 0, y: 0, opacity: 0, rotate: 0 }}
+              animate={{ x: [0, 0, s.x], y: [0, 0, s.y], opacity: [0, 1, 0], rotate: [0, 0, s.rotate] }}
+              transition={{
+                duration: EGG_CRACK_MS / 1000 + 0.3,
+                times: [0, 0.72, 1],
+                ease: "easeOut",
+              }}
             />
           ))}
-        </>
+        </div>
       )}
-    </div>
-  );
-}
-
-function Confetti() {
-  const pieces = useMemo(
-    () =>
-      Array.from({ length: 36 }, (_, i) => ({
-        id: i,
-        x: (Math.random() - 0.5) * 360,
-        fall: 420 + Math.random() * 160,
-        rotate: (Math.random() - 0.5) * 720,
-        delay: Math.random() * 0.25,
-        duration: 1.6 + Math.random() * 0.7,
-        size: 14 + Math.random() * 14,
-        emoji: CONFETTI_EMOJI[i % CONFETTI_EMOJI.length],
-      })),
-    []
-  );
-
-  return (
-    <div className="pointer-events-none fixed inset-0 z-[120] overflow-hidden">
-      {pieces.map((p) => (
-        <motion.span
-          key={p.id}
-          className="absolute left-1/2 top-1/3"
-          style={{ fontSize: p.size }}
-          initial={{ x: 0, y: 0, opacity: 1, rotate: 0, scale: 0.3 }}
-          animate={{
-            x: [0, p.x * 0.6, p.x],
-            y: [0, -60 - Math.random() * 60, p.fall],
-            opacity: [1, 1, 0],
-            rotate: [0, p.rotate * 0.5, p.rotate],
-            scale: [0.3, 1.1, 0.9],
-          }}
-          transition={{ duration: p.duration, delay: p.delay, times: [0, 0.3, 1], ease: "easeOut" }}
-        >
-          {p.emoji}
-        </motion.span>
-      ))}
     </div>
   );
 }
@@ -225,8 +215,6 @@ export default function Masthead() {
           }}
         />
       )}
-
-      {showNote && !reduce && <Confetti />}
 
       <AnimatePresence>
         {showNote && (
