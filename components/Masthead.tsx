@@ -151,7 +151,7 @@ export default function Masthead() {
                 </span>
                 <audio
                   ref={audioRef}
-                  src="/audio/sowmi-note.mp3"
+                  src="/audio/sowmi-note.m4a"
                   onPlay={() => setAudioPlaying(true)}
                   onPause={() => setAudioPlaying(false)}
                   onEnded={() => setAudioPlaying(false)}
